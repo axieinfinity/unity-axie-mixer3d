@@ -7,7 +7,7 @@ namespace SkyMavis.AxieMixer3D
         public string axieGenes;
         public AxieDescriptor axieDescriptor;
 
-        AxieCharacter3D _character;
+        public AxieCharacter3D Character { get; private set; }
 
         void OnEnable()
         {
@@ -16,18 +16,18 @@ namespace SkyMavis.AxieMixer3D
 
         void OnDisable()
         {
-            _character?.Dispose();
-            _character = null;
+            Character?.Dispose();
+            Character = null;
         }
 
         public void Refresh()
         {
-            _character?.Dispose();
+            Character?.Dispose();
 
             if (!string.IsNullOrWhiteSpace(axieGenes)) axieDescriptor = AxieDescriptor.FromGenes(axieGenes);
 
-            _character = AxieFactory.Default.CreateCharacter(axieDescriptor);
-            _character.Root.transform.SetParent(transform, false);
+            Character = AxieFactory.Default.CreateCharacter(axieDescriptor);
+            Character.Root.transform.SetParent(transform, false);
         }
     }
 }
