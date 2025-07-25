@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e38774daec9534fdcabed609808a42bf, type: 3}
+  m_Name: S00_Bug10_L2_Horn
+  m_EditorClassIdentifier: 
+  rigs:
+  - type: 10
+    prefab: {fileID: 63784268822845900, guid: c6f1e7782ba034eda81d9baa4adbe8be, type: 3}
+    animationClips:
+    - {fileID: 7400000, guid: e2f2bf2b82b184a7f82df340fe0c515d, type: 2}
+    - {fileID: 7400000, guid: 4951b8ee895f2483c988048c2b61b5c8, type: 2}
+    - {fileID: 7400000, guid: 342739040a22a4be9b88ad16efd6f8e9, type: 2}
+    - {fileID: 7400000, guid: 2bcb41faa83fd4c5094e0f8c7eace66b, type: 2}
+    - {fileID: 7400000, guid: 74da642e47e1144de9ff74d87b88ca5c, type: 2}
+    - {fileID: 7400000, guid: 52faf7c9f9112459fbe25650c50887ff, type: 2}
+  - type: 12
+    prefab: {fileID: 432668635163174207, guid: af5312d68c94243c7b3d81848a4725b1, type: 3}
+    animationClips:
+    - {fileID: 7400000, guid: caaf93b7a794e4eedaae8f04e9a550a7, type: 2}
+    - {fileID: 7400000, guid: 1d9f9b4b2c53c4b43892c04d20f0ebeb, type: 2}
+    - {fileID: 7400000, guid: cb62c3d47cc4341a9a7754645a739d7b, type: 2}
+    - {fileID: 7400000, guid: e4bb0da8210c0475399e6df3bfbdacd7, type: 2}
+    - {fileID: 7400000, guid: a5f93cd9e5ede4f169104b7b491d7ddb, type: 2}
+    - {fileID: 7400000, guid: 7f0497b8e50cf49329763f3e91b2c97a, type: 2}
