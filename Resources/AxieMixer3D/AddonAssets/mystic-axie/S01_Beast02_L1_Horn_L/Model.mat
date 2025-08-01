@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Model
-  m_Shader: {fileID: 4800000, guid: 18216c8a32de3b74e94f00ebc7a70c67, type: 3}
+  m_Shader: {fileID: 4800000, guid: cb79947763ebf4ba5915a34351c156bb, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -33,7 +33,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ColorTexture:
-        m_Texture: {fileID: 2800000, guid: 0c46efbacbaa1024bac6749f291dacf8, type: 3}
+        m_Texture: {fileID: 2800000, guid: 304b3c36a3d8e4c31a5bec4ac330d68d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _CometsTexture:
@@ -69,19 +69,19 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Main_tex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 376e4fbf5363441f5aa715942f24aa29, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Mask_MAP:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 1274a59468ee4472aa72b6e262177e55, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Matcap:
-        m_Texture: {fileID: 2800000, guid: f4a22b41d4013ec458884180866bae5b, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3a4c3abe66ec2440abf3bc8a91d7dcb6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Matcap_UV2:
-        m_Texture: {fileID: 2800000, guid: ffd54278affbfab4b9f24b54b75aa546, type: 3}
+        m_Texture: {fileID: 2800000, guid: 701975d9010424db093af962b07aba3c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -89,15 +89,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NoiseMap_2nd:
-        m_Texture: {fileID: 2800000, guid: 2662a796e7de5d54c80cfd78164e7835, type: 3}
+        m_Texture: {fileID: 2800000, guid: 10dc70943e8454e39a18e550f5f9c1a2, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NoiseMap_ViewDir:
-        m_Texture: {fileID: 2800000, guid: 24a81ddc97884b44d96f1f35fa3fa6a4, type: 3}
+        m_Texture: {fileID: 2800000, guid: ece154ef6ae4a4b5887a7454f052821a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Noise_3:
-        m_Texture: {fileID: 2800000, guid: 3e5c543587b69804ba8199f0f2c824d3, type: 3}
+        m_Texture: {fileID: 2800000, guid: 695c7f496ff72464f887044643106f67, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalTexture:
@@ -149,7 +149,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureSample0:
-        m_Texture: {fileID: 2800000, guid: d9288d4f6f571fb4d8e524dde4264350, type: 3}
+        m_Texture: {fileID: 2800000, guid: 368dfdb789bbf4c2cbb5248bc367cf96, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureSample11:
@@ -161,7 +161,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureSample2:
-        m_Texture: {fileID: 2800000, guid: d4500c634f3a0684783559e1222d3ab5, type: 3}
+        m_Texture: {fileID: 2800000, guid: f9c12b0de431349b5ad918752bc55545, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureSample3:
@@ -185,7 +185,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _UV2_texture:
-        m_Texture: {fileID: 2800000, guid: 62cba406cead58f479fb1082e5c3cd03, type: 3}
+        m_Texture: {fileID: 2800000, guid: 46fdb0ddb062b4e1ca128dc41c13fce5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _emission:
@@ -193,7 +193,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _emissnoise:
-        m_Texture: {fileID: 2800000, guid: 06d41dee5269fb443af42830ae296489, type: 3}
+        m_Texture: {fileID: 2800000, guid: a0e1f1063e31943a4ba65a4742f4ca43, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _gradientmap:
@@ -205,7 +205,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _second_noise:
-        m_Texture: {fileID: 2800000, guid: 2cc68da8081aeab439a096dac7857e2c, type: 3}
+        m_Texture: {fileID: 2800000, guid: 492c4401456d2442f96169e9308f3cbb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _texcoord:
