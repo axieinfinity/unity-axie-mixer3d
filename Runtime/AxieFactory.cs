@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
+using Unity.Profiling;
 using UnityEngine;
 
 namespace SkyMavis.AxieMixer3D
@@ -33,40 +34,8 @@ namespace SkyMavis.AxieMixer3D
                 return null;
             }
 
-            var animations = new Dictionary<string, List<(Transform rootBone, AnimationClip clip)>>();
             var root = Instantiate(bodyData.prefab);
-            CollectAnimations(root.transform, bodyData.animationClips);
-
-            var attachPoints = new Dictionary<AxieRigType, Transform>();
-            var rightWeaponAttachPoint = default(Transform);
-            var leftWeaponAttachPoint = default(Transform);
-
-            foreach (var transform in root.GetComponentsInChildren<Transform>())
-            {
-                if (AttachPointRegex.Match(transform.name) is { Success: true } match)
-                {
-                    var rigTypeName = match.Groups["rigType"].Value;
-
-                    if (System.Enum.TryParse<AxieRigType>(rigTypeName, out var rigType))
-                    {
-                        attachPoints[rigType] = transform;
-
-                    }
-                    else
-                    {
-                        switch (rigTypeName)
-                        {
-                            case "Weapon_R":
-                                rightWeaponAttachPoint = transform;
-                                break;
-                            case "Weapon_L":
-                                leftWeaponAttachPoint = transform;
-                                break;
-                        }
-                    }
-                }
-            }
-
+            var (attachPoints, leftWeaponAttachPoint, rightWeaponAttachPoint) = CollectAttachPoints(root);
             var rigTypeSet = new HashSet<AxieRigType>();
 
             foreach (var partDescriptor in axieDescriptor.parts)
@@ -90,7 +59,7 @@ namespace SkyMavis.AxieMixer3D
                     }
 
                     var part = Instantiate(rigData.prefab, attachPoint);
-                    CollectAnimations(part.transform, rigData.animationClips);
+                    part.name = $"{partData.name}_{rigData.prefab.GetInstanceID():X8}";
 
                     var addons = GetAddons(partDescriptor, rigData.type);
 
@@ -114,20 +83,7 @@ namespace SkyMavis.AxieMixer3D
 
             Colorize();
 
-            return new(root, animations, rightWeaponAttachPoint, leftWeaponAttachPoint);
-
-            void CollectAnimations(Transform rootBone, List<AnimationClip> clips)
-            {
-                foreach (var clip in clips)
-                {
-                    if (!animations.TryGetValue(clip.name, out var list))
-                    {
-                        animations[clip.name] = list = new();
-                    }
-
-                    list.Add((rootBone, clip));
-                }
-            }
+            return new(root, rightWeaponAttachPoint, leftWeaponAttachPoint, bodyData);
 
             (Dictionary<string, Material> materials, List<GameObject> prefabs) GetAddons(AxiePartDescriptor partDescriptor, AxieRigType rigType)
             {
@@ -202,6 +158,43 @@ namespace SkyMavis.AxieMixer3D
                     Debug.LogWarning($"Cannot parse color #{value}");
                 }
             }
+        }
+
+        static readonly ProfilerMarker CollectAttachPointsMarker = new($"{typeof(AxieFactory).FullName}.{nameof(CollectAttachPoints)}");
+
+        internal static (Dictionary<AxieRigType, Transform> attachPoints, Transform leftWeaponAttachPoint, Transform rightWeaponAttachPoint) CollectAttachPoints(GameObject root)
+        {
+            using var _ = CollectAttachPointsMarker.Auto();
+            var attachPoints = new Dictionary<AxieRigType, Transform>();
+            var leftWeaponAttachPoint = default(Transform);
+            var rightWeaponAttachPoint = default(Transform);
+            foreach (var transform in root.GetComponentsInChildren<Transform>())
+            {
+                if (AttachPointRegex.Match(transform.name) is { Success: true } match)
+                {
+                    var rigTypeName = match.Groups["rigType"].Value;
+
+                    if (System.Enum.TryParse<AxieRigType>(rigTypeName, out var rigType))
+                    {
+                        attachPoints[rigType] = transform;
+
+                    }
+                    else
+                    {
+                        switch (rigTypeName)
+                        {
+                            case "Weapon_R":
+                                rightWeaponAttachPoint = transform;
+                                break;
+                            case "Weapon_L":
+                                leftWeaponAttachPoint = transform;
+                                break;
+                        }
+                    }
+                }
+            }
+
+            return (attachPoints, leftWeaponAttachPoint, rightWeaponAttachPoint);
         }
 
         public void ClearCache()

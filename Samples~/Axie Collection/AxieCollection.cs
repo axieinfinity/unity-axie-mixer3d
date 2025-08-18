@@ -66,6 +66,14 @@ public class AxieCollection : MonoBehaviour
                     Quaternion.Euler(0f, 180f, 0f)
                 );
 
+                var idleClip = Instantiate(character.GetLiteAnimationClip("Default.Idle"));
+                idleClip.legacy = true;
+                idleClip.wrapMode = WrapMode.Loop;
+
+                var animation = character.Root.AddComponent<Animation>();
+                animation.AddClip(idleClip, "Default.Idle");
+                animation.Play("Default.Idle");
+
                 row++;
             }
 
