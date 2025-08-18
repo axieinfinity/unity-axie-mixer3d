@@ -9,18 +9,24 @@ namespace SkyMavis.AxieMixer3D
 
         public AxieCharacter3D Character { get; private set; }
 
-        void OnEnable()
+        void Start()
         {
-            Refresh();
+            if (Character == null) Rebuild();
         }
 
-        void OnDisable()
+        void OnDestroy()
         {
             Character?.Dispose();
             Character = null;
         }
 
+        [System.Obsolete("Refresh() is obsolete. Use Rebuild() instead.")]
         public void Refresh()
+        {
+            Rebuild();
+        }
+
+        public void Rebuild()
         {
             Character?.Dispose();
 
