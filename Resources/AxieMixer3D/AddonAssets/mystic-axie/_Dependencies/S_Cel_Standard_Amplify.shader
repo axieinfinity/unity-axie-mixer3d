@@ -1577,20 +1577,23 @@ Shader "AxieMixer3D/S_Cel_Standard_Amplify"
 			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/ShaderGraphFunctions.hlsl"
 			#include "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/Includes/ShaderPass.hlsl"
 
-			
+			#define ASE_NEEDS_TEXTURE_COORDINATES0
+			#define ASE_NEEDS_VERT_POSITION
+
 
 			struct Attributes
 			{
 				float4 positionOS : POSITION;
 				float3 normalOS : NORMAL;
-				
+				float4 ase_texcoord : TEXCOORD0;
 				UNITY_VERTEX_INPUT_INSTANCE_ID
 			};
 
 			struct PackedVaryings
 			{
 				float4 positionCS : SV_POSITION;
-				
+				float4 ase_texcoord : TEXCOORD0;
+				float4 ase_texcoord1 : TEXCOORD1;
 				UNITY_VERTEX_INPUT_INSTANCE_ID
 				UNITY_VERTEX_OUTPUT_STEREO
 			};
@@ -1619,9 +1622,36 @@ Shader "AxieMixer3D/S_Cel_Standard_Amplify"
 			#endif
 			CBUFFER_END
 
+			sampler2D _ColorTexture;
+
+
+			float4 ASEScreenPositionNormalizedToPixel( float4 screenPosNorm, float4 screenParams )
+			{
+				float4 screenPosPixel = screenPosNorm * float4( screenParams.xy, 1, 1 );
+				#if UNITY_UV_STARTS_AT_TOP
+					screenPosPixel.xy = float2( screenPosPixel.x, ( _ProjectionParams.x < 0 ) ? screenParams.y - screenPosPixel.y : screenPosPixel.y );
+				#else
+					screenPosPixel.xy = float2( screenPosPixel.x, ( _ProjectionParams.x > 0 ) ? screenParams.y - screenPosPixel.y : screenPosPixel.y );
+				#endif
+				return screenPosPixel;
+			}
+			
+			inline float Dither8x8Bayer( int x, int y )
+			{
+				const float dither[ 64 ] = {
+				     1, 49, 13, 61,  4, 52, 16, 64,
+				    33, 17, 45, 29, 36, 20, 48, 32,
+				     9, 57,  5, 53, 12, 60,  8, 56,
+				    41, 25, 37, 21, 44, 28, 40, 24,
+				     3, 51, 15, 63,  2, 50, 14, 62,
+				    35, 19, 47, 31, 34, 18, 46, 30,
+				    11, 59,  7, 55, 10, 58,  6, 54,
+				    43, 27, 39, 23, 42, 26, 38, 22};
+				int r = y * 8 + x;
+				return dither[ r ] / 64; // same # of instructions as pre-dividing due to compiler magic
+			}
 			
 
-			
 			int _ObjectId;
 			int _PassValue;
 
@@ -1640,7 +1670,17 @@ Shader "AxieMixer3D/S_Cel_Standard_Amplify"
 				UNITY_TRANSFER_INSTANCE_ID(input, output);
 				UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(output);
 
+				float4 ase_positionCS = TransformObjectToHClip( ( input.positionOS ).xyz );
+				float4 screenPos = ComputeScreenPos( ase_positionCS );
+				output.ase_texcoord1 = screenPos;
+				float3 objectToViewPos = TransformWorldToView( TransformObjectToWorld( input.positionOS.xyz ) );
+				float eyeDepth = -objectToViewPos.z;
+				output.ase_texcoord.z = eyeDepth;
 				
+				output.ase_texcoord.xy = input.ase_texcoord.xy;
+				
+				//setting value to unused interpolator channels and avoid initialization warnings
+				output.ase_texcoord.w = 0;
 
 				#ifdef ASE_ABSOLUTE_VERTEX_POS
 					float3 defaultVertexValue = input.positionOS.xyz;
@@ -1670,7 +1710,8 @@ Shader "AxieMixer3D/S_Cel_Standard_Amplify"
 			{
 				float4 positionOS : INTERNALTESSPOS;
 				float3 normalOS : NORMAL;
-				
+				float4 ase_texcoord : TEXCOORD0;
+
 				UNITY_VERTEX_INPUT_INSTANCE_ID
 			};
 
@@ -1687,7 +1728,7 @@ Shader "AxieMixer3D/S_Cel_Standard_Amplify"
 				UNITY_TRANSFER_INSTANCE_ID(input, output);
 				output.positionOS = input.positionOS;
 				output.normalOS = input.normalOS;
-				
+				output.ase_texcoord = input.ase_texcoord;
 				return output;
 			}
 
@@ -1726,7 +1767,7 @@ Shader "AxieMixer3D/S_Cel_Standard_Amplify"
 				Attributes output = (Attributes) 0;
 				output.positionOS = patch[0].positionOS * bary.x + patch[1].positionOS * bary.y + patch[2].positionOS * bary.z;
 				output.normalOS = patch[0].normalOS * bary.x + patch[1].normalOS * bary.y + patch[2].normalOS * bary.z;
-				
+				output.ase_texcoord = patch[0].ase_texcoord * bary.x + patch[1].ase_texcoord * bary.y + patch[2].ase_texcoord * bary.z;
 				#if defined(ASE_PHONG_TESSELLATION)
 				float3 pp[3];
 				for (int i = 0; i < 3; ++i)
@@ -1748,9 +1789,19 @@ Shader "AxieMixer3D/S_Cel_Standard_Amplify"
 			{
 				SurfaceDescription surfaceDescription = (SurfaceDescription)0;
 
+				float2 uv_ColorTexture = input.ase_texcoord.xy * _ColorTexture_ST.xy + _ColorTexture_ST.zw;
+				half4 tex2DNode20 = tex2D( _ColorTexture, uv_ColorTexture );
+				float4 screenPos = input.ase_texcoord1;
+				half4 ase_positionSSNorm = screenPos / screenPos.w;
+				ase_positionSSNorm.z = ( UNITY_NEAR_CLIP_VALUE >= 0 ) ? ase_positionSSNorm.z : ase_positionSSNorm.z * 0.5 + 0.5;
+				half4 ase_positionSS_Pixel = ASEScreenPositionNormalizedToPixel( ase_positionSSNorm, _ScaledScreenParams );
+				half dither45 = Dither8x8Bayer( fmod( ase_positionSS_Pixel.x, 8 ), fmod( ase_positionSS_Pixel.y, 8 ) );
+				float eyeDepth = input.ase_texcoord.z;
+				half cameraDepthFade46 = (( eyeDepth -_ProjectionParams.y - _Offset ) / _Length);
+				dither45 = step( dither45, saturate( cameraDepthFade46 * 1.00001 ) );
 				
 
-				surfaceDescription.Alpha = 1;
+				surfaceDescription.Alpha = ( tex2DNode20.a * dither45 );
 				surfaceDescription.AlphaClipThreshold = 0.5;
 
 				#if _ALPHATEST_ON
@@ -1799,20 +1850,23 @@ Shader "AxieMixer3D/S_Cel_Standard_Amplify"
 			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/ShaderGraphFunctions.hlsl"
 			#include "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/Includes/ShaderPass.hlsl"
 
-			
+			#define ASE_NEEDS_TEXTURE_COORDINATES0
+			#define ASE_NEEDS_VERT_POSITION
+
 
 			struct Attributes
 			{
 				float4 positionOS : POSITION;
 				float3 normalOS : NORMAL;
-				
+				float4 ase_texcoord : TEXCOORD0;
 				UNITY_VERTEX_INPUT_INSTANCE_ID
 			};
 
 			struct PackedVaryings
 			{
 				float4 positionCS : SV_POSITION;
-				
+				float4 ase_texcoord : TEXCOORD0;
+				float4 ase_texcoord1 : TEXCOORD1;
 				UNITY_VERTEX_INPUT_INSTANCE_ID
 				UNITY_VERTEX_OUTPUT_STEREO
 			};
@@ -1841,9 +1895,36 @@ Shader "AxieMixer3D/S_Cel_Standard_Amplify"
 			#endif
 			CBUFFER_END
 
+			sampler2D _ColorTexture;
+
+
+			float4 ASEScreenPositionNormalizedToPixel( float4 screenPosNorm, float4 screenParams )
+			{
+				float4 screenPosPixel = screenPosNorm * float4( screenParams.xy, 1, 1 );
+				#if UNITY_UV_STARTS_AT_TOP
+					screenPosPixel.xy = float2( screenPosPixel.x, ( _ProjectionParams.x < 0 ) ? screenParams.y - screenPosPixel.y : screenPosPixel.y );
+				#else
+					screenPosPixel.xy = float2( screenPosPixel.x, ( _ProjectionParams.x > 0 ) ? screenParams.y - screenPosPixel.y : screenPosPixel.y );
+				#endif
+				return screenPosPixel;
+			}
+			
+			inline float Dither8x8Bayer( int x, int y )
+			{
+				const float dither[ 64 ] = {
+				     1, 49, 13, 61,  4, 52, 16, 64,
+				    33, 17, 45, 29, 36, 20, 48, 32,
+				     9, 57,  5, 53, 12, 60,  8, 56,
+				    41, 25, 37, 21, 44, 28, 40, 24,
+				     3, 51, 15, 63,  2, 50, 14, 62,
+				    35, 19, 47, 31, 34, 18, 46, 30,
+				    11, 59,  7, 55, 10, 58,  6, 54,
+				    43, 27, 39, 23, 42, 26, 38, 22};
+				int r = y * 8 + x;
+				return dither[ r ] / 64; // same # of instructions as pre-dividing due to compiler magic
+			}
 			
 
-			
 			float4 _SelectionID;
 
 			struct SurfaceDescription
@@ -1861,7 +1942,17 @@ Shader "AxieMixer3D/S_Cel_Standard_Amplify"
 				UNITY_TRANSFER_INSTANCE_ID(input, output);
 				UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(output);
 
+				float4 ase_positionCS = TransformObjectToHClip( ( input.positionOS ).xyz );
+				float4 screenPos = ComputeScreenPos( ase_positionCS );
+				output.ase_texcoord1 = screenPos;
+				float3 objectToViewPos = TransformWorldToView( TransformObjectToWorld( input.positionOS.xyz ) );
+				float eyeDepth = -objectToViewPos.z;
+				output.ase_texcoord.z = eyeDepth;
 				
+				output.ase_texcoord.xy = input.ase_texcoord.xy;
+				
+				//setting value to unused interpolator channels and avoid initialization warnings
+				output.ase_texcoord.w = 0;
 
 				#ifdef ASE_ABSOLUTE_VERTEX_POS
 					float3 defaultVertexValue = input.positionOS.xyz;
@@ -1889,7 +1980,8 @@ Shader "AxieMixer3D/S_Cel_Standard_Amplify"
 			{
 				float4 positionOS : INTERNALTESSPOS;
 				float3 normalOS : NORMAL;
-				
+				float4 ase_texcoord : TEXCOORD0;
+
 				UNITY_VERTEX_INPUT_INSTANCE_ID
 			};
 
@@ -1906,7 +1998,7 @@ Shader "AxieMixer3D/S_Cel_Standard_Amplify"
 				UNITY_TRANSFER_INSTANCE_ID(input, output);
 				output.positionOS = input.positionOS;
 				output.normalOS = input.normalOS;
-				
+				output.ase_texcoord = input.ase_texcoord;
 				return output;
 			}
 
@@ -1945,7 +2037,7 @@ Shader "AxieMixer3D/S_Cel_Standard_Amplify"
 				Attributes output = (Attributes) 0;
 				output.positionOS = patch[0].positionOS * bary.x + patch[1].positionOS * bary.y + patch[2].positionOS * bary.z;
 				output.normalOS = patch[0].normalOS * bary.x + patch[1].normalOS * bary.y + patch[2].normalOS * bary.z;
-				
+				output.ase_texcoord = patch[0].ase_texcoord * bary.x + patch[1].ase_texcoord * bary.y + patch[2].ase_texcoord * bary.z;
 				#if defined(ASE_PHONG_TESSELLATION)
 				float3 pp[3];
 				for (int i = 0; i < 3; ++i)
@@ -1967,9 +2059,19 @@ Shader "AxieMixer3D/S_Cel_Standard_Amplify"
 			{
 				SurfaceDescription surfaceDescription = (SurfaceDescription)0;
 
+				float2 uv_ColorTexture = input.ase_texcoord.xy * _ColorTexture_ST.xy + _ColorTexture_ST.zw;
+				half4 tex2DNode20 = tex2D( _ColorTexture, uv_ColorTexture );
+				float4 screenPos = input.ase_texcoord1;
+				half4 ase_positionSSNorm = screenPos / screenPos.w;
+				ase_positionSSNorm.z = ( UNITY_NEAR_CLIP_VALUE >= 0 ) ? ase_positionSSNorm.z : ase_positionSSNorm.z * 0.5 + 0.5;
+				half4 ase_positionSS_Pixel = ASEScreenPositionNormalizedToPixel( ase_positionSSNorm, _ScaledScreenParams );
+				half dither45 = Dither8x8Bayer( fmod( ase_positionSS_Pixel.x, 8 ), fmod( ase_positionSS_Pixel.y, 8 ) );
+				float eyeDepth = input.ase_texcoord.z;
+				half cameraDepthFade46 = (( eyeDepth -_ProjectionParams.y - _Offset ) / _Length);
+				dither45 = step( dither45, saturate( cameraDepthFade46 * 1.00001 ) );
 				
 
-				surfaceDescription.Alpha = 1;
+				surfaceDescription.Alpha = ( tex2DNode20.a * dither45 );
 				surfaceDescription.AlphaClipThreshold = 0.5;
 
 				#if _ALPHATEST_ON
@@ -2024,7 +2126,10 @@ Shader "AxieMixer3D/S_Cel_Standard_Amplify"
 			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/ShaderGraphFunctions.hlsl"
 			#include "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/Includes/ShaderPass.hlsl"
 
-			
+			#define ASE_NEEDS_TEXTURE_COORDINATES0
+			#define ASE_NEEDS_FRAG_SCREEN_POSITION_NORMALIZED
+			#define ASE_NEEDS_VERT_POSITION
+
 
 			#if defined(ASE_EARLY_Z_DEPTH_OPTIMIZE) && (SHADER_TARGET >= 45)
 				#define ASE_SV_DEPTH SV_DepthLessEqual
@@ -2038,7 +2143,7 @@ Shader "AxieMixer3D/S_Cel_Standard_Amplify"
 			{
 				float4 positionOS : POSITION;
 				float3 normalOS : NORMAL;
-				
+				float4 ase_texcoord : TEXCOORD0;
 				UNITY_VERTEX_INPUT_INSTANCE_ID
 			};
 
@@ -2047,7 +2152,7 @@ Shader "AxieMixer3D/S_Cel_Standard_Amplify"
 				ASE_SV_POSITION_QUALIFIERS float4 positionCS : SV_POSITION;
 				float3 positionWS : TEXCOORD0;
 				float3 normalWS : TEXCOORD1;
-				
+				float4 ase_texcoord2 : TEXCOORD2;
 				UNITY_VERTEX_INPUT_INSTANCE_ID
 				UNITY_VERTEX_OUTPUT_STEREO
 			};
@@ -2076,9 +2181,36 @@ Shader "AxieMixer3D/S_Cel_Standard_Amplify"
 			#endif
 			CBUFFER_END
 
+			sampler2D _ColorTexture;
+
+
+			float4 ASEScreenPositionNormalizedToPixel( float4 screenPosNorm, float4 screenParams )
+			{
+				float4 screenPosPixel = screenPosNorm * float4( screenParams.xy, 1, 1 );
+				#if UNITY_UV_STARTS_AT_TOP
+					screenPosPixel.xy = float2( screenPosPixel.x, ( _ProjectionParams.x < 0 ) ? screenParams.y - screenPosPixel.y : screenPosPixel.y );
+				#else
+					screenPosPixel.xy = float2( screenPosPixel.x, ( _ProjectionParams.x > 0 ) ? screenParams.y - screenPosPixel.y : screenPosPixel.y );
+				#endif
+				return screenPosPixel;
+			}
+			
+			inline float Dither8x8Bayer( int x, int y )
+			{
+				const float dither[ 64 ] = {
+				     1, 49, 13, 61,  4, 52, 16, 64,
+				    33, 17, 45, 29, 36, 20, 48, 32,
+				     9, 57,  5, 53, 12, 60,  8, 56,
+				    41, 25, 37, 21, 44, 28, 40, 24,
+				     3, 51, 15, 63,  2, 50, 14, 62,
+				    35, 19, 47, 31, 34, 18, 46, 30,
+				    11, 59,  7, 55, 10, 58,  6, 54,
+				    43, 27, 39, 23, 42, 26, 38, 22};
+				int r = y * 8 + x;
+				return dither[ r ] / 64; // same # of instructions as pre-dividing due to compiler magic
+			}
 			
 
-			
 			struct SurfaceDescription
 			{
 				float Alpha;
@@ -2094,7 +2226,14 @@ Shader "AxieMixer3D/S_Cel_Standard_Amplify"
 				UNITY_TRANSFER_INSTANCE_ID(input, output);
 				UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(output);
 
+				float3 objectToViewPos = TransformWorldToView( TransformObjectToWorld( input.positionOS.xyz ) );
+				float eyeDepth = -objectToViewPos.z;
+				output.ase_texcoord2.z = eyeDepth;
 				
+				output.ase_texcoord2.xy = input.ase_texcoord.xy;
+				
+				//setting value to unused interpolator channels and avoid initialization warnings
+				output.ase_texcoord2.w = 0;
 				#ifdef ASE_ABSOLUTE_VERTEX_POS
 					float3 defaultVertexValue = input.positionOS.xyz;
 				#else
@@ -2124,7 +2263,8 @@ Shader "AxieMixer3D/S_Cel_Standard_Amplify"
 			{
 				float4 positionOS : INTERNALTESSPOS;
 				float3 normalOS : NORMAL;
-				
+				float4 ase_texcoord : TEXCOORD0;
+
 				UNITY_VERTEX_INPUT_INSTANCE_ID
 			};
 
@@ -2141,7 +2281,7 @@ Shader "AxieMixer3D/S_Cel_Standard_Amplify"
 				UNITY_TRANSFER_INSTANCE_ID(input, output);
 				output.positionOS = input.positionOS;
 				output.normalOS = input.normalOS;
-				
+				output.ase_texcoord = input.ase_texcoord;
 				return output;
 			}
 
@@ -2180,7 +2320,7 @@ Shader "AxieMixer3D/S_Cel_Standard_Amplify"
 				Attributes output = (Attributes) 0;
 				output.positionOS = patch[0].positionOS * bary.x + patch[1].positionOS * bary.y + patch[2].positionOS * bary.z;
 				output.normalOS = patch[0].normalOS * bary.x + patch[1].normalOS * bary.y + patch[2].normalOS * bary.z;
-				
+				output.ase_texcoord = patch[0].ase_texcoord * bary.x + patch[1].ase_texcoord * bary.y + patch[2].ase_texcoord * bary.z;
 				#if defined(ASE_PHONG_TESSELLATION)
 				float3 pp[3];
 				for (int i = 0; i < 3; ++i)
@@ -2212,9 +2352,16 @@ Shader "AxieMixer3D/S_Cel_Standard_Amplify"
 				float4 ClipPos = ComputeClipSpacePosition( ScreenPosNorm.xy, input.positionCS.z ) * input.positionCS.w;
 				float4 ScreenPos = ComputeScreenPos( ClipPos );
 
+				float2 uv_ColorTexture = input.ase_texcoord2.xy * _ColorTexture_ST.xy + _ColorTexture_ST.zw;
+				half4 tex2DNode20 = tex2D( _ColorTexture, uv_ColorTexture );
+				half4 ase_positionSS_Pixel = ASEScreenPositionNormalizedToPixel( ScreenPosNorm, _ScaledScreenParams );
+				half dither45 = Dither8x8Bayer( fmod( ase_positionSS_Pixel.x, 8 ), fmod( ase_positionSS_Pixel.y, 8 ) );
+				float eyeDepth = input.ase_texcoord2.z;
+				half cameraDepthFade46 = (( eyeDepth -_ProjectionParams.y - _Offset ) / _Length);
+				dither45 = step( dither45, saturate( cameraDepthFade46 * 1.00001 ) );
 				
 
-				float Alpha = 1;
+				float Alpha = ( tex2DNode20.a * dither45 );
 				float AlphaClipThreshold = 0.5;
 
 				#ifdef ASE_DEPTH_WRITE_ON
@@ -2366,4 +2513,4 @@ WireConnection;1;2;90;0
 WireConnection;1;3;49;0
 WireConnection;1;4;54;0
 ASEEND*/
-//CHKSM=DA9407431336556ABF7E3A37B4CF52BAF5575166
+//CHKSM=C3A89563AFBB8139693CE984ACE2C5CC3BD066E4
