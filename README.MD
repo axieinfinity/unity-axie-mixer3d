@@ -23,12 +23,18 @@ var axie = new AxieCharacter3D(AxieDescriptor.FromGenes("0x123"));
 // Access the root GameObject of the generated character
 axie.Root;
 
-// Access the list of animation clips paired with their root bones
-axie.Animations;
-
 // Get visual attach points for right/left-hand weapon visuals
 axie.RightWeaponAttachPoint;
 axie.LeftWeaponAttachPoint;
+
+// Access the list of animation names
+axie.AnimationNames;
+
+// Get body AnimationClip with a specified name
+axie.GetLiteAnimationClip("Default.Idle");
+
+// Get body and body parts AnimationClip with a specified name
+axie.GetFullAnimationClip("Default.Run");
 
 // Clean up and destroy the generated GameObject when no longer needed
 axie.Dispose();
@@ -41,8 +47,10 @@ axie.Dispose();
 Represents a fully assembled 3D Axie character. It contains:
 
 * `Root` – the generated GameObject.
-* `Animations` – a dictionary of `(Transform rootBone, AnimationClip clip)` pairs.
 * `RightWeaponAttachPoint` / `LeftWeaponAttachPoint` – transforms for visual attachments.
+* `AnimationNames` – list of animation names.
+* `GetLiteAnimationClip(string)` – get AnimationClip that animates only body.
+* `GetFullAnimationClip(string)` – get AnimationClip that animates both body and body parts.
 * `Dispose()` – destroys the root GameObject and cleans up resources.
 
 ### `AxieCharacter3DBehaviour`
