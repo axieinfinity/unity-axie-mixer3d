@@ -13,9 +13,7 @@ namespace SkyMavis.AxieMixer3D.Editor
         static readonly Regex AxieBodyRegex = new(@"(?<body>[^/]+)/Model/Model\.prefab$", RegexOptions.Compiled);
         static readonly Regex AxiePartRegex = new(@"/S(?<skin>\d\d)/(?<class>[^/]+)/\k<class>_(?<variant>\d\d)/Lvl_(?<level>\d)/[^/]+/(?<rigType>[^/]+)/(?<subRigName>[^/]+)/\k<subRigName>\.prefab$", RegexOptions.Compiled);
 
-        // TODO: Don't expose to consumer
-        [MenuItem("Tools/Update Axie Data")]
-        static void UpdateAxieData()
+        public static void UpdateAxieData()
         {
             try
             {

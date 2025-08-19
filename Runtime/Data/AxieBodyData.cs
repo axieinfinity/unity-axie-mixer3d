@@ -2,9 +2,6 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-// TODO: Remove
-[assembly: System.Runtime.CompilerServices.InternalsVisibleTo("Editor")]
-
 namespace SkyMavis.AxieMixer3D
 {
     [PreferBinarySerialization]
