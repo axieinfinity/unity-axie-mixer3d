@@ -27,6 +27,9 @@ axie.Root;
 axie.RightWeaponAttachPoint;
 axie.LeftWeaponAttachPoint;
 
+// Access the set of avatars
+axie.Avatars;
+
 // Access the list of animation names
 axie.AnimationNames;
 
@@ -48,6 +51,7 @@ Represents a fully assembled 3D Axie character. It contains:
 
 * `Root` – the generated GameObject.
 * `RightWeaponAttachPoint` / `LeftWeaponAttachPoint` – transforms for visual attachments.
+* `Avatars` – set of avatars from various directions.
 * `AnimationNames` – list of animation names.
 * `GetLiteAnimationClip(string)` – get AnimationClip that animates only body.
 * `GetFullAnimationClip(string)` – get AnimationClip that animates both body and body parts.

@@ -13,6 +13,7 @@ namespace SkyMavis.AxieMixer3D
         public Transform RightWeaponAttachPoint { get; }
         public Transform LeftWeaponAttachPoint { get; }
         public ReadOnlyCollection<string> AnimationNames { get; }
+        public AxieAvatars Avatars { get; }
 
         readonly AxieBodyData _bodyData;
 
@@ -31,12 +32,14 @@ namespace SkyMavis.AxieMixer3D
             RightWeaponAttachPoint = rightWeaponAttachPoint;
             LeftWeaponAttachPoint = leftWeaponAttachPoint;
             AnimationNames = new(bodyData.liteAnimations.Select(a => a.name).ToArray());
+            Avatars = new(this);
             _bodyData = bodyData;
         }
 
         public void Dispose()
         {
             if (Root != null) Object.Destroy(Root);
+            Avatars.Dispose();
         }
 
         /// <summary>Include only body animations.</summary>
