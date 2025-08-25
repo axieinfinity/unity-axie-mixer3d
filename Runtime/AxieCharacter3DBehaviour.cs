@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 
 namespace SkyMavis.AxieMixer3D
@@ -6,8 +7,10 @@ namespace SkyMavis.AxieMixer3D
     {
         public string axieGenes;
         public AxieDescriptor axieDescriptor;
+        public AxieAvatarRenderParams[] avatarRenderParams;
 
         public AxieCharacter3D Character { get; private set; }
+        public RenderTexture[] Avatars { get; private set; } = new RenderTexture[0];
 
         void Start()
         {
@@ -16,8 +19,7 @@ namespace SkyMavis.AxieMixer3D
 
         void OnDestroy()
         {
-            Character?.Dispose();
-            Character = null;
+            Cleanup();
         }
 
         [System.Obsolete("Refresh() is obsolete. Use Rebuild() instead.")]
@@ -28,12 +30,30 @@ namespace SkyMavis.AxieMixer3D
 
         public void Rebuild()
         {
-            Character?.Dispose();
+            Cleanup();
 
             if (!string.IsNullOrWhiteSpace(axieGenes)) axieDescriptor = AxieDescriptor.FromGenes(axieGenes);
 
             Character = AxieFactory.Default.CreateCharacter(axieDescriptor);
             Character.Root.transform.SetParent(transform, false);
+
+            Avatars = avatarRenderParams.Select(renderParams =>
+            {
+                var avatar = new RenderTexture(1, 1, 16, RenderTextureFormat.ARGB32);
+                Character.RenderAvatar(avatar, renderParams);
+                return avatar;
+            }).ToArray();
+        }
+
+        void Cleanup()
+        {
+            Character?.Dispose();
+            Character = null;
+
+            foreach (var avatar in Avatars)
+            {
+                Destroy(avatar);
+            }
         }
     }
 }

@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 namespace SkyMavis.AxieMixer3D
 {
@@ -13,7 +14,6 @@ namespace SkyMavis.AxieMixer3D
         public Transform RightWeaponAttachPoint { get; }
         public Transform LeftWeaponAttachPoint { get; }
         public ReadOnlyCollection<string> AnimationNames { get; }
-        public AxieAvatars Avatars { get; }
 
         readonly AxieBodyData _bodyData;
 
@@ -32,14 +32,12 @@ namespace SkyMavis.AxieMixer3D
             RightWeaponAttachPoint = rightWeaponAttachPoint;
             LeftWeaponAttachPoint = leftWeaponAttachPoint;
             AnimationNames = new(bodyData.liteAnimations.Select(a => a.name).ToArray());
-            Avatars = new(this);
             _bodyData = bodyData;
         }
 
         public void Dispose()
         {
             if (Root != null) Object.Destroy(Root);
-            Avatars.Dispose();
         }
 
         /// <summary>Include only body animations.</summary>
@@ -47,5 +45,74 @@ namespace SkyMavis.AxieMixer3D
 
         /// <summary>Include part animations in additional to body animations.</summary>
         public AnimationClip GetFullAnimationClip(string animationName) => _bodyData.FullAnimations[animationName].clip.asset;
+
+        /// <summary>
+        /// Renders an Axie avatar into the specified <see cref="RenderTexture"/> using the provided rendering parameters.
+        /// </summary>
+        /// <param name="targetTexture">
+        /// The <see cref="RenderTexture"/> that will receive the rendered avatar image.
+        /// Must be created and released by the caller.
+        /// </param>
+        /// <param name="renderParams">
+        /// Rendering parameters that define resolution, camera setup, and model orientation.
+        /// See <see cref="AxieAvatarRenderParams"/>.
+        /// </param>
+        public void RenderAvatar(RenderTexture targetTexture, AxieAvatarRenderParams renderParams)
+        {
+            if (renderParams.width == 0) throw new System.ArgumentException($"Render width cannot be zero!");
+            if (renderParams.height == 0) throw new System.ArgumentException($"Render height cannot be zero!");
+
+            if ((targetTexture.width, targetTexture.height) != (renderParams.width, renderParams.height))
+            {
+                if (targetTexture.IsCreated()) targetTexture.Release();
+                (targetTexture.width, targetTexture.height) = (renderParams.width, renderParams.height);
+            }
+
+            if (!targetTexture.IsCreated()) targetTexture.Create();
+
+            var originalEulers = Root.transform.eulerAngles;
+            Root.transform.eulerAngles = new(0f, renderParams.modelHeading, 0f);
+
+            try
+            {
+                var aspect = (float)renderParams.height / renderParams.width;
+
+                using var command = new CommandBuffer { name = $"{nameof(AxieCharacter3D)}.{nameof(RenderAvatar)}" };
+                command.SetRenderTarget(targetTexture);
+                command.ClearRenderTarget(true, true, Color.clear);
+                command.SetViewProjectionMatrices(
+                    Matrix4x4.Scale(new(1f, 1f, -1f)) * Matrix4x4.Inverse(
+                        Root.transform.localToWorldMatrix *
+                        Matrix4x4.LookAt(renderParams.viewCenter, renderParams.viewCenter + renderParams.viewDirection, Vector3.up)
+                    ),
+                    Matrix4x4.Ortho(-1f, 1f, -aspect, aspect, -2f, 2f)
+                );
+                command.SetGlobalVector("unity_OrthoParams", new(2f, 2f * aspect, 0f, 1f));
+
+                foreach (var renderer in Root.GetComponentsInChildren<SkinnedMeshRenderer>())
+                {
+                    var materials = renderer.sharedMaterials;
+
+                    for (var subMeshIndex = 0; subMeshIndex < materials.Length; subMeshIndex++)
+                    {
+                        var material = materials[subMeshIndex];
+                        Render("ExtraPrePass");
+                        Render("Forward");
+
+                        void Render(string passName)
+                        {
+                            var passIndex = material.FindPass(passName);
+                            if (passIndex >= 0) command.DrawRenderer(renderer, material, subMeshIndex, passIndex);
+                        }
+                    }
+                }
+
+                Graphics.ExecuteCommandBuffer(command);
+            }
+            finally
+            {
+                Root.transform.eulerAngles = originalEulers;
+            }
+        }
     }
 }
