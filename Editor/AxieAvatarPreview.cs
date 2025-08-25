@@ -8,11 +8,25 @@ namespace SkyMavis.AxieMixer3D.Editor
         [MenuItem("Tools/Axie Mixer 3D/Axie Avatar Preview")]
         static void Open() => GetWindow<AxieAvatarPreview>();
 
+        [SerializeField]
+        AxieAvatarRenderParams _renderParams = new();
+
         Vector2 _scrollPosition;
+        RenderTexture _texture;
+        SerializedObject _serializedObject;
+        SerializedProperty _renderParamsProp;
 
         void OnEnable()
         {
             titleContent = new("Axie Avatar Preview");
+            _texture = new(_renderParams.width, _renderParams.height, 16, RenderTextureFormat.ARGB32);
+            _serializedObject = new(this);
+            _renderParamsProp = _serializedObject.FindProperty(nameof(_renderParams));
+        }
+
+        void OnDisable()
+        {
+            DestroyImmediate(_texture);
         }
 
         void Update()
@@ -22,28 +36,39 @@ namespace SkyMavis.AxieMixer3D.Editor
 
         void OnGUI()
         {
-            if (Selection.activeGameObject is not { } gameObject || !gameObject.TryGetComponent<AxieCharacter3DBehaviour>(out var characterBehaviour))
-            {
-                EditorGUILayout.HelpBox("Select a GameObject with AxieCharacter3DBehaviour to see the avatar previews.", MessageType.Info);
-                return;
-            }
-
             using var scrollView = new EditorGUILayout.ScrollViewScope(_scrollPosition);
             _scrollPosition = scrollView.scrollPosition;
 
-            DrawAvatar("Front", characterBehaviour.Character.Avatars.Front);
-            DrawAvatar("Back", characterBehaviour.Character.Avatars.Back);
-            DrawAvatar("Left", characterBehaviour.Character.Avatars.Left);
-            DrawAvatar("Right", characterBehaviour.Character.Avatars.Right);
-            DrawAvatar("FrontLeft", characterBehaviour.Character.Avatars.FrontLeft);
-            DrawAvatar("FrontRight", characterBehaviour.Character.Avatars.FrontRight);
-            DrawAvatar("FrontLeftTop", characterBehaviour.Character.Avatars.FrontLeftTop);
-            DrawAvatar("FrontRightTop", characterBehaviour.Character.Avatars.FrontRightTop);
+            _serializedObject.Update();
+            EditorGUILayout.PropertyField(_renderParamsProp);
+            _serializedObject.ApplyModifiedProperties();
 
-            static void DrawAvatar(string name, RenderTexture texture)
+            if (
+                Selection.activeGameObject is { } gameObject &&
+                gameObject.TryGetComponent<AxieCharacter3DBehaviour>(out var characterBehaviour) &&
+                characterBehaviour.Character is { } character
+            )
             {
-                EditorGUILayout.ObjectField(name, texture, typeof(RenderTexture), false);
-                var rect = GUILayoutUtility.GetAspectRect(1f, GUILayout.MaxWidth(256f));
+                character.RenderAvatar(_texture, _renderParams);
+                EditorGUILayout.LabelField("Preview Avatar");
+                DrawTexture(_texture);
+
+                EditorGUILayout.Separator();
+                EditorGUILayout.LabelField("AxieCharacter3DBehaviour.Avatars");
+
+                foreach (var avatar in characterBehaviour.Avatars)
+                {
+                    DrawTexture(avatar);
+                }
+            }
+            else
+            {
+                EditorGUILayout.HelpBox("Select a GameObject with an active AxieCharacter3DBehaviour to preview avatar.", MessageType.Info);
+            }
+
+            static void DrawTexture(Texture texture)
+            {
+                var rect = GUILayoutUtility.GetAspectRect((float)texture.width / texture.height, GUILayout.MaxWidth(texture.width));
                 EditorGUI.DrawPreviewTexture(rect, texture);
             }
         }
