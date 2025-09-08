@@ -348,9 +348,10 @@ Use the **Axie Avatar Preview** tool to experiment with rendering parameters:
 
 ## Sample Projects
 
-The package includes two sample projects that demonstrate different aspects of the Unity Axie Mixer 3D system. Import samples through the Package Manager to explore practical implementations.
+The package includes sample projects that demonstrate different aspects of the Unity Axie Mixer 3D system. Import samples through the Package Manager to explore practical implementations.
 
 - **Axie Collection**: Demonstrates how different body types and part types are combined to create diverse Axie characters using [`AxieDescriptor`](Runtime/AxieDescriptor.cs) data structures
+- **Axie Animations**: Interactive examples showcasing both modern [`Animator`](https://docs.unity3d.com/ScriptReference/Animator.html) and legacy [`Animation`](https://docs.unity3d.com/ScriptReference/Animation.html) systems with weapon attachment, animation switching, and lite vs. full animation comparisons
 - **Axie Avatars**: Shows how to use avatar rendering for both pre-rendered and real-time texture generation in UI applications
 
 ### Importing Samples
