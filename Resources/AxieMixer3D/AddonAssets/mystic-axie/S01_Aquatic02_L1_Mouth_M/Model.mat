@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Model
-  m_Shader: {fileID: 4800000, guid: cb79947763ebf4ba5915a34351c156bb, type: 3}
+  m_Shader: {fileID: 4800000, guid: 60164f492e4ea48b2ababdd12de37ef3, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -33,7 +33,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ColorTexture:
-        m_Texture: {fileID: 2800000, guid: aa9b63b7a705e448ab7011ef230ffd8e, type: 3}
+        m_Texture: {fileID: 2800000, guid: 5f25b139b90ee4eab8e5e8366518c3c8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _CometsTexture:
@@ -69,15 +69,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Main_tex:
-        m_Texture: {fileID: 2800000, guid: aa9b63b7a705e448ab7011ef230ffd8e, type: 3}
+        m_Texture: {fileID: 2800000, guid: 5f25b139b90ee4eab8e5e8366518c3c8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Mask_MAP:
-        m_Texture: {fileID: 2800000, guid: 1274a59468ee4472aa72b6e262177e55, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Matcap:
-        m_Texture: {fileID: 2800000, guid: a02b95faca4724ca0bbcd215f6b4831d, type: 3}
+        m_Texture: {fileID: 2800000, guid: 22ca91f7ff46f4ee19f7130f33c56944, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Matcap_UV2:
@@ -93,7 +93,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NoiseMap_ViewDir:
-        m_Texture: {fileID: 2800000, guid: cc30f3d91ae96405bbcfdac683e1d0f6, type: 3}
+        m_Texture: {fileID: 2800000, guid: 58969159d95c645bdaaf83b282565ef2, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Noise_3:
@@ -149,7 +149,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureSample0:
-        m_Texture: {fileID: 2800000, guid: 344ad5e88d4e7444ca6e2f906bb6bd76, type: 3}
+        m_Texture: {fileID: 2800000, guid: ca115789266844c8a8f2734d79e2dc12, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureSample11:
@@ -161,7 +161,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureSample2:
-        m_Texture: {fileID: 2800000, guid: 63f56052dbf8e4c5582f2d8e34df448b, type: 3}
+        m_Texture: {fileID: 2800000, guid: 60d5d0d06d7b84892b2db747f0c9db0c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureSample3:
@@ -185,19 +185,23 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _UV2_texture:
-        m_Texture: {fileID: 2800000, guid: 4a907def779d74cb9ba143d81c831859, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _emission:
-        m_Texture: {fileID: 2800000, guid: 8900c41ec3660488d98f64e9f66e8e03, type: 3}
+        m_Texture: {fileID: 2800000, guid: ca29a7d1df2594aa197d8aee2a7015f3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _emissnoise:
-        m_Texture: {fileID: 2800000, guid: a0e1f1063e31943a4ba65a4742f4ca43, type: 3}
+        m_Texture: {fileID: 2800000, guid: d146919c06114461592c125d29c95807, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _kisspngspaceskyboxtexturemappingcubemappingnightsky5ac07d8380e2621165275515225644835279:
         m_Texture: {fileID: 8900000, guid: 43b272ebb5485644f9edd04a1c827a8f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _maskmapcolorbody1:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _second_noise:
@@ -385,7 +389,7 @@ Material:
     - _TestIOR: 0.5
     - _TestPower: 7.5
     - _ToggleSwitch0: 0
-    - _TopMid_Offset: 0.27
+    - _TopMid_Offset: -0.52
     - _UV2_thresholdalpha: 1
     - _UVSec: 0
     - _ZWrite: 1
@@ -394,7 +398,7 @@ Material:
     - _alpha_emiss: 0.94
     - _matcap: 1.5
     - _matcap_UV2: 1
-    - _outline: 0
+    - _outline: 0.01
     - _scale: 0
     - _stencil: 3
     m_Colors:
@@ -412,12 +416,14 @@ Material:
     - _NoiseMap_2: {r: 2, g: 2, b: -0.1, a: -0.05}
     - _NoiseMap_ViewDIr: {r: 1, g: 1, b: -0.02, a: -0.02}
     - _Panner: {r: 0, g: 0, b: 0, a: 0}
+    - _PrimaryColor: {r: 1, g: 1, b: 1, a: 0}
     - _RimColor: {r: 2.4335713, g: 1.886893, b: 1.6912553, a: 1}
     - _RimEmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _RimFalloff: {r: -0.01, g: 0.2, b: 0, a: 0}
     - _RimNoiseSpherizeCenter: {r: 0, g: 0, b: 0, a: 0}
     - _RimNoiseSpherizePosition: {r: 0, g: 0, b: 0, a: 0}
     - _RotationAxis: {r: 0, g: 2.72, b: 1.56, a: 0}
+    - _SecondaryColor: {r: 1, g: 1, b: 1, a: 0}
     - _Solid_Color: {r: 1, g: 1, b: 1, a: 0}
     - _SunColor: {r: 1, g: 0, b: 0, a: 1}
     - _SunLocalPosition: {r: 0, g: 0, b: 0, a: 0}
@@ -425,7 +431,7 @@ Material:
     - _TestColor: {r: 1, g: 0, b: 0, a: 1}
     - _TintColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
     - _Top: {r: 1, g: 0.80950385, b: 0.27044016, a: 1}
-    - _TopMid_Step: {r: 0.5, g: 0, b: 0, a: 0}
+    - _TopMid_Step: {r: -0.1, g: 0, b: 0, a: 0}
     - _UV2_speed: {r: 0, g: 0, b: 0, a: 0}
     - _Vector0: {r: 2, g: 4, b: 0, a: 0}
     - _Vector2: {r: 0, g: 0, b: 0, a: 0}
@@ -433,6 +439,6 @@ Material:
     - _back: {r: 0, g: 0, b: 0, a: 0}
     - _emissioncolor: {r: 2.1185472, g: 0.8042633, b: 0, a: 1}
     - _front: {r: 1, g: 1, b: 1, a: 1}
-    - _outlinecolor: {r: 0, g: 0, b: 0, a: 0}
+    - _outlinecolor: {r: 42.224255, g: 0, b: 0, a: 0}
     - _secondNoise: {r: 9.3, g: 92.45, b: -0.1, a: 0.05}
   m_BuildTextureStacks: []
