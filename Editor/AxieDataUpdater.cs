@@ -54,7 +54,7 @@ namespace SkyMavis.AxieMixer3D.Editor
 
                 if (AssetDatabase.LoadAssetAtPath<AxieBodyData>(bodyDataPath) is { } bodyData)
                 {
-                    fullBodyClips = AssetDatabase.LoadAllAssetRepresentationsAtPath(bodyDataPath).Cast<AnimationClip>().ToArray();
+                    fullBodyClips = AssetDatabase.LoadAllAssetRepresentationsAtPath(bodyDataPath).OfType<AnimationClip>().ToArray();
                 }
                 else
                 {
@@ -108,6 +108,14 @@ namespace SkyMavis.AxieMixer3D.Editor
 
                 bodyData.liteAnimations.Sort((a, b) => EditorUtility.NaturalCompare(a.name, b.name));
                 bodyData.fullAnimations.Sort((a, b) => EditorUtility.NaturalCompare(a.name, b.name));
+
+                foreach (var animationClip in fullBodyClips)
+                {
+                    if (!bodyData.fullAnimations.Exists(data => data.clip.asset == animationClip))
+                    {
+                        Object.DestroyImmediate(animationClip, true);
+                    }
+                }
                 EditorUtility.SetDirty(bodyData);
             }
         }
@@ -156,7 +164,14 @@ namespace SkyMavis.AxieMixer3D.Editor
                 }
 
                 var rigData = new AxieRigData { type = rigType, prefab = AssetDatabase.LoadAssetAtPath<GameObject>(subRigPath) };
-                var animationClipGUIDs = AssetDatabase.FindAssets($"t:{nameof(AnimationClip)}", new[] { Path.Join(Path.GetDirectoryName(subRigPath), "Animations") });
+                partData.rigs.Add(rigData);
+
+
+                var animationsPath = Path.Join(Path.GetDirectoryName(subRigPath), "Animations");
+
+                if (!AssetDatabase.IsValidFolder(animationsPath)) continue;
+
+                var animationClipGUIDs = AssetDatabase.FindAssets($"t:{nameof(AnimationClip)}", new[] { animationsPath });
 
                 foreach (var animationClipGUID in animationClipGUIDs)
                 {
@@ -169,8 +184,6 @@ namespace SkyMavis.AxieMixer3D.Editor
                         animationClip
                     ));
                 }
-
-                partData.rigs.Add(rigData);
             }
 
             EditorUtility.DisplayProgressBar("Updating part data", "Sorting...", 1f);
@@ -214,6 +227,10 @@ namespace SkyMavis.AxieMixer3D.Editor
             var excessiveLengthPaths = new List<string>();
             var baseClipLength = bodyClip.length + 1f / 30f;
             EditorUtility.CopySerialized(bodyClip, outputClip);
+            // BUG: In some case, the current bindings get completely removed by subsequence `AnimationUtility.SetEditorCurves` calls.
+            // AnimationUtility probably is not aware of the copied curves.
+            // This call ensures the AnimationUtlity awareness of the current curves.
+            AnimationUtility.GetCurveBindings(outputClip);
 
             foreach (var (rigType, rigPrefab, rootName, clip) in partAnimationData)
             {
