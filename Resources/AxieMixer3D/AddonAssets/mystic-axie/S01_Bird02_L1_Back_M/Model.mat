@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Model
-  m_Shader: {fileID: 4800000, guid: cb79947763ebf4ba5915a34351c156bb, type: 3}
+  m_Shader: {fileID: 4800000, guid: 60164f492e4ea48b2ababdd12de37ef3, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -65,19 +65,19 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Main_tex:
-        m_Texture: {fileID: 2800000, guid: 376e4fbf5363441f5aa715942f24aa29, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Mask_MAP:
-        m_Texture: {fileID: 2800000, guid: 1274a59468ee4472aa72b6e262177e55, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Matcap:
-        m_Texture: {fileID: 2800000, guid: e7b454038414a4c21bd8688b09835acb, type: 3}
+        m_Texture: {fileID: 2800000, guid: 10750e92d166c4596942be23ba1b7043, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Matcap_UV2:
-        m_Texture: {fileID: 2800000, guid: e0ae5e7b059d044d5b105ecc48180d21, type: 3}
+        m_Texture: {fileID: 2800000, guid: 784bd765e8b0d49078dbe7729633d9f5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -85,15 +85,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NoiseMap_2nd:
-        m_Texture: {fileID: 2800000, guid: ff581f9cc0d4e4a62afe47fb763edc18, type: 3}
+        m_Texture: {fileID: 2800000, guid: d918cc8df59ed4447a2e9d1d569c758f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NoiseMap_ViewDir:
-        m_Texture: {fileID: 2800000, guid: ece154ef6ae4a4b5887a7454f052821a, type: 3}
+        m_Texture: {fileID: 2800000, guid: f0882567629a1403a8dc454ef0ed0d44, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Noise_3:
-        m_Texture: {fileID: 2800000, guid: 695c7f496ff72464f887044643106f67, type: 3}
+        m_Texture: {fileID: 2800000, guid: c8485cc3d91ef45aba4d12fd2d4ee741, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalTexture:
@@ -145,7 +145,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureSample0:
-        m_Texture: {fileID: 2800000, guid: 344ad5e88d4e7444ca6e2f906bb6bd76, type: 3}
+        m_Texture: {fileID: 2800000, guid: ca115789266844c8a8f2734d79e2dc12, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureSample11:
@@ -157,7 +157,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureSample2:
-        m_Texture: {fileID: 2800000, guid: 5032afe30c6b942928abdb2c8290d7cd, type: 3}
+        m_Texture: {fileID: 2800000, guid: e4bf2cab0866548c789b11bc53b4c225, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureSample3:
@@ -181,15 +181,19 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _UV2_texture:
-        m_Texture: {fileID: 2800000, guid: 4a907def779d74cb9ba143d81c831859, type: 3}
+        m_Texture: {fileID: 2800000, guid: eb2e3a12d30cd46c899af96d3b52e0b5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _kisspngspaceskyboxtexturemappingcubemappingnightsky5ac07d8380e2621165275515225644835279:
         m_Texture: {fileID: 8900000, guid: 43b272ebb5485644f9edd04a1c827a8f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _maskmapcolorbody1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _second_noise:
-        m_Texture: {fileID: 2800000, guid: 084a9448d31ba44cc800a7e57996ab02, type: 3}
+        m_Texture: {fileID: 2800000, guid: eb7832722946c4a0c8b28a14b69c29d8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _texcoord:
@@ -389,12 +393,14 @@ Material:
     - _NoiseMap_2: {r: 0.5, g: 0.5, b: -0.3, a: -0.03}
     - _NoiseMap_ViewDIr: {r: 0.5, g: 0.5, b: -0.012, a: -0.012}
     - _Panner: {r: 0, g: 0, b: 0, a: 0}
+    - _PrimaryColor: {r: 1, g: 1, b: 1, a: 0}
     - _RimColor: {r: 10.233336, g: 30.784996, b: 141.48717, a: 1}
     - _RimEmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _RimFalloff: {r: 0, g: 1.47, b: 0, a: 0}
     - _RimNoiseSpherizeCenter: {r: 0, g: 0, b: 0, a: 0}
     - _RimNoiseSpherizePosition: {r: 0, g: 0, b: 0, a: 0}
     - _RotationAxis: {r: 0, g: 2.72, b: 1.56, a: 0}
+    - _SecondaryColor: {r: 1, g: 1, b: 1, a: 0}
     - _SunColor: {r: 1, g: 0, b: 0, a: 1}
     - _SunLocalPosition: {r: 0, g: 0, b: 0, a: 0}
     - _SunRampColorTint: {r: 1, g: 1, b: 1, a: 1}
