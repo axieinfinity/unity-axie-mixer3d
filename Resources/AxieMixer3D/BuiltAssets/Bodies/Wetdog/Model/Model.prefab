@@ -56,7 +56,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 489624631948554054}
-  m_LocalRotation: {x: -0.16886728, y: 0.00090607227, z: -0.0069144894, w: 0.9856142}
+  m_LocalRotation: {x: -0.16886728, y: 0.0009060722, z: -0.0069144894, w: 0.9856141}
   m_LocalPosition: {x: 0.0054692165, y: 0.86818373, z: 0.4238513}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1433,7 +1433,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7895473204891259881}
-  m_LocalRotation: {x: -0.030920127, y: 0.038991097, z: -0.23948283, w: 0.9696245}
+  m_LocalRotation: {x: -0.030920127, y: 0.038991094, z: -0.23948283, w: 0.96962446}
   m_LocalPosition: {x: -0.23648298, y: 2.842171e-16, z: -6.750156e-16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1523,6 +1523,7 @@ SkinnedMeshRenderer:
   m_Bones:
   - {fileID: 8914379400954354344}
   - {fileID: 799163594555740811}
+  - {fileID: 7035529748902855828}
   - {fileID: 6231308513864612490}
   - {fileID: 8960661376275710520}
   - {fileID: 6196561277956459935}
@@ -1537,6 +1538,12 @@ SkinnedMeshRenderer:
   - {fileID: 5158609206488138766}
   - {fileID: 813576109445805978}
   - {fileID: 3648734284321976979}
+  - {fileID: 2596438574872649578}
+  - {fileID: 2091820699098977720}
+  - {fileID: 1455871680994151635}
+  - {fileID: 4925593857067791600}
+  - {fileID: 5936694949200986783}
+  - {fileID: 5691695119959948819}
   - {fileID: 5940299296593829733}
   - {fileID: 8892577257848815523}
   - {fileID: 5965432347505904765}
@@ -1561,18 +1568,12 @@ SkinnedMeshRenderer:
   - {fileID: 8300702099172456937}
   - {fileID: 6673040948607433708}
   - {fileID: 5745215051876851674}
-  - {fileID: 2596438574872649578}
-  - {fileID: 2091820699098977720}
-  - {fileID: 1455871680994151635}
-  - {fileID: 4925593857067791600}
-  - {fileID: 5936694949200986783}
-  - {fileID: 5691695119959948819}
   - {fileID: 7691672326805546710}
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 8914379400954354344}
   m_AABB:
-    m_Center: {x: -0.0050398707, y: 0.65444314, z: -0.06708264}
-    m_Extent: {x: 0.76516896, y: 0.76715887, z: 0.627955}
+    m_Center: {x: -0.0050399303, y: 0.65444314, z: -0.0670827}
+    m_Extent: {x: 0.765169, y: 0.76715887, z: 0.62795496}
   m_DirtyAABB: 0
 --- !u!1 &8495919947332205892
 GameObject:

@@ -55,7 +55,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2012921825966159284}
-  m_LocalRotation: {x: -0.065035425, y: -0.25920865, z: 0.9292083, w: 0.25525138}
+  m_LocalRotation: {x: -0.065035425, y: -0.25920868, z: 0.9292083, w: 0.2552514}
   m_LocalPosition: {x: -0.021579843, y: -0.09276046, z: 0.023843404}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -143,13 +143,15 @@ SkinnedMeshRenderer:
   m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300000, guid: a851b5e4c2e5b4d508b891f349840cf3, type: 2}
   m_Bones:
+  - {fileID: 5828774828375715211}
+  - {fileID: 6951206725519804631}
   - {fileID: 7705616126030036465}
   - {fileID: 9200631676612272551}
   m_BlendShapeWeights: []
-  m_RootBone: {fileID: 7705616126030036465}
+  m_RootBone: {fileID: 5828774828375715211}
   m_AABB:
-    m_Center: {x: -0.27594265, y: -0.12035699, z: 0.0066580772}
-    m_Extent: {x: 0.3013318, y: 0.17468233, z: 0.14182755}
+    m_Center: {x: 0.2674207, y: -0.14744711, z: 0.08836116}
+    m_Extent: {x: 0.3724, y: 0.34515896, z: 0.21497087}
   m_DirtyAABB: 0
 --- !u!1 &4007646849174132215
 GameObject:
