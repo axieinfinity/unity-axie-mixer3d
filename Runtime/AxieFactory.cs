@@ -16,6 +16,8 @@ namespace SkyMavis.AxieMixer3D
         AxieMixerConfig _config;
         [SerializeField]
         string[] _addonPaths;
+        [SerializeField]
+        internal int _lodLevel = 2;
 
         readonly Dictionary<string, (Dictionary<string, Material> materials, List<GameObject> prefabs)> _addonCache = new();
 
@@ -24,9 +26,12 @@ namespace SkyMavis.AxieMixer3D
             ClearCache();
         }
 
-        public AxieCharacter3D CreateCharacter(AxieDescriptor axieDescriptor)
+        public AxieCharacter3D CreateCharacter(AxieDescriptor axieDescriptor, int lodLevel = -1)
         {
             const string dataPath = "AxieMixer3D/Data";
+
+            axieDescriptor = CoerceDescriptor(axieDescriptor);
+            lodLevel = lodLevel < 0 ? _lodLevel : lodLevel;
 
             if (Resources.Load<AxieBodyData>(Path.Combine(dataPath, "Bodies", axieDescriptor.body.ToString())) is not { } bodyData)
             {
@@ -37,6 +42,14 @@ namespace SkyMavis.AxieMixer3D
             var root = Instantiate(bodyData.prefab);
             var (attachPoints, leftWeaponAttachPoint, rightWeaponAttachPoint) = CollectAttachPoints(root);
             var rigTypeSet = new HashSet<AxieRigType>();
+
+            if (
+                root.GetComponentInChildren<SkinnedMeshRenderer>() is { } rootRenderer &&
+                0 <= lodLevel && lodLevel < bodyData.lodMeshes.Count
+            )
+            {
+                rootRenderer.sharedMesh = bodyData.lodMeshes[lodLevel];
+            }
 
             foreach (var partDescriptor in axieDescriptor.parts)
             {
@@ -54,12 +67,24 @@ namespace SkyMavis.AxieMixer3D
                 {
                     if (!attachPoints.TryGetValue(rigData.type, out var attachPoint))
                     {
-                        Debug.LogError($"Cannot find attach point for {rigData.type}.");
+                        Debug.LogError($"Cannot find attach point for {rigData.type}.", partData);
                         continue;
                     }
 
-                    var part = Instantiate(rigData.prefab, attachPoint);
-                    part.name = $"{partData.name}_{rigData.prefab.GetInstanceID():X8}";
+                    if (rigData.prefab.GetComponentInChildren<SkinnedMeshRenderer>() is not { } prefabRenderer)
+                    {
+                        Debug.LogError($"Cannot find material in {rigData.prefab}.", rigData.prefab);
+                        continue;
+                    }
+
+                    var part = new GameObject($"{partData.name}_{rigData.prefab.GetInstanceID():X8}", typeof(MeshFilter), typeof(MeshRenderer));
+                    part.transform.SetParent(attachPoint, false);
+
+                    var partMeshFilter = part.GetComponent<MeshFilter>();
+                    partMeshFilter.sharedMesh = rigData.lodMeshes[Mathf.Clamp(lodLevel, 0, rigData.lodMeshes.Count - 1)];
+
+                    var partMeshRenderer = part.GetComponent<MeshRenderer>();
+                    partMeshRenderer.sharedMaterial = prefabRenderer.sharedMaterial;
 
                     var addons = GetAddons(partDescriptor, rigData.type);
 
@@ -124,26 +149,18 @@ namespace SkyMavis.AxieMixer3D
                     _config?.items.colors?.FirstOrDefault(c => c.index == axieDescriptor.colorVariant) is not { } colorVariant
                 ) return;
 
-                var materialMap = new Dictionary<Material, Material>();
                 var primaryColor = Color.white;
                 var secondaryColor = Color.white;
                 ParseColor(ref primaryColor, colorVariant.primary1);
                 ParseColor(ref secondaryColor, colorVariant.primary2);
 
+                var materialProperties = new MaterialPropertyBlock();
+                materialProperties.SetColor("_PrimaryColor", primaryColor);
+                materialProperties.SetColor("_SecondaryColor", secondaryColor);
+
                 foreach (var renderer in root.GetComponentsInChildren<Renderer>())
                 {
-                    if (materialMap.TryGetValue(renderer.sharedMaterial, out var clonedMaterial))
-                    {
-                        renderer.sharedMaterial = clonedMaterial;
-                        continue;
-                    }
-
-                    var material = renderer.sharedMaterial;
-                    renderer.sharedMaterial = Instantiate(renderer.sharedMaterial);
-                    renderer.sharedMaterial.name = material.name;
-                    renderer.sharedMaterial.SetColor("_PrimaryColor", primaryColor);
-                    renderer.sharedMaterial.SetColor("_SecondaryColor", secondaryColor);
-                    materialMap.Add(material, renderer.sharedMaterial);
+                    renderer.SetPropertyBlock(materialProperties);
                 }
             }
 
@@ -158,6 +175,20 @@ namespace SkyMavis.AxieMixer3D
                     Debug.LogWarning($"Cannot parse color #{value}");
                 }
             }
+        }
+
+        internal static AxieDescriptor CoerceDescriptor(AxieDescriptor descriptor)
+        {
+            var parts = descriptor.parts = descriptor.parts.ToList();
+
+            for (var partIndex = 0; partIndex < parts.Count; partIndex++)
+            {
+                var part = parts[partIndex];
+                part.skin = part.skin == 1 && part.variant == 2 ? 1 : 0;
+                part.level = 1;
+            }
+
+            return descriptor;
         }
 
         static readonly ProfilerMarker CollectAttachPointsMarker = new($"{typeof(AxieFactory).FullName}.{nameof(CollectAttachPoints)}");
