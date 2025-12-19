@@ -17,7 +17,7 @@ namespace SkyMavis.AxieMixer3D
         [SerializeField]
         string[] _addonPaths;
         [SerializeField]
-        internal int _lodLevel = 2;
+        AxieInstantiationParams _defaultInstantiationParams;
 
         readonly Dictionary<string, (Dictionary<string, Material> materials, List<GameObject> prefabs)> _addonCache = new();
 
@@ -26,12 +26,12 @@ namespace SkyMavis.AxieMixer3D
             ClearCache();
         }
 
-        public AxieCharacter3D CreateCharacter(AxieDescriptor axieDescriptor, int lodLevel = -1)
+        public AxieCharacter3D CreateCharacter(AxieDescriptor axieDescriptor, AxieInstantiationParams instantiationParams = null)
         {
             const string dataPath = "AxieMixer3D/Data";
 
             axieDescriptor = CoerceDescriptor(axieDescriptor);
-            lodLevel = lodLevel < 0 ? _lodLevel : lodLevel;
+            instantiationParams = _defaultInstantiationParams.Merge(instantiationParams);
 
             if (Resources.Load<AxieBodyData>(Path.Combine(dataPath, "Bodies", axieDescriptor.body.ToString())) is not { } bodyData)
             {
@@ -42,6 +42,7 @@ namespace SkyMavis.AxieMixer3D
             var root = Instantiate(bodyData.prefab);
             var (attachPoints, leftWeaponAttachPoint, rightWeaponAttachPoint) = CollectAttachPoints(root);
             var rigTypeSet = new HashSet<AxieRigType>();
+            var lodLevel = instantiationParams.lodLevel;
 
             if (
                 root.GetComponentInChildren<SkinnedMeshRenderer>() is { } rootRenderer &&
@@ -61,6 +62,7 @@ namespace SkyMavis.AxieMixer3D
                     continue;
                 }
 
+                var layerOverrideIndex = instantiationParams.partLayerOverrides.FindIndex(x => x.type == partDescriptor.type);
                 rigTypeSet.Clear();
 
                 foreach (var rigData in partData.rigs)
@@ -86,6 +88,11 @@ namespace SkyMavis.AxieMixer3D
                     var partMeshRenderer = part.GetComponent<MeshRenderer>();
                     partMeshRenderer.sharedMaterial = prefabRenderer.sharedMaterial;
 
+                    if (layerOverrideIndex >= 0)
+                    {
+                        part.layer = instantiationParams.partLayerOverrides[layerOverrideIndex].layer;
+                    }
+
                     var addons = GetAddons(partDescriptor, rigData.type);
 
                     if (
@@ -108,7 +115,7 @@ namespace SkyMavis.AxieMixer3D
 
             Colorize();
 
-            return new(root, rightWeaponAttachPoint, leftWeaponAttachPoint, bodyData);
+            return new(instantiationParams, root, rightWeaponAttachPoint, leftWeaponAttachPoint, bodyData);
 
             (Dictionary<string, Material> materials, List<GameObject> prefabs) GetAddons(AxiePartDescriptor partDescriptor, AxieRigType rigType)
             {
@@ -154,13 +161,24 @@ namespace SkyMavis.AxieMixer3D
                 ParseColor(ref primaryColor, colorVariant.primary1);
                 ParseColor(ref secondaryColor, colorVariant.primary2);
 
-                var materialProperties = new MaterialPropertyBlock();
-                materialProperties.SetColor("_PrimaryColor", primaryColor);
-                materialProperties.SetColor("_SecondaryColor", secondaryColor);
-
-                foreach (var renderer in root.GetComponentsInChildren<Renderer>())
+                if (instantiationParams.useMaterialPropertyBlocks)
                 {
-                    renderer.SetPropertyBlock(materialProperties);
+                    var materialProperties = new MaterialPropertyBlock();
+                    materialProperties.SetColor("_PrimaryColor", primaryColor);
+                    materialProperties.SetColor("_SecondaryColor", secondaryColor);
+
+                    foreach (var renderer in root.GetComponentsInChildren<Renderer>())
+                    {
+                        renderer.SetPropertyBlock(materialProperties);
+                    }
+                }
+                else
+                {
+                    foreach (var renderer in root.GetComponentsInChildren<Renderer>())
+                    {
+                        renderer.material.SetColor("_PrimaryColor", primaryColor);
+                        renderer.material.SetColor("_SecondaryColor", secondaryColor);
+                    }
                 }
             }
 
