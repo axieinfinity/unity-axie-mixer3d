@@ -8,6 +8,7 @@ namespace SkyMavis.AxieMixer3D
 {
     public class AxieCharacter3D : System.IDisposable
     {
+        public AxieInstantiationParams InstantiationParams { get; }
         public GameObject Root { get; }
         [System.Obsolete("Animations is deprecated. Please use GetLiteAnimationClip(animationName) or GetFullAnimationClip(animationName) instead.", true)]
         public ReadOnlyDictionary<string, List<(Transform rootBone, AnimationClip clip)>> Animations { get; }
@@ -17,17 +18,19 @@ namespace SkyMavis.AxieMixer3D
 
         readonly AxieBodyData _bodyData;
 
-        public static AxieCharacter3D FromDescriptor(AxieDescriptor axieDescriptor, int lodLevel = 0) => AxieFactory.Default.CreateCharacter(axieDescriptor, lodLevel);
+        public static AxieCharacter3D FromDescriptor(AxieDescriptor axieDescriptor, AxieInstantiationParams instantiationParams = null) => AxieFactory.Default.CreateCharacter(axieDescriptor, instantiationParams);
 
-        public static AxieCharacter3D FromGenes(string genes, int lodLevel = 0) => FromDescriptor(AxieDescriptor.FromGenes(genes), lodLevel);
+        public static AxieCharacter3D FromGenes(string genes, AxieInstantiationParams instantiationParams = null) => FromDescriptor(AxieDescriptor.FromGenes(genes), instantiationParams);
 
         internal AxieCharacter3D(
+            AxieInstantiationParams instantiationParams,
             GameObject root,
             Transform rightWeaponAttachPoint,
             Transform leftWeaponAttachPoint,
             AxieBodyData bodyData
         )
         {
+            InstantiationParams = instantiationParams;
             Root = root;
             RightWeaponAttachPoint = rightWeaponAttachPoint;
             LeftWeaponAttachPoint = leftWeaponAttachPoint;
@@ -37,6 +40,14 @@ namespace SkyMavis.AxieMixer3D
 
         public void Dispose()
         {
+            if (!InstantiationParams.useMaterialPropertyBlocks)
+            {
+                foreach (var renderer in Root.GetComponentsInChildren<Renderer>())
+                {
+                    Object.Destroy(renderer.sharedMaterial);
+                }
+            }
+
             if (Root != null) Object.Destroy(Root);
         }
 
