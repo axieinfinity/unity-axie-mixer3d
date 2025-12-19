@@ -42,20 +42,19 @@ namespace SkyMavis.AxieMixer3D
             if (bodySkin == 1)
             {
                 desc.colorVariant = 48;
-                // desc.body = "Frosty";
-                desc.body = AxieBodyType.Normal;
+                desc.body = AxieBodyType.Frosty;
             }
             else
             {
                 desc.colorVariant = GetColorVariant(GetAxieClass(mainClass), primaryColor0);
                 desc.body = bodyDetail0 switch
                 {
-                    // 1 => "Spiky",
+                    1 => AxieBodyType.Spiky,
                     2 => AxieBodyType.Fuzzy,
-                    // 3 => "Curly",
-                    // 256 => "Sumo",
-                    // 257 => "Wetdog",
-                    // 384 => "Bigyak",
+                    3 => AxieBodyType.Curly,
+                    256 => AxieBodyType.Sumo,
+                    257 => AxieBodyType.Wetdog,
+                    384 => AxieBodyType.Bigyak,
                     _ => AxieBodyType.Normal,
                 };
             }
@@ -82,10 +81,10 @@ namespace SkyMavis.AxieMixer3D
                 desc.parts.Add(new()
                 {
                     type = partType,
-                    skin = partSkin == 1 && partValue0 == 2 ? 1 : 0,
+                    skin = partSkin,
                     @class = partClass,
                     variant = partValue0,
-                    level = 1,
+                    level = partStage + 1,
                 });
             }
 

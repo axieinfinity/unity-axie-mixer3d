@@ -17,9 +17,9 @@ namespace SkyMavis.AxieMixer3D
 
         readonly AxieBodyData _bodyData;
 
-        public static AxieCharacter3D FromDescriptor(AxieDescriptor axieDescriptor) => AxieFactory.Default.CreateCharacter(axieDescriptor);
+        public static AxieCharacter3D FromDescriptor(AxieDescriptor axieDescriptor, int lodLevel = 0) => AxieFactory.Default.CreateCharacter(axieDescriptor, lodLevel);
 
-        public static AxieCharacter3D FromGenes(string genes) => AxieFactory.Default.CreateCharacter(AxieDescriptor.FromGenes(genes));
+        public static AxieCharacter3D FromGenes(string genes, int lodLevel = 0) => FromDescriptor(AxieDescriptor.FromGenes(genes), lodLevel);
 
         internal AxieCharacter3D(
             GameObject root,

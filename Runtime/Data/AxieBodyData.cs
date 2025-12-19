@@ -8,6 +8,7 @@ namespace SkyMavis.AxieMixer3D
     internal class AxieBodyData : ScriptableObject
     {
         public GameObject prefab;
+        public List<Mesh> lodMeshes = new();
         public List<AxieAnimationData> liteAnimations = new();
         public List<AxieAnimationData> fullAnimations = new();
 

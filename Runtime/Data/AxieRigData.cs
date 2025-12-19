@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace SkyMavis.AxieMixer3D
@@ -7,5 +8,6 @@ namespace SkyMavis.AxieMixer3D
     {
         public AxieRigType type;
         public GameObject prefab;
+        public List<Mesh> lodMeshes = new();
     }
 }
