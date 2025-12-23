@@ -7,8 +7,11 @@ This package provides the core functionality for assembling 3D Axie characters b
 - [Installation](#installation)
 - [Usage](#usage)
   - [Basic Character Creation](#basic-character-creation)
+  - [Advanced Character Creation](#advanced-character-creation)
   - [Working with Animations](#working-with-animations)
   - [Weapon Attachment Points](#weapon-attachment-points)
+- [Visual Effects](#visual-effects)
+  - [Outline Rendering](#outline-rendering)
 - [Components](#components)
   - [AxieCharacter3D](#axiecharacter3d)
   - [AxieCharacter3DBehaviour](#axiecharacter3dbehaviour)
@@ -16,8 +19,10 @@ This package provides the core functionality for assembling 3D Axie characters b
   - [Manual Avatar Rendering](#manual-avatar-rendering)
   - [Automatic Avatar Rendering](#automatic-avatar-rendering)
   - [Avatar Render Parameters](#avatar-render-parameters)
-  - [Editor Tools](#editor-tools)
   - [Important Notes](#important-notes)
+- [Editor Tools](#editor-tools)
+  - [Axie Avatar Preview](#axie-avatar-preview)
+  - [Axie Genes Decoder](#axie-genes-decoder)
 - [Sample Projects](#sample-projects)
 
 ## Installation
@@ -52,6 +57,92 @@ GameObject character = axie.Root;
 // Clean up when done
 axie.Dispose();
 ```
+
+### Advanced Character Creation
+
+For more control over character generation, use [`AxieInstantiationParams`](Runtime/AxieInstantiationParams.cs:8) to configure LOD (Level of Detail), material handling, and rendering layers.
+
+#### Configuring Instantiation Parameters
+
+```csharp
+using SkyMavis.AxieMixer3D;
+
+// Create with custom instantiation parameters
+var instantiationParams = new AxieInstantiationParams
+{
+    lodLevel = 1,  // 0 = highest quality, higher values = lower detail
+    useMaterialPropertyBlocks = false,  // See performance notes below
+    partLayerOverrides = new List<AxieInstantiationParams.PartLayerOverride>()
+};
+
+var axie = AxieCharacter3D.FromGenes("0x123", instantiationParams);
+```
+
+#### LOD (Level of Detail) Control
+
+Control the mesh detail level for performance optimization:
+
+```csharp
+// High quality for close-up views
+var highQuality = new AxieInstantiationParams { lodLevel = 0 };
+var detailedAxie = AxieCharacter3D.FromGenes("0x123", highQuality);
+
+// Lower quality for distant characters or mobile platforms
+var lowQuality = new AxieInstantiationParams { lodLevel = 2 };
+var distantAxie = AxieCharacter3D.FromGenes("0x456", lowQuality);
+```
+
+#### Material Property Blocks
+
+Material Property Blocks allow dynamic per-instance colorization without duplicating materials:
+
+```csharp
+var params = new AxieInstantiationParams
+{
+    useMaterialPropertyBlocks = true
+};
+
+var axie = AxieCharacter3D.FromGenes("0x123", params);
+```
+
+**⚠️ Important Performance Consideration:**
+
+While Material Property Blocks reduce memory usage by avoiding material duplication, they **break SRP (Scriptable Render Pipeline) batching**, which can reduce rendering performance. Use this feature with caution and only after profiling your specific use case.
+
+**When to use Material Property Blocks:**
+- ✅ Many characters with frequently changing colors
+- ✅ Memory-constrained platforms where material duplication is problematic
+- ❌ Static scenes with many identical characters (SRP batching is more efficient)
+- ❌ When maximum rendering performance is critical
+
+#### Part Layer Overrides
+
+Customize the rendering layer for specific body parts, useful for selective rendering or outline effects:
+
+```csharp
+var params = new AxieInstantiationParams
+{
+    partLayerOverrides = new List<AxieInstantiationParams.PartLayerOverride>
+    {
+        new() { type = AxiePartType.Horn, layer = LayerMask.NameToLayer("Outline") },
+        new() { type = AxiePartType.Back, layer = LayerMask.NameToLayer("Outline") },
+        new() { type = AxiePartType.Tail, layer = LayerMask.NameToLayer("Outline") }
+    }
+};
+
+var axie = AxieCharacter3D.FromGenes("0x123", params);
+
+// Now certain parts render on the "Outline" layer
+// Useful for selective post-processing or rendering effects
+```
+
+**Available Part Types:**
+- `AxiePartType.Back`
+- `AxiePartType.Ear`
+- `AxiePartType.Eye`
+- `AxiePartType.Horn`
+- `AxiePartType.Mouth`
+- `AxiePartType.Tail`
 
 ### Working with Animations
 
@@ -179,6 +270,142 @@ var sword = Instantiate(swordPrefab, rightHand);
 var shield = Instantiate(shieldPrefab, leftHand);
 ```
 
+## Visual Effects
+
+### Outline Rendering
+
+The package provides two approaches for rendering outlines around Axie characters, each optimized for different rendering pipelines and use cases.
+
+#### Choosing the Right Approach
+
+| Feature | Draw Objects | Post-Process |
+|---------|-------------|--------------|
+| **Best Rendering Path** | Forward Rendering | Deferred Rendering |
+| **Setup Complexity** | Simple | Moderate |
+| **Additional Overhead** | Minimal | Extra passes in Forward Rendering |
+| **Visual Quality** | Simple, clean outline | Sophisticated edge detection |
+| **Data Requirements** | None | Depth & Normal buffers |
+| **Use Case** | Per-object selection highlights | Screen-wide stylized effects |
+
+#### Approach A: Draw Objects Renderer Feature
+
+**✅ Recommended for Forward Rendering**
+
+This approach uses URP's built-in "Draw Objects" Renderer Feature to render objects a second time with an outline material. It works directly with object geometry and has minimal performance overhead.
+
+**Setup:**
+
+1. **Configure Rendering Layers (one-time setup):**
+   - Open your **Universal Render Pipeline Asset**
+   - Add "Outline" to **Rendering → Layers** list (or use an existing layer)
+
+2. **Add Draw Objects Renderer Feature:**
+   - Open your **URP Renderer** asset
+   - Click **Add Renderer Feature → Render Objects**
+   - Configure:
+     - **Name:** `Axie Outline`
+     - **Event:** `AfterRenderingTransparents`
+     - **Layer Mask:** Select your outline layer
+     - **Override Material:** Assign [`Outline_RenderObjects`](Resources/AxieMixer3D/Materials/Outline/Outline_RenderObjects.mat)
+
+3. **Assign Parts to Outline Layer:**
+
+```csharp
+using SkyMavis.AxieMixer3D;
+
+// Option 1: Override parts at instantiation
+var params = new AxieInstantiationParams
+{
+    partLayerOverrides = new List<AxieInstantiationParams.PartLayerOverride>
+    {
+        new() { type = AxiePartType.Horn, layer = LayerMask.NameToLayer("Outline") },
+        new() { type = AxiePartType.Back, layer = LayerMask.NameToLayer("Outline") }
+    }
+};
+
+var axie = AxieCharacter3D.FromGenes("0x123", params);
+
+// Option 2: Assign all renderers to outline layer at runtime
+foreach (var renderer in axie.Root.GetComponentsInChildren<Renderer>())
+{
+    renderer.gameObject.layer = LayerMask.NameToLayer("Outline");
+}
+```
+
+**Customization:**
+
+Adjust outline thickness by modifying the [`Outline_RenderObjects`](Resources/AxieMixer3D/Materials/Outline/Outline_RenderObjects.mat) material:
+- **_Thickness:** `0.02` (default) - Increase for thicker outlines
+
+#### Approach B: Screen-based Post-Process Renderer Feature
+
+**✅ Recommended for Deferred Rendering**
+
+This approach uses screen-space edge detection based on depth and normal discontinuities. It produces sophisticated, stylized outlines across the entire screen.
+
+**⚠️ Caution for Forward Rendering:**
+
+When using this approach in **Forward Rendering**, Unity must generate depth and normal data through additional draw calls, introducing extra overhead. For Forward rendering projects, consider using the **Draw Objects** approach instead unless you specifically need screen-space edge detection.
+
+**Setup:**
+
+1. **Add the Renderer Feature:**
+   - Open your **URP Renderer** asset
+   - Click **Add Renderer Feature → Outline Post Process Renderer Feature**
+
+2. **Configure Settings:**
+
+```
+Outline Appearance:
+  - Outline Color: Black (or your preferred color)
+  - Thickness: 1-10 (higher = thicker outlines)
+
+Depth Settings:
+  - Depth Scale: 50.0 (sensitivity to depth edges)
+  - Depth Bias: 50.0 (threshold for edge detection)
+
+Normal Settings:
+  - Normal Scale: 0.7 (sensitivity to surface angle changes)
+  - Normal Bias: 10.0 (threshold for normal discontinuities)
+
+Render Settings:
+  - Render Pass Event: After Rendering Post Processing
+```
+
+3. **Using in Code:**
+
+```csharp
+using SkyMavis.AxieMixer3D;
+
+// No special code needed - the effect applies screen-wide
+var axie = AxieCharacter3D.FromGenes("0x123");
+
+// The post-process effect will detect edges automatically
+// based on depth and normal discontinuities
+```
+
+**Parameter Tuning:**
+
+- **Thickness:** Overall outline width (1-10)
+- **Depth Scale/Bias:** Control edge detection at depth discontinuities
+  - Higher Scale = more sensitive to depth changes
+  - Higher Bias = only detect larger depth differences
+- **Normal Scale/Bias:** Control edge detection at surface angle changes
+  - Higher Scale = more sensitive to surface angles
+  - Higher Bias = only detect sharper angles
+
+**Performance Comparison:**
+
+| Rendering Path | Draw Objects | Post-Process |
+|---------------|-------------|--------------|
+| **Forward** | ✅ Minimal overhead | ⚠️ Additional depth/normal passes |
+| **Deferred** | ✅ Minimal overhead | ✅ Reuses existing buffers |
+
+**Typical Use Cases:**
+
+- **Draw Objects:** Character selection, UI highlights, per-object emphasis
+- **Post-Process:** Stylized rendering, toon shading, artistic effects
+
 ## Components
 
 ### `AxieCharacter3D`
@@ -189,10 +416,11 @@ The core class that represents a fully assembled 3D Axie character. It provides 
 
 | Property                                                  | Description                                       | Type                         |
 | --------------------------------------------------------- | ------------------------------------------------- | ---------------------------- |
-| [`Root`](Runtime/AxieCharacter3D.cs:11)                   | The generated character GameObject                | `GameObject`                 |
-| [`RightWeaponAttachPoint`](Runtime/AxieCharacter3D.cs:14) | Transform for right-hand weapon attachments       | `Transform`                  |
-| [`LeftWeaponAttachPoint`](Runtime/AxieCharacter3D.cs:15)  | Transform for left-hand weapon attachments        | `Transform`                  |
-| [`AnimationNames`](Runtime/AxieCharacter3D.cs:16)         | Read-only collection of available animation names | `ReadOnlyCollection<string>` |
+| [`InstantiationParams`](Runtime/AxieCharacter3D.cs:11)    | Configuration used to create this character       | `AxieInstantiationParams`    |
+| [`Root`](Runtime/AxieCharacter3D.cs:12)                   | The generated character GameObject                | `GameObject`                 |
+| [`RightWeaponAttachPoint`](Runtime/AxieCharacter3D.cs:15) | Transform for right-hand weapon attachments       | `Transform`                  |
+| [`LeftWeaponAttachPoint`](Runtime/AxieCharacter3D.cs:16)  | Transform for left-hand weapon attachments        | `Transform`                  |
+| [`AnimationNames`](Runtime/AxieCharacter3D.cs:17)         | Read-only collection of available animation names | `ReadOnlyCollection<string>` |
 
 #### Methods
 
@@ -211,6 +439,11 @@ var axie = AxieCharacter3D.FromDescriptor(descriptor);
 
 // Create from gene string
 var axie = AxieCharacter3D.FromGenes("0x123");
+
+// Create with custom instantiation parameters
+var params = new AxieInstantiationParams { lodLevel = 1 };
+var axie = AxieCharacter3D.FromDescriptor(descriptor, params);
+var axie = AxieCharacter3D.FromGenes("0x123", params);
 ```
 
 ### `AxieCharacter3DBehaviour`
@@ -331,20 +564,85 @@ axieBehaviour.avatarRenderParams = new AxieAvatarRenderParams[]
 | [`viewCenter`](Runtime/AxieAvatarRenderParams.cs:34)    | Orthographic camera focal point in model space               | (0, 0.75, 0) |
 | [`viewDirection`](Runtime/AxieAvatarRenderParams.cs:39) | Camera viewing direction in model space                      | (-1, -1, -1) |
 
-### Editor Tools
+### Important Notes
 
-Use the **Axie Avatar Preview** tool to experiment with rendering parameters:
+- **Play Mode Rendering**: When entering Play Mode, skip the first 3 frames before rendering avatars to ensure the graphics device is fully initialized.
+- **Memory Management**: Avatar textures are automatically cleaned up when using [`AxieCharacter3DBehaviour`](Runtime/AxieCharacter3DBehaviour.cs:6), but manual [`RenderTexture`](https://docs.unity3d.com/ScriptReference/RenderTexture.html) instances must be released manually.
+- **Performance**: Avatar rendering uses Unity's CommandBuffer system for efficient GPU-based rendering.
+
+## Editor Tools
+
+The package includes editor utilities to streamline development and debugging workflows.
+
+### Axie Avatar Preview
+
+Use the **Axie Avatar Preview** tool to experiment with avatar rendering parameters:
 
 1. Open **Tools → Axie Mixer 3D → Axie Avatar Preview**
 2. Select a GameObject with an [`AxieCharacter3DBehaviour`](Runtime/AxieCharacter3DBehaviour.cs:6) component
 3. Adjust render parameters in real-time
 4. Preview both live renders and cached avatars
 
-### Important Notes
+This tool is particularly useful for:
+- Finding optimal camera angles for avatars
+- Testing different model headings and view directions
+- Previewing cached vs. realtime rendering
 
-- **Play Mode Rendering**: When entering Play Mode, skip the first 3 frames before rendering avatars to ensure the graphics device is fully initialized.
-- **Memory Management**: Avatar textures are automatically cleaned up when using [`AxieCharacter3DBehaviour`](Runtime/AxieCharacter3DBehaviour.cs:6), but manual [`RenderTexture`](https://docs.unity3d.com/ScriptReference/RenderTexture.html) instances must be released manually.
-- **Performance**: Avatar rendering uses Unity's CommandBuffer system for efficient GPU-based rendering.
+### Axie Genes Decoder
+
+The **Axie Genes Decoder** helps you fetch and decode Axie genetic data for testing and development.
+
+**Access:** **Tools → Axie Mixer 3D → Axie Genes Decoder**
+
+#### Fetching Genes by Axie ID
+
+The tool can query real Axie data from the Axie Infinity GraphQL API:
+
+1. Open the Genes Decoder window
+2. Enter an Axie ID (e.g., `123456`)
+3. Click **Fetch**
+4. The tool downloads and automatically decodes the genes
+5. View the resulting [`AxieDescriptor`](Runtime/AxieDescriptor.cs) in the inspector
+
+```csharp
+// The GraphQL query fetches from: https://graphql-gateway.axieinfinity.com/graphql
+// Query: { axie (axieId: "123456") { id, genes, newGenes } }
+```
+
+#### Manual Gene Decoding
+
+You can also decode gene strings directly without fetching from the API:
+
+1. Paste a gene string in the **Genes** field (e.g., `0x...`)
+2. Click **Decode**
+3. View the decoded [`AxieDescriptor`](Runtime/AxieDescriptor.cs) structure
+
+The decoded descriptor shows:
+- **Body Type:** The Axie's class (Aquatic, Beast, Bird, Bug, Plant, Reptile)
+- **Color Variant:** Index for primary/secondary colors
+- **Parts:** All 6 body parts with their attributes:
+  - Class and variant
+  - Skin ID and level
+  - Mystic status
+
+#### Use Cases
+
+- **Testing with Real Data:** Fetch actual Axie configurations for realistic testing
+- **Gene Analysis:** Understand how gene strings map to body parts and traits
+- **Debugging:** Verify gene decoding logic and character generation
+- **Development:** Quickly prototype with existing Axie designs
+- **Learning:** Explore how different genes create visual variations
+
+**Code Equivalent:**
+
+```csharp
+// The decoder uses the same underlying method you can call in code:
+var descriptor = AxieDescriptor.FromGenes("0x...");
+var axie = AxieCharacter3D.FromDescriptor(descriptor);
+
+// Or directly from genes:
+var axie = AxieCharacter3D.FromGenes("0x...");
+```
 
 ## Sample Projects
 
