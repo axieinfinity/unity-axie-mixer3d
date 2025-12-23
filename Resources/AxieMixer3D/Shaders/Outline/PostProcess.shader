@@ -1,4 +1,4 @@
-Shader "Axie Mixer 3D/Outline PostProcess URP"
+Shader "Axie Mixer 3D/Outline/PostProcess"
 {
     Properties
     {
@@ -31,17 +31,13 @@ Shader "Axie Mixer 3D/Outline PostProcess URP"
             struct Attributes
             {
                 float4 positionOS : POSITION;
-                float2 uv : TEXCOORD0;
             };
 
             struct Varyings
             {
                 float4 positionCS : SV_POSITION;
                 float2 uv : TEXCOORD0;
-                float3 viewSpaceDir : TEXCOORD1;
             };
-
-            float4 _MainTex_TexelSize;
 
             // Outline parameters
             float _Thickness;
@@ -55,12 +51,7 @@ Shader "Axie Mixer 3D/Outline PostProcess URP"
             {
                 Varyings output;
                 output.positionCS = mul(UNITY_MATRIX_MVP, input.positionOS);
-                output.uv = input.uv;
-
-#if UNITY_UV_STARTS_AT_TOP
-                if (_MainTex_TexelSize.y < 0) output.uv.y = 1.0 - output.uv.y;
-#endif
-
+                output.uv = ComputeScreenPos(output.positionCS).xy;
                 return output;
             }
 
@@ -98,13 +89,17 @@ Shader "Axie Mixer 3D/Outline PostProcess URP"
                 float3 nb = SampleSceneNormals(adjacentUVs[1]);
                 float3 nr = SampleSceneNormals(adjacentUVs[2]);
                 float3 nl = SampleSceneNormals(adjacentUVs[3]);
-                float3 n = abs(nt - nc) + abs(nb - nc) + abs(nr - nc) + abs(nl - nc);
-                return pow((n.x + n.y + n.z) * _NormalScale, _NormalBias);
+                nt -= nc;
+                nb -= nc;
+                nr -= nc;
+                nl -= nc;
+                float n = sqrt(dot(nt, nt) + dot(nb, nb) + dot(nr, nr) + dot(nl, nl));
+                return pow(n * _NormalScale, _NormalBias);
             }
 
             float4 Frag(Varyings input) : SV_Target
             {
-                float3 offset = float3(_MainTex_TexelSize.xy, 0.0) * _Thickness;
+                float3 offset = float3(_Thickness / _ScreenParams.xy, 0.0) * _Thickness;
                 float4x2 adjacentUVs = float4x2(
                     input.uv + offset.xz,
                     input.uv - offset.xz,
