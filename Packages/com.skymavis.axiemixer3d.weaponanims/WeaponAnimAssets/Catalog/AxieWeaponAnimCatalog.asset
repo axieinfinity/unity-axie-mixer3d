@@ -1,0 +1,1381 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daa47941ea4df4f5d99e52a4f8f56258, type: 3}
+  m_Name: AxieWeaponAnimCatalog
+  m_EditorClassIdentifier: 
+  bodies:
+  - body: 0
+    animations:
+    - name: AttackCombo
+      clip: {fileID: 7400000, guid: f321f5f006cc51049b2cecc37992fb96, type: 2}
+    - name: AttackHead
+      clip: {fileID: 7400000, guid: 8a211ee1a500c3942b1d2e852b87acad, type: 2}
+    - name: AttackRange
+      clip: {fileID: 7400000, guid: 9675defe9c2c46d44b904fe6be629c3a, type: 2}
+    - name: AxeAttack
+      clip: {fileID: 7400000, guid: b06728a67a349714b97b2d55a3873d9d, type: 2}
+    - name: AxeIdle
+      clip: {fileID: 7400000, guid: afbcd400edb7aae43857c8774f981bcf, type: 2}
+    - name: AxeRun
+      clip: {fileID: 7400000, guid: e9db2feddf9629047a74d5c8cd907d5d, type: 2}
+    - name: AxeSkill
+      clip: {fileID: 7400000, guid: d8cc9b0c70fdaab43a90b11505c4320e, type: 2}
+    - name: AxeWalk
+      clip: {fileID: 7400000, guid: e41e720c0a954c64a8412a1409567a09, type: 2}
+    - name: BowAttack
+      clip: {fileID: 7400000, guid: 5f11c50b6205b8444aca0cf3787df8bf, type: 2}
+    - name: BowIdle
+      clip: {fileID: 7400000, guid: 9a3475a35437021488a3dd0401527eff, type: 2}
+    - name: BowRun
+      clip: {fileID: 7400000, guid: 786da27b1abb5d045b301ef41aeeb19c, type: 2}
+    - name: BowSkill
+      clip: {fileID: 7400000, guid: 642a7a4ad7ed0684aaa588ae2e35250f, type: 2}
+    - name: BowWalk
+      clip: {fileID: 7400000, guid: 83d6dbc5a8969ea44a22efeb150bd25c, type: 2}
+    - name: BrushAttack
+      clip: {fileID: 7400000, guid: e86e3b90711b5fc4889eee5c621d02f1, type: 2}
+    - name: BrushIdle
+      clip: {fileID: 7400000, guid: 7459132ead0704d44984fc04d8bd29a2, type: 2}
+    - name: BrushRun
+      clip: {fileID: 7400000, guid: 1aabb0f349edcbe48b36567dafe54c7b, type: 2}
+    - name: BrushWalk
+      clip: {fileID: 7400000, guid: b576c434fe85b2f419ba9e49ccd64bc7, type: 2}
+    - name: CannonAttack
+      clip: {fileID: 7400000, guid: 3a51d8b4acf71fc47aaa3d10e44b6dd7, type: 2}
+    - name: CannonIdle
+      clip: {fileID: 7400000, guid: d9545d61b2eb5ee4aa7c71b757c910c6, type: 2}
+    - name: CannonRun
+      clip: {fileID: 7400000, guid: 4b843e75fa4b3664b831b25d2082f4d5, type: 2}
+    - name: CannonSkill
+      clip: {fileID: 7400000, guid: b381e96b6e9ce8947b2d22101da13799, type: 2}
+    - name: CannonWalk
+      clip: {fileID: 7400000, guid: 3a41c9ef57d2c744e997280e36ef32f7, type: 2}
+    - name: CutTree
+      clip: {fileID: 7400000, guid: bf54ba9ed240547dca72baf6e31e7714, type: 2}
+    - name: DaggerAttack
+      clip: {fileID: 7400000, guid: b4552c3f8856e7a40a411edf116a2316, type: 2}
+    - name: DaggerIdle
+      clip: {fileID: 7400000, guid: d60e7e3d45209c8488626a0a177b7bd0, type: 2}
+    - name: DaggerRun
+      clip: {fileID: 7400000, guid: ff92f07ed0de6d94cb113b10583cfde4, type: 2}
+    - name: DaggerSkill
+      clip: {fileID: 7400000, guid: 84563cb413062e14c8d3463c419fd008, type: 2}
+    - name: DaggerWalk
+      clip: {fileID: 7400000, guid: 68aaf1a2dcd8cea4eb27621eb05e69e3, type: 2}
+    - name: FlagAttack
+      clip: {fileID: 7400000, guid: 92eb06eac4030e84ab049be1f2db7ff0, type: 2}
+    - name: FlagIdle
+      clip: {fileID: 7400000, guid: 93c1f37ff98e1e4449135ce06c9d700e, type: 2}
+    - name: FlagRun
+      clip: {fileID: 7400000, guid: ee9ba547ff58fe840a3b22b248259eb0, type: 2}
+    - name: FlagSkill
+      clip: {fileID: 7400000, guid: 9cf398cb748fc3a42a7445cfe089004a, type: 2}
+    - name: FlagWalk
+      clip: {fileID: 7400000, guid: 70da69e29b13b184592077c4222bb27a, type: 2}
+    - name: FluteAttack
+      clip: {fileID: 7400000, guid: 692f4b843e54df14e9f8a768eb702ac4, type: 2}
+    - name: FluteIdle
+      clip: {fileID: 7400000, guid: e4fcce838d4877e4b988b02fb30460f5, type: 2}
+    - name: FluteRun
+      clip: {fileID: 7400000, guid: 9d4bc244d50dd46458105f4502e5f5c6, type: 2}
+    - name: FluteSkill
+      clip: {fileID: 7400000, guid: 380133e025d14f145a040b590e10d876, type: 2}
+    - name: FluteWalk
+      clip: {fileID: 7400000, guid: aded18c230da36e4a89c03fe26021475, type: 2}
+    - name: GauntletAttack
+      clip: {fileID: 7400000, guid: 6e00837a6da078f48b6f757415c55e31, type: 2}
+    - name: GauntletIdle
+      clip: {fileID: 7400000, guid: 8a9441b0d96959649a99d9e1f79db7d3, type: 2}
+    - name: GauntletRun
+      clip: {fileID: 7400000, guid: b0ecd4dabb448ef44b16e707c71a7415, type: 2}
+    - name: GauntletSkill
+      clip: {fileID: 7400000, guid: 70ccad18487edf14b99cf91807e55901, type: 2}
+    - name: GauntletWalk
+      clip: {fileID: 7400000, guid: 86e1fa2896642964cb625fe73a9fc8a2, type: 2}
+    - name: HammerAttack
+      clip: {fileID: 7400000, guid: be72c269334e16442aa2f5cccdf67d77, type: 2}
+    - name: HammerIdle
+      clip: {fileID: 7400000, guid: 56b70de25e5dcf4408dbc833023e4028, type: 2}
+    - name: HammerRun
+      clip: {fileID: 7400000, guid: 0844473a6b8c6aa4da2a38a1101bf727, type: 2}
+    - name: HammerSkill
+      clip: {fileID: 7400000, guid: 171b8686ac0230a42809bdf59df58bf1, type: 2}
+    - name: HammerWalk
+      clip: {fileID: 7400000, guid: 470fa6880f5b03a46812a574e74eaf4f, type: 2}
+    - name: HitTree
+      clip: {fileID: 7400000, guid: 970ced63291fe436f98544a004cded9f, type: 2}
+    - name: LanternAttack
+      clip: {fileID: 7400000, guid: f8265f7b0a8268642bc4aa677f30ca69, type: 2}
+    - name: LanternIdle
+      clip: {fileID: 7400000, guid: d94b7c271ae47a44c9359727225e8a8d, type: 2}
+    - name: LanternRun
+      clip: {fileID: 7400000, guid: 1ad3d229cc25fa14ab9c93dc831e2586, type: 2}
+    - name: LanternSkill
+      clip: {fileID: 7400000, guid: 7999758e7afb0764d88ac75f77834ebe, type: 2}
+    - name: LanternWalk
+      clip: {fileID: 7400000, guid: eb3302f2535edc4409a1b4cf7178f1e1, type: 2}
+    - name: LootItem
+      clip: {fileID: 7400000, guid: 056a5e5310fd347048318b6a8e05385f, type: 2}
+    - name: MalaAttack
+      clip: {fileID: 7400000, guid: 916a96028ba697747951e95269a9edf3, type: 2}
+    - name: MalaIdle
+      clip: {fileID: 7400000, guid: deb56d84f296c5b4bbeea5d0121b2b5c, type: 2}
+    - name: MalaRun
+      clip: {fileID: 7400000, guid: f08dcee59ae163049afd5e2a58d5315d, type: 2}
+    - name: MalaSkill
+      clip: {fileID: 7400000, guid: a99234d96d08e0742a49459e89134725, type: 2}
+    - name: MalaWalk
+      clip: {fileID: 7400000, guid: a92696819b5986c47b9b28eafe6129c4, type: 2}
+    - name: PourWater
+      clip: {fileID: 7400000, guid: 55b39dd1eeeeb45aba6642859f0f884c, type: 2}
+    - name: Shoveling
+      clip: {fileID: 7400000, guid: 11235aa1b8c674e809721ff4a474069b, type: 2}
+    - name: SpearAttack
+      clip: {fileID: 7400000, guid: 9c19823bacbbb584f982fc4ae86a0ce9, type: 2}
+    - name: SpearIdle
+      clip: {fileID: 7400000, guid: 04062a20695b4b143b9af72bd6b2f413, type: 2}
+    - name: SpearRun
+      clip: {fileID: 7400000, guid: be9ab97e1d09bfe4aa101380f21b3b21, type: 2}
+    - name: SpearSkill
+      clip: {fileID: 7400000, guid: 7836dde6598d88442be8122014835379, type: 2}
+    - name: SpearWalk
+      clip: {fileID: 7400000, guid: 83b3259418fde964385ee820fc66ea9d, type: 2}
+    - name: StaffAttack
+      clip: {fileID: 7400000, guid: 734f4c3621fb6be428504fb1f8548d30, type: 2}
+    - name: StaffIdle
+      clip: {fileID: 7400000, guid: 371e5357745cc8946aad25ba9581f0fe, type: 2}
+    - name: StaffRun
+      clip: {fileID: 7400000, guid: 86caf95e785025b4793ac8639837b7f3, type: 2}
+    - name: StaffSkill
+      clip: {fileID: 7400000, guid: 5740a7b3812f30a4ea200f866aeadf71, type: 2}
+    - name: StaffWalk
+      clip: {fileID: 7400000, guid: f9e26742a776cd042a7a21219e331087, type: 2}
+    - name: StoneHarvest
+      clip: {fileID: 7400000, guid: c43a8a27b84e24397aabe193060fb679, type: 2}
+    - name: SwordAttack
+      clip: {fileID: 7400000, guid: 3ab0ab9e61affb042b38793850ac9786, type: 2}
+    - name: SwordIdle
+      clip: {fileID: 7400000, guid: 21552847dd1bc444aac3fb0f9099f7ec, type: 2}
+    - name: SwordRun
+      clip: {fileID: 7400000, guid: 6ee3f18f781ed8e4a8aa4bc1a701200f, type: 2}
+    - name: SwordSkill
+      clip: {fileID: 7400000, guid: c5911ceb90025be469e6c13886a301c4, type: 2}
+    - name: SwordWalk
+      clip: {fileID: 7400000, guid: 16db4d453bc5f1245a03867fdc5139aa, type: 2}
+    - name: TalismanAttack
+      clip: {fileID: 7400000, guid: fa7df5539f676a046923e617b6ea429e, type: 2}
+    - name: TalismanIdle
+      clip: {fileID: 7400000, guid: c16f3d44db4f53144a2f3d9f17fe2dfe, type: 2}
+    - name: TalismanRun
+      clip: {fileID: 7400000, guid: a6ed76883d7f48548be1082b21d6d6bb, type: 2}
+    - name: TalismanSkill
+      clip: {fileID: 7400000, guid: e716753a16b53be4fa26b15d523dec4d, type: 2}
+    - name: TalismanWalk
+      clip: {fileID: 7400000, guid: 307a2ed825dbbc84eb26979ccbcd3e34, type: 2}
+    - name: TomeAttack
+      clip: {fileID: 7400000, guid: 1f5f0a7d5873d2244b5ada6ab0a1e1fc, type: 2}
+    - name: TomeIdle
+      clip: {fileID: 7400000, guid: 71c46c2536503244ebb6a3a6e55491d7, type: 2}
+    - name: TomeRun
+      clip: {fileID: 7400000, guid: 52f74e86d3b6a2a4d8e8d73d9e9ffb87, type: 2}
+    - name: TomeSkill
+      clip: {fileID: 7400000, guid: 4ff80150433e91043b75017bfffe255d, type: 2}
+    - name: TomeWalk
+      clip: {fileID: 7400000, guid: dcc689359c20bb448847672e20026602, type: 2}
+    - name: WhipAttack
+      clip: {fileID: 7400000, guid: 73a89bf92b6ff404b89029e2ee033c0f, type: 2}
+    - name: WhipIdle
+      clip: {fileID: 7400000, guid: bb181f094c52d2e4a98475b65717ace5, type: 2}
+    - name: WhipRun
+      clip: {fileID: 7400000, guid: 2b194db7f90b6a34284e95525f90dba2, type: 2}
+    - name: WhipSkill
+      clip: {fileID: 7400000, guid: 579c7ead26dcd7e45a40622eff2561a8, type: 2}
+    - name: WhipWalk
+      clip: {fileID: 7400000, guid: 804cc0fb24587014a9ab772d455db470, type: 2}
+  - body: 1
+    animations:
+    - name: AxeAttack
+      clip: {fileID: 7400000, guid: 823247d24014f29409618ca58a113273, type: 2}
+    - name: AxeIdle
+      clip: {fileID: 7400000, guid: c89528227530ff54c803585da319529b, type: 2}
+    - name: AxeRun
+      clip: {fileID: 7400000, guid: 3b3db083e56972744834fb64ce3575d7, type: 2}
+    - name: AxeSkill
+      clip: {fileID: 7400000, guid: ff33abbedf5ddd24d9cdf7cd07dc2c8c, type: 2}
+    - name: AxeWalk
+      clip: {fileID: 7400000, guid: fc4180955d46bef4ba562367e7551fa5, type: 2}
+    - name: BowAttack
+      clip: {fileID: 7400000, guid: cf2f8d90c4ff85946b0b47a7055ca770, type: 2}
+    - name: BowIdle
+      clip: {fileID: 7400000, guid: ec444a3684919a6448895c58a370a23c, type: 2}
+    - name: BowRun
+      clip: {fileID: 7400000, guid: c8221e10860b07748a8d4db6c8942768, type: 2}
+    - name: BowSkill
+      clip: {fileID: 7400000, guid: 2e5827eede172f04d9d03eaf49877924, type: 2}
+    - name: BowWalk
+      clip: {fileID: 7400000, guid: 70f521b0e62fe87429506c346d16dfe0, type: 2}
+    - name: BrushAttack
+      clip: {fileID: 7400000, guid: 7fa7db79e6a1cbe49ba0d6806475cfce, type: 2}
+    - name: BrushIdle
+      clip: {fileID: 7400000, guid: 8ce841feb4413c2478c7ff7605a744c6, type: 2}
+    - name: BrushRun
+      clip: {fileID: 7400000, guid: 4b6705eff4ab4d14cb8410ca13482cf4, type: 2}
+    - name: BrushWalk
+      clip: {fileID: 7400000, guid: b633270a0b269294f87d44aa3c4946cb, type: 2}
+    - name: CannonAttack
+      clip: {fileID: 7400000, guid: 7ecdd18c3cdfa534bac9507477199214, type: 2}
+    - name: CannonIdle
+      clip: {fileID: 7400000, guid: b1867a1e6aeacef47ac76586a8aa10a6, type: 2}
+    - name: CannonRun
+      clip: {fileID: 7400000, guid: d1b0c5ec2d41ba34791de4276c4bd99e, type: 2}
+    - name: CannonSkill
+      clip: {fileID: 7400000, guid: dad00feea8037014693d3f44af02f7f0, type: 2}
+    - name: CannonWalk
+      clip: {fileID: 7400000, guid: 8848fbf03d1203345904603896ffec86, type: 2}
+    - name: CutTree
+      clip: {fileID: 7400000, guid: eb0d0a278999a4e669d3e0cf25361b98, type: 2}
+    - name: DaggerAttack
+      clip: {fileID: 7400000, guid: 4080cc21d1d1ee444b553162ba05414b, type: 2}
+    - name: DaggerIdle
+      clip: {fileID: 7400000, guid: 02bf5381ed7400d47b7f3e6b7870af2f, type: 2}
+    - name: DaggerRun
+      clip: {fileID: 7400000, guid: e5f4c691a67e65a4a96060909a23aa68, type: 2}
+    - name: DaggerSkill
+      clip: {fileID: 7400000, guid: 577c4cfcb9b44c9478c9b8b765d1ecc3, type: 2}
+    - name: DaggerWalk
+      clip: {fileID: 7400000, guid: a7a79bbda786a86428ff8695c7872c30, type: 2}
+    - name: FlagAttack
+      clip: {fileID: 7400000, guid: 5a189ca93f4b1be48aae7ed26283385a, type: 2}
+    - name: FlagIdle
+      clip: {fileID: 7400000, guid: 9162d6d511ce73e4883f780090fb173e, type: 2}
+    - name: FlagRun
+      clip: {fileID: 7400000, guid: f200f662a3d0d4f45bb4e6d0ac6741b3, type: 2}
+    - name: FlagSkill
+      clip: {fileID: 7400000, guid: 8c2652a2889575f4c991c01846122090, type: 2}
+    - name: FlagWalk
+      clip: {fileID: 7400000, guid: cecfdb7a84cf9b1419151c61a6dbee19, type: 2}
+    - name: FluteAttack
+      clip: {fileID: 7400000, guid: dfc2d067c483ef94790f99befffd2476, type: 2}
+    - name: FluteIdle
+      clip: {fileID: 7400000, guid: c1190563a9def084ea501b85321094af, type: 2}
+    - name: FluteRun
+      clip: {fileID: 7400000, guid: cdee3b2929fa26f4ea343525e35d55a9, type: 2}
+    - name: FluteSkill
+      clip: {fileID: 7400000, guid: 36ef67ed969de8c479ac166406da198c, type: 2}
+    - name: FluteWalk
+      clip: {fileID: 7400000, guid: d2f9cde3b1df6ac42b4e3b5f48e13c59, type: 2}
+    - name: GauntletAttack
+      clip: {fileID: 7400000, guid: 79a9b5d528dfb7e4fb922c08d7609728, type: 2}
+    - name: GauntletIdle
+      clip: {fileID: 7400000, guid: 78fe6341867b9fa478f3710435f8f855, type: 2}
+    - name: GauntletRun
+      clip: {fileID: 7400000, guid: 22847a9c955c6eb4d90e55ebc9a1f66a, type: 2}
+    - name: GauntletSkill
+      clip: {fileID: 7400000, guid: 634a69f17d40d4f4ba22a8d55d018da5, type: 2}
+    - name: GauntletWalk
+      clip: {fileID: 7400000, guid: 0589c8fad91444e4ba46cec3cb9578b0, type: 2}
+    - name: LanternAttack
+      clip: {fileID: 7400000, guid: de023b639ba2fb54daee396319dcf844, type: 2}
+    - name: LanternIdle
+      clip: {fileID: 7400000, guid: ba4bddaf1af866b4eae221bb1d56d331, type: 2}
+    - name: LanternRun
+      clip: {fileID: 7400000, guid: 2773ed4b109c207498eea6c1e8e117f5, type: 2}
+    - name: LanternSkill
+      clip: {fileID: 7400000, guid: 1943ddb4020fe2e4cbcf5287e15a00b2, type: 2}
+    - name: LanternWalk
+      clip: {fileID: 7400000, guid: f093c53884e0ce04d903f253407e2b43, type: 2}
+    - name: MalaAttack
+      clip: {fileID: 7400000, guid: b15b7b2d5a50dd241abc3b25b37119b2, type: 2}
+    - name: MalaIdle
+      clip: {fileID: 7400000, guid: d584767952277ff48b097db4324877c6, type: 2}
+    - name: MalaRun
+      clip: {fileID: 7400000, guid: b0ca537321d5e4040ba0df897d70134c, type: 2}
+    - name: MalaSkill
+      clip: {fileID: 7400000, guid: 6e396f8286767d542abebf74ede8b715, type: 2}
+    - name: MalaWalk
+      clip: {fileID: 7400000, guid: 3c070ccc79e0ef24ca0b659ef3e25126, type: 2}
+    - name: Shoveling
+      clip: {fileID: 7400000, guid: cbcd0107db4474595b8f81b6f3c900be, type: 2}
+    - name: SpearAttack
+      clip: {fileID: 7400000, guid: f2d55e8fa2f08744f8bffacde95b4c32, type: 2}
+    - name: SpearIdle
+      clip: {fileID: 7400000, guid: 5de15f63fe41e9d4883eae8ea87112e1, type: 2}
+    - name: SpearRun
+      clip: {fileID: 7400000, guid: aa04f6393ba92ef438d63d0583c925d2, type: 2}
+    - name: SpearSkill
+      clip: {fileID: 7400000, guid: 9270756aa349ed94e96428455b482f9e, type: 2}
+    - name: SpearWalk
+      clip: {fileID: 7400000, guid: 5557ee37f957d894ba22e9b18abfc4ba, type: 2}
+    - name: StaffAttack
+      clip: {fileID: 7400000, guid: 1401518c0ba31f14a9c29dfdb34df4ac, type: 2}
+    - name: StaffIdle
+      clip: {fileID: 7400000, guid: 264b2ea4e33cee94cb517d338ea5c4f9, type: 2}
+    - name: StaffRun
+      clip: {fileID: 7400000, guid: cd42774526203154bbc0baa2209e45c9, type: 2}
+    - name: StaffSkill
+      clip: {fileID: 7400000, guid: 217eadd3216b08e4dbf76754e25c591d, type: 2}
+    - name: StaffWalk
+      clip: {fileID: 7400000, guid: 1179c9a28a91a554da48bc1b7c6023a4, type: 2}
+    - name: StoneHarvest
+      clip: {fileID: 7400000, guid: 96094747d823c4fb2a8fd67860c7b793, type: 2}
+    - name: SwordAttack
+      clip: {fileID: 7400000, guid: 0f16e7bd05d5dd242afb5d9123f52d1b, type: 2}
+    - name: SwordIdle
+      clip: {fileID: 7400000, guid: bbd3dfb36c2324f4697587cdc89a2280, type: 2}
+    - name: SwordRun
+      clip: {fileID: 7400000, guid: 8663b5f92681b3d4b84347ac93e125ac, type: 2}
+    - name: SwordSkill
+      clip: {fileID: 7400000, guid: cac37f8b9b1943445a6a35f8643232cb, type: 2}
+    - name: SwordWalk
+      clip: {fileID: 7400000, guid: 92a1c6d29adcee74d8551f5fc7761c2e, type: 2}
+    - name: TalismanAttack
+      clip: {fileID: 7400000, guid: be6fd9529b51c6c4ea20a3a7e96af948, type: 2}
+    - name: TalismanIdle
+      clip: {fileID: 7400000, guid: 19d34fd75fa5db34dace6860bbb9d3fa, type: 2}
+    - name: TalismanRun
+      clip: {fileID: 7400000, guid: 04225e207444c8940a37f7642f83ffd7, type: 2}
+    - name: TalismanSkill
+      clip: {fileID: 7400000, guid: 5cab2e6f1bf734c40a98785e6a142f24, type: 2}
+    - name: TalismanWalk
+      clip: {fileID: 7400000, guid: 2a246efd296b5e545bb8d5d7d599a3b3, type: 2}
+    - name: TomeAttack
+      clip: {fileID: 7400000, guid: 3a0e5c79c8ae78d43b2821e38fd9cafb, type: 2}
+    - name: TomeIdle
+      clip: {fileID: 7400000, guid: ef6a06a373c63834f8c06671b2ecf1ad, type: 2}
+    - name: TomeRun
+      clip: {fileID: 7400000, guid: 7e60eb3676011214fba0dba07a3f766b, type: 2}
+    - name: TomeSkill
+      clip: {fileID: 7400000, guid: cfafc1378cdca514ab688bef964e38cb, type: 2}
+    - name: TomeWalk
+      clip: {fileID: 7400000, guid: aa1d987ccf4d7b34f8c9bbddf7b879a8, type: 2}
+    - name: WhipAttack
+      clip: {fileID: 7400000, guid: 42f09253b2e109b4993c76db8808f27a, type: 2}
+    - name: WhipIdle
+      clip: {fileID: 7400000, guid: d0b4cb449c65b384a88695f6be643113, type: 2}
+    - name: WhipRun
+      clip: {fileID: 7400000, guid: c1e6d0b180fbb5d429deb7ede56cb661, type: 2}
+    - name: WhipSkill
+      clip: {fileID: 7400000, guid: a15eb91ddd4073b49af440ed9c06e7b3, type: 2}
+    - name: WhipWalk
+      clip: {fileID: 7400000, guid: e28f0d1d70edd864782d75e6e1218354, type: 2}
+  - body: 2
+    animations:
+    - name: AxeAttack
+      clip: {fileID: 7400000, guid: f645fd52fb529a7478ee1b93aa30b873, type: 2}
+    - name: AxeIdle
+      clip: {fileID: 7400000, guid: a6c42d7ea565c774fa294729acd794d9, type: 2}
+    - name: AxeRun
+      clip: {fileID: 7400000, guid: e5f1fa22a826c4a4698b8da04cbdc616, type: 2}
+    - name: AxeSkill
+      clip: {fileID: 7400000, guid: 8ff51fc0aa3ef86488571ae2d453d438, type: 2}
+    - name: AxeWalk
+      clip: {fileID: 7400000, guid: 7defac586247892439a88c8928748391, type: 2}
+    - name: BowAttack
+      clip: {fileID: 7400000, guid: d893f710df05d534ab4daf718a4e84ec, type: 2}
+    - name: BowIdle
+      clip: {fileID: 7400000, guid: 2b1315b91812c064aa33a7ef09c0b8af, type: 2}
+    - name: BowRun
+      clip: {fileID: 7400000, guid: d4cbdc14828e5cd47813180deadc672d, type: 2}
+    - name: BowSkill
+      clip: {fileID: 7400000, guid: 638e88dbf7380984d8f4021ac3bd2176, type: 2}
+    - name: BowWalk
+      clip: {fileID: 7400000, guid: 8c18db7c0d3f57b4a82862a2a725f630, type: 2}
+    - name: BrushAttack
+      clip: {fileID: 7400000, guid: 21ac2ac6ed000ab40b0e5599f4639862, type: 2}
+    - name: BrushIdle
+      clip: {fileID: 7400000, guid: abbde3f5ff2df234e8b87b0788a4f69b, type: 2}
+    - name: BrushRun
+      clip: {fileID: 7400000, guid: 137ab57a61fc1054cacdc8f58afd9e91, type: 2}
+    - name: BrushWalk
+      clip: {fileID: 7400000, guid: 3d7c3d7b1daa4a849904c91a2d4a3b71, type: 2}
+    - name: CannonAttack
+      clip: {fileID: 7400000, guid: a7b75fc603fb18d4887a9c2e8a11ad6a, type: 2}
+    - name: CannonIdle
+      clip: {fileID: 7400000, guid: f5de61007cf68ea4296ca317ea8245b4, type: 2}
+    - name: CannonRun
+      clip: {fileID: 7400000, guid: 066d496059ef1ec41afe6e0d4989706a, type: 2}
+    - name: CannonSkill
+      clip: {fileID: 7400000, guid: d72f7b93460934c488e5966de89a3b3c, type: 2}
+    - name: CannonWalk
+      clip: {fileID: 7400000, guid: 56a93b83f6cae2246bc74d66a089e71f, type: 2}
+    - name: CutTree
+      clip: {fileID: 7400000, guid: d01cdb779b61246c3b435591806b9f4d, type: 2}
+    - name: DaggerAttack
+      clip: {fileID: 7400000, guid: 638410f48de1e2a4096d862ff1ed750c, type: 2}
+    - name: DaggerIdle
+      clip: {fileID: 7400000, guid: 79923b1212d56314c9a72aebfb6a2497, type: 2}
+    - name: DaggerRun
+      clip: {fileID: 7400000, guid: 3fa7c1abb43adbf4ba3af48dd6aa3a81, type: 2}
+    - name: DaggerSkill
+      clip: {fileID: 7400000, guid: e032411a9dacd754d8fc1810949d5e35, type: 2}
+    - name: DaggerWalk
+      clip: {fileID: 7400000, guid: 633933e690d33234b874cea5767f7fc0, type: 2}
+    - name: FlagAttack
+      clip: {fileID: 7400000, guid: 3686ae262604aad4086371c7edbdfb15, type: 2}
+    - name: FlagIdle
+      clip: {fileID: 7400000, guid: 74c1e375e420e8d4c9c743e2dcae497c, type: 2}
+    - name: FlagRun
+      clip: {fileID: 7400000, guid: 51a71b959f1bf9e48999ebf2f6cd0858, type: 2}
+    - name: FlagSkill
+      clip: {fileID: 7400000, guid: 6cf376d790664044fbc5d97b1ea8eaa3, type: 2}
+    - name: FlagWalk
+      clip: {fileID: 7400000, guid: 2984f02cc2e2c6b43a390b4a2fe543aa, type: 2}
+    - name: FluteAttack
+      clip: {fileID: 7400000, guid: 1919f72994f530a44acc925101b62b60, type: 2}
+    - name: FluteIdle
+      clip: {fileID: 7400000, guid: 1d7051c5b5b942b478a0a524b97b182c, type: 2}
+    - name: FluteRun
+      clip: {fileID: 7400000, guid: a5e9d65fc28939049a620f84e30ddcff, type: 2}
+    - name: FluteSkill
+      clip: {fileID: 7400000, guid: 44db723924b99b644b696cf4ae1cffe2, type: 2}
+    - name: FluteWalk
+      clip: {fileID: 7400000, guid: 986b40bf69abf3b4d8ce80126b3ead02, type: 2}
+    - name: GauntletAttack
+      clip: {fileID: 7400000, guid: 105bd287c55c44146b548912a60460d3, type: 2}
+    - name: GauntletIdle
+      clip: {fileID: 7400000, guid: 53ac3c5646a7a454ab1115844a4324dd, type: 2}
+    - name: GauntletRun
+      clip: {fileID: 7400000, guid: e67c582aed0584a4191f5b71ec98e016, type: 2}
+    - name: GauntletSkill
+      clip: {fileID: 7400000, guid: 9dbd76c69cf60e3478a125b3fc3ad44c, type: 2}
+    - name: GauntletWalk
+      clip: {fileID: 7400000, guid: 35d669ec8de4f5544b989a0c82702011, type: 2}
+    - name: HammerAttack
+      clip: {fileID: 7400000, guid: 4fe9fa7a66275994b8a7b8fe970bc438, type: 2}
+    - name: HammerIdle
+      clip: {fileID: 7400000, guid: 869af28297dc5c94cbcdd5cb889b4af1, type: 2}
+    - name: HammerRun
+      clip: {fileID: 7400000, guid: 2f21f9857f1679d4e979e08cc508bd58, type: 2}
+    - name: HammerSkill
+      clip: {fileID: 7400000, guid: 37b7dfb52ccbb374da20bfd74778db42, type: 2}
+    - name: HammerWalk
+      clip: {fileID: 7400000, guid: 54b72658f8635104dbda551b60c4e5d6, type: 2}
+    - name: LanternAttack
+      clip: {fileID: 7400000, guid: 25eede92aa3bc1242b29758388045b74, type: 2}
+    - name: LanternIdle
+      clip: {fileID: 7400000, guid: 07599ab083defd84faa6b10d27c1a222, type: 2}
+    - name: LanternRun
+      clip: {fileID: 7400000, guid: 00487e13a4f5a2a4faaefebf214568cb, type: 2}
+    - name: LanternSkill
+      clip: {fileID: 7400000, guid: 407f6f50ae02c5646a97b06846926402, type: 2}
+    - name: LanternWalk
+      clip: {fileID: 7400000, guid: 225f7de8d62ff72428a434e0569fb6e1, type: 2}
+    - name: MalaAttack
+      clip: {fileID: 7400000, guid: 81b925c68509f4c47ba8c4499ba092fe, type: 2}
+    - name: MalaIdle
+      clip: {fileID: 7400000, guid: 019f1465e6cc8d347ae73896fe77dff1, type: 2}
+    - name: MalaRun
+      clip: {fileID: 7400000, guid: 74303c19078ad5748993bf8c7f6bdbdc, type: 2}
+    - name: MalaSkill
+      clip: {fileID: 7400000, guid: c7280de0c1aeb3544a0309d6e0e1cf39, type: 2}
+    - name: MalaWalk
+      clip: {fileID: 7400000, guid: 425015f05a6c95549bd56f63375a17fb, type: 2}
+    - name: Shoveling
+      clip: {fileID: 7400000, guid: b46346aaa394b4c778db1cbe48b787da, type: 2}
+    - name: SpearAttack
+      clip: {fileID: 7400000, guid: 140ed50d28321394ba6d3e6ff396d914, type: 2}
+    - name: SpearIdle
+      clip: {fileID: 7400000, guid: 0f8609c52ed4aff4e8c3c0175506d8f0, type: 2}
+    - name: SpearRun
+      clip: {fileID: 7400000, guid: a83046c3f0d85aa43bd2b3a46903d2d5, type: 2}
+    - name: SpearSkill
+      clip: {fileID: 7400000, guid: f583a85b0f4cfde4bb97c6dacbd3bf5d, type: 2}
+    - name: SpearWalk
+      clip: {fileID: 7400000, guid: 52e93cea4a52f6440a9fb5c17842ca76, type: 2}
+    - name: StaffAttack
+      clip: {fileID: 7400000, guid: a0654b6ff1500094c90259de815f851f, type: 2}
+    - name: StaffIdle
+      clip: {fileID: 7400000, guid: d6410ad43d16c2a4f88d829cb752cf49, type: 2}
+    - name: StaffRun
+      clip: {fileID: 7400000, guid: c57e6a83efec1374bae7c2912c73639e, type: 2}
+    - name: StaffSkill
+      clip: {fileID: 7400000, guid: 78ada3bbc7945b14fbbe81968d794e71, type: 2}
+    - name: StaffWalk
+      clip: {fileID: 7400000, guid: 2ab30f10d768944468c2333b4b6f0ce0, type: 2}
+    - name: StoneHarvest
+      clip: {fileID: 7400000, guid: 356fadbec777247808eac1c8bad625af, type: 2}
+    - name: SwordAttack
+      clip: {fileID: 7400000, guid: 1dbb2efd25115b84dbe517fff7a371a9, type: 2}
+    - name: SwordIdle
+      clip: {fileID: 7400000, guid: c27671f6270d89b48a9835afff52bf15, type: 2}
+    - name: SwordRun
+      clip: {fileID: 7400000, guid: 8afe77ccc93ec7d45904cf7269d00afa, type: 2}
+    - name: SwordSkill
+      clip: {fileID: 7400000, guid: 2a73ab004240968448f62c2ad8f4d420, type: 2}
+    - name: SwordWalk
+      clip: {fileID: 7400000, guid: 5d1a59a0501016147a9a3514fc54ee84, type: 2}
+    - name: TalismanAttack
+      clip: {fileID: 7400000, guid: fb58678256affc5418deacd7ead8cdd1, type: 2}
+    - name: TalismanIdle
+      clip: {fileID: 7400000, guid: fc926dd9127fe1343ba53165ba03170e, type: 2}
+    - name: TalismanRun
+      clip: {fileID: 7400000, guid: efe3975878906dc44b62363ddc728713, type: 2}
+    - name: TalismanSkill
+      clip: {fileID: 7400000, guid: d1a64561a139ff54d8761a7f44621b06, type: 2}
+    - name: TalismanWalk
+      clip: {fileID: 7400000, guid: c0d5d706ce7ea494da96f978b511414e, type: 2}
+    - name: TomeAttack
+      clip: {fileID: 7400000, guid: 86a51e02b6ea7bf47bb548dfa11e6501, type: 2}
+    - name: TomeIdle
+      clip: {fileID: 7400000, guid: 0589461a5220f494b86dabe5fb8bf29b, type: 2}
+    - name: TomeRun
+      clip: {fileID: 7400000, guid: e0e4229a633cb7241aa4d23c476b95ad, type: 2}
+    - name: TomeSkill
+      clip: {fileID: 7400000, guid: eeb36c9b0289551459f0b2e598dcc331, type: 2}
+    - name: TomeWalk
+      clip: {fileID: 7400000, guid: 1ccb1b5a32f77f941ae3cd99628d9ba6, type: 2}
+    - name: WhipAttack
+      clip: {fileID: 7400000, guid: b6b49920ae9855949b9a541e07da684d, type: 2}
+    - name: WhipIdle
+      clip: {fileID: 7400000, guid: 2e3ff1a2dfc7fde4b981af88ecaadae8, type: 2}
+    - name: WhipRun
+      clip: {fileID: 7400000, guid: abead66ca3710b74c997444c8d233e15, type: 2}
+    - name: WhipSkill
+      clip: {fileID: 7400000, guid: 5988b7290c9ff9f48a14fc50e653907d, type: 2}
+    - name: WhipWalk
+      clip: {fileID: 7400000, guid: 1245657201c556d45b30d550508b6946, type: 2}
+  - body: 3
+    animations:
+    - name: AxeAttack
+      clip: {fileID: 7400000, guid: adb7606e3b50a6e41aae07e7022e4695, type: 2}
+    - name: AxeIdle
+      clip: {fileID: 7400000, guid: b45f8d74e2945b249b91b1f3756febd2, type: 2}
+    - name: AxeRun
+      clip: {fileID: 7400000, guid: 29f9848d41b55ff46a33135202740f2b, type: 2}
+    - name: AxeSkill
+      clip: {fileID: 7400000, guid: fa90c56673d20b8438770085ac9cc375, type: 2}
+    - name: AxeWalk
+      clip: {fileID: 7400000, guid: c1ac74f45b3e06a4b9b1ed1773895c6e, type: 2}
+    - name: BowAttack
+      clip: {fileID: 7400000, guid: 44a445089f97b9d45aeec379765e152e, type: 2}
+    - name: BowIdle
+      clip: {fileID: 7400000, guid: 29b1743fee5366240892b73b84d8e583, type: 2}
+    - name: BowRun
+      clip: {fileID: 7400000, guid: 2bb651c69b9befb45ab0b76950887b22, type: 2}
+    - name: BowSkill
+      clip: {fileID: 7400000, guid: 2a8124c0397da4748a18c1565d3057f8, type: 2}
+    - name: BowWalk
+      clip: {fileID: 7400000, guid: 8b865e01e75f6f54588ac9cea7aeda16, type: 2}
+    - name: BrushAttack
+      clip: {fileID: 7400000, guid: ba6390efe77caeb4ebee51c076e574ec, type: 2}
+    - name: BrushIdle
+      clip: {fileID: 7400000, guid: 12100f4d76b1ca04694bd7a6fcb2d86b, type: 2}
+    - name: BrushRun
+      clip: {fileID: 7400000, guid: 5dea43985d5d5774f86914f603f318cb, type: 2}
+    - name: BrushWalk
+      clip: {fileID: 7400000, guid: d1b1ce0df8c6a964ea82cf7e7c553983, type: 2}
+    - name: CannonAttack
+      clip: {fileID: 7400000, guid: a631b1a9afcd8664ab0c726731099dc6, type: 2}
+    - name: CannonIdle
+      clip: {fileID: 7400000, guid: c3582e878adb80040979c09c5295ce7e, type: 2}
+    - name: CannonRun
+      clip: {fileID: 7400000, guid: 9345356973d6e3b44874e2686d81d647, type: 2}
+    - name: CannonSkill
+      clip: {fileID: 7400000, guid: 4a58e33b17e1a4544a82946e41d2bb5f, type: 2}
+    - name: CannonWalk
+      clip: {fileID: 7400000, guid: dc27567f95130f34aa315f8d12b40de7, type: 2}
+    - name: CutTree
+      clip: {fileID: 7400000, guid: 39ee6d0026a214fb3a21073594f7e1d5, type: 2}
+    - name: DaggerAttack
+      clip: {fileID: 7400000, guid: 62c9bb59cbe34424fa0130df53d23e6b, type: 2}
+    - name: DaggerIdle
+      clip: {fileID: 7400000, guid: 160fb36f76a3e094983653897c49d6cb, type: 2}
+    - name: DaggerRun
+      clip: {fileID: 7400000, guid: 473aed699d3139c4fab0f77c21d5d37d, type: 2}
+    - name: DaggerSkill
+      clip: {fileID: 7400000, guid: 99a4c8084413926469f0dd11509dce24, type: 2}
+    - name: DaggerWalk
+      clip: {fileID: 7400000, guid: a6bfa32b4ffa90d489b6f9528cd3bb3c, type: 2}
+    - name: FlagAttack
+      clip: {fileID: 7400000, guid: 08ef91324b5942941a3436088a98d46b, type: 2}
+    - name: FlagIdle
+      clip: {fileID: 7400000, guid: e57c123b76d8b434e96db3daab6a9f10, type: 2}
+    - name: FlagRun
+      clip: {fileID: 7400000, guid: 9f3e273ddfb04944baa50b11a70ad8b9, type: 2}
+    - name: FlagSkill
+      clip: {fileID: 7400000, guid: 24b0850f518ab7e418b2a34bed19099f, type: 2}
+    - name: FlagWalk
+      clip: {fileID: 7400000, guid: f3c84c9f4dea17845abcddee8e765e54, type: 2}
+    - name: FluteAttack
+      clip: {fileID: 7400000, guid: 429822e03f19cd445816d09756ba906f, type: 2}
+    - name: FluteIdle
+      clip: {fileID: 7400000, guid: 6a25df6dd5419994cbfc300ab61dccf2, type: 2}
+    - name: FluteRun
+      clip: {fileID: 7400000, guid: c513a4ae4992e2446bbb92677ae737a3, type: 2}
+    - name: FluteSkill
+      clip: {fileID: 7400000, guid: 4fc08db61bdfb5648a047ccdac078037, type: 2}
+    - name: FluteWalk
+      clip: {fileID: 7400000, guid: c1a028fee70501a47ad751d616a4ff99, type: 2}
+    - name: GauntletAttack
+      clip: {fileID: 7400000, guid: a02879266b2e7d34a9935b553b4a7509, type: 2}
+    - name: GauntletIdle
+      clip: {fileID: 7400000, guid: 8e68220d1a045e44c8db4b63ef326557, type: 2}
+    - name: GauntletRun
+      clip: {fileID: 7400000, guid: 2fcef22bf0495734bbd31ba8fe75b3c1, type: 2}
+    - name: GauntletSkill
+      clip: {fileID: 7400000, guid: e017fdfdd51632c4989a1e3fa53addcd, type: 2}
+    - name: GauntletWalk
+      clip: {fileID: 7400000, guid: a762c01b42ece44479abedf1bd3acc63, type: 2}
+    - name: LanternAttack
+      clip: {fileID: 7400000, guid: 4163cab64b7e89244964d0e91912b7e5, type: 2}
+    - name: LanternIdle
+      clip: {fileID: 7400000, guid: 85eea914e5a870649b4e003d0c5a6607, type: 2}
+    - name: LanternRun
+      clip: {fileID: 7400000, guid: 49c35af6152a696468e956c89e9256c0, type: 2}
+    - name: LanternSkill
+      clip: {fileID: 7400000, guid: 9116686067e22c24895adb14bf8ae01a, type: 2}
+    - name: LanternWalk
+      clip: {fileID: 7400000, guid: 7ebca145f1fba214e88372d614c5d326, type: 2}
+    - name: MalaAttack
+      clip: {fileID: 7400000, guid: cf6a48e021cc7e0498c1f7bb03445ea1, type: 2}
+    - name: MalaIdle
+      clip: {fileID: 7400000, guid: 7a5dab37f177f554cb3f51311e8352e5, type: 2}
+    - name: MalaRun
+      clip: {fileID: 7400000, guid: 35f22846bd219224a9805961dabca113, type: 2}
+    - name: MalaSkill
+      clip: {fileID: 7400000, guid: 935a868ff23c5dc40a7185e1d719fc64, type: 2}
+    - name: MalaWalk
+      clip: {fileID: 7400000, guid: d190eb0c26d55ab4aac4b7df1a1ef7a1, type: 2}
+    - name: Shoveling
+      clip: {fileID: 7400000, guid: a2f9898e789c743699a9ff4fab1bb2a2, type: 2}
+    - name: SpearAttack
+      clip: {fileID: 7400000, guid: db334b151a7c3914ba5610cd2df32629, type: 2}
+    - name: SpearIdle
+      clip: {fileID: 7400000, guid: c6c060326ede19048b8ab4e097586e5f, type: 2}
+    - name: SpearRun
+      clip: {fileID: 7400000, guid: e45f604dfdc060d44999e466c8c5abd6, type: 2}
+    - name: SpearSkill
+      clip: {fileID: 7400000, guid: 8b4c05b4ba620594985a0cc5ed6f9c9e, type: 2}
+    - name: SpearWalk
+      clip: {fileID: 7400000, guid: fa40f2689aff9164998fb6fa74466eb0, type: 2}
+    - name: StaffAttack
+      clip: {fileID: 7400000, guid: 99e7906c27195c549a2dea0ff91b4466, type: 2}
+    - name: StaffIdle
+      clip: {fileID: 7400000, guid: adc3a78e8a7d1644696ac921ef74e728, type: 2}
+    - name: StaffRun
+      clip: {fileID: 7400000, guid: dcfc8a27665cdae46801560bc09c89dd, type: 2}
+    - name: StaffSkill
+      clip: {fileID: 7400000, guid: 91eb4cd1a02378442ac91eafaaaf6468, type: 2}
+    - name: StaffWalk
+      clip: {fileID: 7400000, guid: 8680250e91a177d419181c77e0e9b5bc, type: 2}
+    - name: StoneHarvest
+      clip: {fileID: 7400000, guid: b4d3f03af3c684b859a3fb161a5343a2, type: 2}
+    - name: SwordAttack
+      clip: {fileID: 7400000, guid: dc66c17b33bf9584e8543d9cf4b8a103, type: 2}
+    - name: SwordIdle
+      clip: {fileID: 7400000, guid: 2d4b9608fa9ede24ea0d571e32899ac8, type: 2}
+    - name: SwordRun
+      clip: {fileID: 7400000, guid: 32d065d2795c20745b5bf4ebd50240ba, type: 2}
+    - name: SwordSkill
+      clip: {fileID: 7400000, guid: fcc516a052f242d40832a09ba3837113, type: 2}
+    - name: SwordWalk
+      clip: {fileID: 7400000, guid: dc609f97458292c46b6a61447157451f, type: 2}
+    - name: TalismanAttack
+      clip: {fileID: 7400000, guid: a4ced2df3196ad14c9a030267113ff7b, type: 2}
+    - name: TalismanIdle
+      clip: {fileID: 7400000, guid: fa61b053f843ddc47aedeb1cabda47cf, type: 2}
+    - name: TalismanRun
+      clip: {fileID: 7400000, guid: 7ae44931d833b224e90a263136c36070, type: 2}
+    - name: TalismanSkill
+      clip: {fileID: 7400000, guid: d39d0abf376c85046ad92bc5cef7628c, type: 2}
+    - name: TalismanWalk
+      clip: {fileID: 7400000, guid: 63ff8cf260414ae4db60e884c1103cd4, type: 2}
+    - name: TomeAttack
+      clip: {fileID: 7400000, guid: 1172ce146d3a99046b18e679082f7b62, type: 2}
+    - name: TomeIdle
+      clip: {fileID: 7400000, guid: 680dd3667d1191546865595015f847d6, type: 2}
+    - name: TomeRun
+      clip: {fileID: 7400000, guid: 2f13f3b84ec65cc4a8036b1f85c1357f, type: 2}
+    - name: TomeSkill
+      clip: {fileID: 7400000, guid: 30f3b9439c51f074bba176c5601eefed, type: 2}
+    - name: TomeWalk
+      clip: {fileID: 7400000, guid: e94bee91a41f21747baeb7a1462dc1ed, type: 2}
+    - name: WhipAttack
+      clip: {fileID: 7400000, guid: dd6a33bf2c9bd344a8e04d1f87560e26, type: 2}
+    - name: WhipIdle
+      clip: {fileID: 7400000, guid: b3527179b445dcb4daf457f5f1b3be67, type: 2}
+    - name: WhipRun
+      clip: {fileID: 7400000, guid: fc9afa06d6ba5a045ac49094f8e5903f, type: 2}
+    - name: WhipSkill
+      clip: {fileID: 7400000, guid: 571957373452ec541886632b68c83dc3, type: 2}
+    - name: WhipWalk
+      clip: {fileID: 7400000, guid: 60967cab789ecd14da2346a5e4333259, type: 2}
+  - body: 4
+    animations:
+    - name: AxeAttack
+      clip: {fileID: 7400000, guid: 2359eeb2e9ab67a48978d6084a7a4404, type: 2}
+    - name: AxeIdle
+      clip: {fileID: 7400000, guid: 7cefa007585621841ad27c5788b91924, type: 2}
+    - name: AxeRun
+      clip: {fileID: 7400000, guid: 5601936b9ecb7ff46ba6980de6c00d5a, type: 2}
+    - name: AxeSkill
+      clip: {fileID: 7400000, guid: 1446e3fa8c78e004fabdcb186c9196ff, type: 2}
+    - name: AxeWalk
+      clip: {fileID: 7400000, guid: e009d3e381182af4b82888d667dfbb61, type: 2}
+    - name: BowAttack
+      clip: {fileID: 7400000, guid: cff8037786c41eb419fe68fe61128d56, type: 2}
+    - name: BowIdle
+      clip: {fileID: 7400000, guid: 1024ad6fbffd485449968c9ca7673967, type: 2}
+    - name: BowRun
+      clip: {fileID: 7400000, guid: 70252503115641f4f9a700011a98dc49, type: 2}
+    - name: BowSkill
+      clip: {fileID: 7400000, guid: 8ad7a06b3228feb4780c49c346d4a7d2, type: 2}
+    - name: BowWalk
+      clip: {fileID: 7400000, guid: 0b7cb4e3fbe28e148ad8bf231dbd094a, type: 2}
+    - name: BrushAttack
+      clip: {fileID: 7400000, guid: 12bd34ca56a78f648b72960af4f0a93b, type: 2}
+    - name: BrushIdle
+      clip: {fileID: 7400000, guid: a68ecdc41ef496140b574f9f72883986, type: 2}
+    - name: BrushRun
+      clip: {fileID: 7400000, guid: 5504ef4b8b5d99f4384fbda7110691bd, type: 2}
+    - name: BrushWalk
+      clip: {fileID: 7400000, guid: 69f1efcc7cff34744a97db91fb3d19d1, type: 2}
+    - name: CannonAttack
+      clip: {fileID: 7400000, guid: cf1ed08dc4fec42408a70533afc08716, type: 2}
+    - name: CannonIdle
+      clip: {fileID: 7400000, guid: e91bf5d1b69472c43b12802362883d08, type: 2}
+    - name: CannonRun
+      clip: {fileID: 7400000, guid: 3983e6a0f0bd75342bcadfcc9f710d63, type: 2}
+    - name: CannonSkill
+      clip: {fileID: 7400000, guid: c257bc8c8c2a70441ac1093786a1e220, type: 2}
+    - name: CannonWalk
+      clip: {fileID: 7400000, guid: f9bcf5519d1971b408be67f1c79c7685, type: 2}
+    - name: CutTree
+      clip: {fileID: 7400000, guid: 719c2861432c1451995d69c54126cf9a, type: 2}
+    - name: DaggerAttack
+      clip: {fileID: 7400000, guid: 7573cd63e99383b4f968c247b1293d65, type: 2}
+    - name: DaggerIdle
+      clip: {fileID: 7400000, guid: 1f9cb1e6eb95527458d837cfe403200e, type: 2}
+    - name: DaggerRun
+      clip: {fileID: 7400000, guid: 571aa108aeb1fe34d9c1b83668901ace, type: 2}
+    - name: DaggerSkill
+      clip: {fileID: 7400000, guid: 8f4ff7c96d3c04d49a792ff569abd8c6, type: 2}
+    - name: DaggerWalk
+      clip: {fileID: 7400000, guid: 7bc43ff347ae0494fa045fcba2f50671, type: 2}
+    - name: FlagAttack
+      clip: {fileID: 7400000, guid: dacc4f876c185404992c72ffe58e376b, type: 2}
+    - name: FlagIdle
+      clip: {fileID: 7400000, guid: 29eaf15b6430ee8489fcd31af0ae01ff, type: 2}
+    - name: FlagRun
+      clip: {fileID: 7400000, guid: 3edf26a2866237c46bd1ff27f23d74b1, type: 2}
+    - name: FlagSkill
+      clip: {fileID: 7400000, guid: 502ccac2dfcc4f0449079baa638e5e15, type: 2}
+    - name: FlagWalk
+      clip: {fileID: 7400000, guid: 8595bbeff6987a74289a76468ff565ef, type: 2}
+    - name: FluteAttack
+      clip: {fileID: 7400000, guid: 2ccebdd5bb065f54c8c6673dbcd8f171, type: 2}
+    - name: FluteIdle
+      clip: {fileID: 7400000, guid: e5ca1019cc00fb1429654af4af92c1e1, type: 2}
+    - name: FluteRun
+      clip: {fileID: 7400000, guid: 56f45cd7814c8be49854a43fd30bdbf9, type: 2}
+    - name: FluteSkill
+      clip: {fileID: 7400000, guid: add248fa595868e4bb680d945c527e1e, type: 2}
+    - name: FluteWalk
+      clip: {fileID: 7400000, guid: 32bcbc5e260088741a5cda705e8b5de3, type: 2}
+    - name: GauntletAttack
+      clip: {fileID: 7400000, guid: ae13d189f6aed2d40bd4fe7eb080b647, type: 2}
+    - name: GauntletIdle
+      clip: {fileID: 7400000, guid: 5d46296306e38264cabbd7e1cd030128, type: 2}
+    - name: GauntletRun
+      clip: {fileID: 7400000, guid: 01e6739797421564daa5decbf2ee2021, type: 2}
+    - name: GauntletSkill
+      clip: {fileID: 7400000, guid: a34cfc612a24d9a4b87a56fd1373dc2b, type: 2}
+    - name: GauntletWalk
+      clip: {fileID: 7400000, guid: 754a643a4b9f6324692bc25c977c0d49, type: 2}
+    - name: LanternAttack
+      clip: {fileID: 7400000, guid: b35ea82d853b491489369747fa248e76, type: 2}
+    - name: LanternIdle
+      clip: {fileID: 7400000, guid: 14fc041b1adae5c4f876c5de53d3df84, type: 2}
+    - name: LanternRun
+      clip: {fileID: 7400000, guid: 51e0544a971481143b843a2ada39be42, type: 2}
+    - name: LanternSkill
+      clip: {fileID: 7400000, guid: f311a2e7ab9481a47847f7fc7369e450, type: 2}
+    - name: LanternWalk
+      clip: {fileID: 7400000, guid: f1812fda4b410244d9104513f4303e15, type: 2}
+    - name: MalaAttack
+      clip: {fileID: 7400000, guid: 88c99eb1b78ff8f4a9309a7f9a9fb8ac, type: 2}
+    - name: MalaIdle
+      clip: {fileID: 7400000, guid: 6ae0bb70342bc304a806dbd0e1ec780b, type: 2}
+    - name: MalaRun
+      clip: {fileID: 7400000, guid: 35e63ed60f5dbf546b7dc0c22c82dce5, type: 2}
+    - name: MalaSkill
+      clip: {fileID: 7400000, guid: 8fc324c6677795546b628b1f136264a5, type: 2}
+    - name: MalaWalk
+      clip: {fileID: 7400000, guid: 048db70e52ca36849b76b5a0ad27974a, type: 2}
+    - name: Shoveling
+      clip: {fileID: 7400000, guid: 78e9f4210af554d9691ac698ab8c2589, type: 2}
+    - name: SpearAttack
+      clip: {fileID: 7400000, guid: 053aabd0ed3faf649ab6120af9963a8a, type: 2}
+    - name: SpearIdle
+      clip: {fileID: 7400000, guid: 7e5f9f0c76a4129448346a5cf47e088c, type: 2}
+    - name: SpearRun
+      clip: {fileID: 7400000, guid: 84d7666d813ea534780119f6ca18a7d8, type: 2}
+    - name: SpearSkill
+      clip: {fileID: 7400000, guid: 2b7536fc3de62c440ada845129d42cfb, type: 2}
+    - name: SpearWalk
+      clip: {fileID: 7400000, guid: 08e0f37d4b229584fbb6f517532781ef, type: 2}
+    - name: StaffAttack
+      clip: {fileID: 7400000, guid: 46a03ecfb49d91f49ad4edc1b569ed3f, type: 2}
+    - name: StaffIdle
+      clip: {fileID: 7400000, guid: f86b4717329adcb4cb498b46f019f7ba, type: 2}
+    - name: StaffRun
+      clip: {fileID: 7400000, guid: 96d5eb687e153fd4c8217348a200acaf, type: 2}
+    - name: StaffSkill
+      clip: {fileID: 7400000, guid: 944f657f79561bb44bc9706409ad239b, type: 2}
+    - name: StaffWalk
+      clip: {fileID: 7400000, guid: 1ed35671a632102498c533b2a6034ed9, type: 2}
+    - name: StoneHarvest
+      clip: {fileID: 7400000, guid: 1cbb708af560c44339b6e14a8ad3a369, type: 2}
+    - name: SwordAttack
+      clip: {fileID: 7400000, guid: e7c0761b89507394e97fca13d69dc22b, type: 2}
+    - name: SwordIdle
+      clip: {fileID: 7400000, guid: 1a9482b06ef5627488b13ad43444d497, type: 2}
+    - name: SwordRun
+      clip: {fileID: 7400000, guid: 545e9857d63f1e24bb5201c803073b72, type: 2}
+    - name: SwordSkill
+      clip: {fileID: 7400000, guid: d13347cc377bcc74eab55d142ae2845d, type: 2}
+    - name: SwordWalk
+      clip: {fileID: 7400000, guid: 15ecd193d1037d544bbb137eafda77b4, type: 2}
+    - name: TalismanAttack
+      clip: {fileID: 7400000, guid: 93b1bb7db0b03b54ca8ef45cc35b380a, type: 2}
+    - name: TalismanIdle
+      clip: {fileID: 7400000, guid: 99cda24ecab0acc42b14eef5d27025d8, type: 2}
+    - name: TalismanRun
+      clip: {fileID: 7400000, guid: dd1ce63705bca4a44b798d5416e35d26, type: 2}
+    - name: TalismanSkill
+      clip: {fileID: 7400000, guid: 0be827c9f1153e1408082e1d6733a6f5, type: 2}
+    - name: TalismanWalk
+      clip: {fileID: 7400000, guid: 2fc66e157cf8b7e49a7af8485a934820, type: 2}
+    - name: TomeAttack
+      clip: {fileID: 7400000, guid: 710a5c79169187849911227a8a90718e, type: 2}
+    - name: TomeIdle
+      clip: {fileID: 7400000, guid: d99494b461412ba4b831918461573ad0, type: 2}
+    - name: TomeRun
+      clip: {fileID: 7400000, guid: 04d9657c87d9ad44dacd594189c78a7e, type: 2}
+    - name: TomeSkill
+      clip: {fileID: 7400000, guid: f8efd4edce97ad047baf31764b7e749b, type: 2}
+    - name: TomeWalk
+      clip: {fileID: 7400000, guid: 2a008778e26377848bc201330bfe38d4, type: 2}
+    - name: WhipAttack
+      clip: {fileID: 7400000, guid: 4224782fe75b2de4cb16301e9ab759f5, type: 2}
+    - name: WhipIdle
+      clip: {fileID: 7400000, guid: 6870a9b2ef6b09a4b81681f417a0a1d8, type: 2}
+    - name: WhipRun
+      clip: {fileID: 7400000, guid: 108a0f7f5f66d154c8de9c6bad3a1951, type: 2}
+    - name: WhipSkill
+      clip: {fileID: 7400000, guid: 3743b8dcae8e6ac4b884cd54f6f81587, type: 2}
+    - name: WhipWalk
+      clip: {fileID: 7400000, guid: a70684a76d152f74d8ab8c912cb8e45f, type: 2}
+  - body: 5
+    animations:
+    - name: AxeAttack
+      clip: {fileID: 7400000, guid: 60343d408b8b558429506870a8291b99, type: 2}
+    - name: AxeIdle
+      clip: {fileID: 7400000, guid: c02b6e76fbf29304db23e3884366ce7e, type: 2}
+    - name: AxeRun
+      clip: {fileID: 7400000, guid: 29edd9452bdf1dd4680d0451faaaf34b, type: 2}
+    - name: AxeSkill
+      clip: {fileID: 7400000, guid: ac6462bba45461b499a96b3069a82045, type: 2}
+    - name: AxeWalk
+      clip: {fileID: 7400000, guid: 9a24a5265bf6bee42a5bdc5aab03be2e, type: 2}
+    - name: BowAttack
+      clip: {fileID: 7400000, guid: 7384498218481b94c9a469c00b065539, type: 2}
+    - name: BowIdle
+      clip: {fileID: 7400000, guid: 28858935c5e1dc14fa25650b18ad3356, type: 2}
+    - name: BowRun
+      clip: {fileID: 7400000, guid: 46e38db698836454d8d119ee1b27e51c, type: 2}
+    - name: BowSkill
+      clip: {fileID: 7400000, guid: 397c2ba20f0e2dd4681083e9af53ceaf, type: 2}
+    - name: BowWalk
+      clip: {fileID: 7400000, guid: bc5707b4c086bee40819f85b74e2196f, type: 2}
+    - name: BrushAttack
+      clip: {fileID: 7400000, guid: 27c32156da662b342a5a8f8cef375939, type: 2}
+    - name: BrushIdle
+      clip: {fileID: 7400000, guid: 8b5322e0b2e50bf41860b8ad05dec3e1, type: 2}
+    - name: BrushRun
+      clip: {fileID: 7400000, guid: b7fa482961060c847807e202067fefa6, type: 2}
+    - name: CannonAttack
+      clip: {fileID: 7400000, guid: ca7f22082344a244987c037fb841bdcb, type: 2}
+    - name: CannonIdle
+      clip: {fileID: 7400000, guid: f5c7d750ea7a5b248934b8302366652a, type: 2}
+    - name: CannonRun
+      clip: {fileID: 7400000, guid: 56a3ee7eb9fb8614ea837068d1bbbefe, type: 2}
+    - name: CannonSkill
+      clip: {fileID: 7400000, guid: d22616305e533414fa108c0c1e40c80c, type: 2}
+    - name: CannonWalk
+      clip: {fileID: 7400000, guid: cbf879d0f600ca24f9e9c5c3cf38084a, type: 2}
+    - name: CutTree
+      clip: {fileID: 7400000, guid: cc1fe12dcd07e4ec5949e66ae6442d24, type: 2}
+    - name: DaggerAttack
+      clip: {fileID: 7400000, guid: 2f8031a9976a3094294115205bfb14f1, type: 2}
+    - name: DaggerIdle
+      clip: {fileID: 7400000, guid: bb776b42f52784f4d8257ecd2366b091, type: 2}
+    - name: DaggerRun
+      clip: {fileID: 7400000, guid: 5703109fff7668147864f69867227624, type: 2}
+    - name: DaggerSkill
+      clip: {fileID: 7400000, guid: 81b28aa4fa745a746901fd39a6e1b993, type: 2}
+    - name: DaggerWalk
+      clip: {fileID: 7400000, guid: 6541b3354daf27e41bd7bd3b1a5bd51a, type: 2}
+    - name: FlagAttack
+      clip: {fileID: 7400000, guid: 173782ad8d1db074d8ff9a931f9b91d8, type: 2}
+    - name: FlagIdle
+      clip: {fileID: 7400000, guid: 595a7b3ac96f1d34dae63d5cae0e67e9, type: 2}
+    - name: FlagRun
+      clip: {fileID: 7400000, guid: 05ef6a96c9456524d8fa464f35aa3c2b, type: 2}
+    - name: FlagSkill
+      clip: {fileID: 7400000, guid: 708c35f0f647d59418987e111094be40, type: 2}
+    - name: FlagWalk
+      clip: {fileID: 7400000, guid: 4929ae4a6dc06cf40b02c41c8b122bc4, type: 2}
+    - name: FluteAttack
+      clip: {fileID: 7400000, guid: b546f894260b3434d85456b8e9d44a99, type: 2}
+    - name: FluteIdle
+      clip: {fileID: 7400000, guid: 18a2818547f80df4a9580356cdadbdde, type: 2}
+    - name: FluteRun
+      clip: {fileID: 7400000, guid: 228c1f5ea69174a499129ac74da00b25, type: 2}
+    - name: FluteSkill
+      clip: {fileID: 7400000, guid: 7a7c8c5815852fa4b808323884d45b96, type: 2}
+    - name: FluteWalk
+      clip: {fileID: 7400000, guid: 8de7eaf10b4189a47b66f25a6c5f0ddd, type: 2}
+    - name: GauntletAttack
+      clip: {fileID: 7400000, guid: bf754acf5d9ae114e8380d8444aef6bb, type: 2}
+    - name: GauntletIdle
+      clip: {fileID: 7400000, guid: 2c653df7e761af142947dd49da338ead, type: 2}
+    - name: GauntletRun
+      clip: {fileID: 7400000, guid: 47edec9fec0f67940a18f428cd62fc64, type: 2}
+    - name: GauntletSkill
+      clip: {fileID: 7400000, guid: 583cc525bc987ca4fabe7612633514b6, type: 2}
+    - name: GauntletWalk
+      clip: {fileID: 7400000, guid: 6ea86f8caa8cb1743aefa623111015dd, type: 2}
+    - name: LanternAttack
+      clip: {fileID: 7400000, guid: 56df4b80d1e8c234982cf458a1f8b26c, type: 2}
+    - name: LanternIdle
+      clip: {fileID: 7400000, guid: c47e620ede44a2a4db4c1d2956b94bb1, type: 2}
+    - name: LanternRun
+      clip: {fileID: 7400000, guid: 42e464062b473f5488a470e5bc8af96c, type: 2}
+    - name: LanternSkill
+      clip: {fileID: 7400000, guid: fd0c9ab5dc348954fbacd7f895a8cf7f, type: 2}
+    - name: LanternWalk
+      clip: {fileID: 7400000, guid: 3395fe61380edc045a85429026f06822, type: 2}
+    - name: MalaAttack
+      clip: {fileID: 7400000, guid: a937f9e80e5ac424c8f97b14ca0553cb, type: 2}
+    - name: MalaIdle
+      clip: {fileID: 7400000, guid: f9d9322ecd217cd4d884b885883b29e2, type: 2}
+    - name: MalaRun
+      clip: {fileID: 7400000, guid: efe84ca31f8442846a9e28afac319b89, type: 2}
+    - name: MalaSkill
+      clip: {fileID: 7400000, guid: 8e9233b9ae8206847944a19de70bb45f, type: 2}
+    - name: MalaWalk
+      clip: {fileID: 7400000, guid: 9f44d31cc03409f4d9fb074b099f17b9, type: 2}
+    - name: Shoveling
+      clip: {fileID: 7400000, guid: b7f3821aacb5548e796d563adba7feb8, type: 2}
+    - name: SpearAttack
+      clip: {fileID: 7400000, guid: 9d97bd0619c257e46912d977e097f4f7, type: 2}
+    - name: SpearIdle
+      clip: {fileID: 7400000, guid: a7d36587d9b62eb49b0732a8fcf20722, type: 2}
+    - name: SpearRun
+      clip: {fileID: 7400000, guid: 09314f7ff64fcd449bc518f20a044693, type: 2}
+    - name: SpearSkill
+      clip: {fileID: 7400000, guid: 20dcfc7f0196afa42890d542622bc02d, type: 2}
+    - name: SpearWalk
+      clip: {fileID: 7400000, guid: 15036bd89fa68e44d801bed665157f46, type: 2}
+    - name: StaffAttack
+      clip: {fileID: 7400000, guid: aafaf498c80dc734982491ec1a563168, type: 2}
+    - name: StaffIdle
+      clip: {fileID: 7400000, guid: 7078d056627fbeb439509bd5d83e7a5c, type: 2}
+    - name: StaffRun
+      clip: {fileID: 7400000, guid: 86c9c2f89f17c80418a3f3922bba4e7b, type: 2}
+    - name: StaffSkill
+      clip: {fileID: 7400000, guid: 7ea622867b22e24478b7eeebee603f34, type: 2}
+    - name: StaffWalk
+      clip: {fileID: 7400000, guid: ca344c9d4465d0a459e5abdba5702184, type: 2}
+    - name: StoneHarvest
+      clip: {fileID: 7400000, guid: 09d8e1cb0849a4feca40a19e85e1a980, type: 2}
+    - name: SwordAttack
+      clip: {fileID: 7400000, guid: fd6abd1585f424647891af79808a4d0b, type: 2}
+    - name: SwordAttackv2
+      clip: {fileID: 7400000, guid: 013430d90b9c9bf44ac10fe83be632fd, type: 2}
+    - name: SwordIdle
+      clip: {fileID: 7400000, guid: 9d5e2c48fe388e54a84910f5695b77af, type: 2}
+    - name: SwordRun
+      clip: {fileID: 7400000, guid: 4b3fa8e98f507d243992e95491c9d7fa, type: 2}
+    - name: SwordSkill
+      clip: {fileID: 7400000, guid: da1874b9cbe37bc4b86fa4425c65c451, type: 2}
+    - name: SwordSkill2
+      clip: {fileID: 7400000, guid: 597327775cddae0489589f6f26ed2592, type: 2}
+    - name: SwordWalk
+      clip: {fileID: 7400000, guid: bdbdfc271b2b99b468a3ff3a731364ad, type: 2}
+    - name: TalismanAttack
+      clip: {fileID: 7400000, guid: 4bc35a6c670047449acf5d221c44c3f5, type: 2}
+    - name: TalismanIdle
+      clip: {fileID: 7400000, guid: d749003c25bba9c498cfb156b9bd4548, type: 2}
+    - name: TalismanRun
+      clip: {fileID: 7400000, guid: ec286c18b01152240a2b0128095e8b07, type: 2}
+    - name: TalismanSkill
+      clip: {fileID: 7400000, guid: f7b0f59d24b325c4786955dbf82ad830, type: 2}
+    - name: TalismanWalk
+      clip: {fileID: 7400000, guid: fb1415a56eb19954b9c211751686652e, type: 2}
+    - name: TomeAttack
+      clip: {fileID: 7400000, guid: a1c69586f4af4fb4f864effedb6317bd, type: 2}
+    - name: TomeIdle
+      clip: {fileID: 7400000, guid: fc44cf7e2b136824bb550848e64f8e34, type: 2}
+    - name: TomeRun
+      clip: {fileID: 7400000, guid: 8620661e2be946d4eb6c74a1bb515a02, type: 2}
+    - name: TomeSkill
+      clip: {fileID: 7400000, guid: a7807f25c06019448960538a59762691, type: 2}
+    - name: TomeWalk
+      clip: {fileID: 7400000, guid: 50238a4417a21324c87658f1c8f285f2, type: 2}
+    - name: WhipAttack
+      clip: {fileID: 7400000, guid: aa3ef6b9350a1ed4da65812410c5e86d, type: 2}
+    - name: WhipIdle
+      clip: {fileID: 7400000, guid: ae27bad162d951a41a24334be1934fd9, type: 2}
+    - name: WhipRun
+      clip: {fileID: 7400000, guid: 9010019809dd69d43ad380dc278890d1, type: 2}
+    - name: WhipSkill
+      clip: {fileID: 7400000, guid: b7c88386389a607479dc482ff03b5041, type: 2}
+    - name: WhipWalk
+      clip: {fileID: 7400000, guid: 7f11326179fd94d40a923e75062c5398, type: 2}
+  - body: 6
+    animations:
+    - name: AxeAttack
+      clip: {fileID: 7400000, guid: 90859184dc566c145ab5b02ca18ecc79, type: 2}
+    - name: AxeIdle
+      clip: {fileID: 7400000, guid: 3526e98d7c5834147b464ec05693b12f, type: 2}
+    - name: AxeRun
+      clip: {fileID: 7400000, guid: 19ec66d66df602c4683e14e4d28628ac, type: 2}
+    - name: AxeSkill
+      clip: {fileID: 7400000, guid: bf70e732e96d80f4dafce6a64d009d8b, type: 2}
+    - name: AxeWalk
+      clip: {fileID: 7400000, guid: 04fa810a5483b604bbb1a5c1f2b22626, type: 2}
+    - name: BowAttack
+      clip: {fileID: 7400000, guid: eda0ca5a8f59a844a8874eb01dacf6ad, type: 2}
+    - name: BowIdle
+      clip: {fileID: 7400000, guid: f1bddfd6478f1f84d87b62b153f48c4e, type: 2}
+    - name: BowRun
+      clip: {fileID: 7400000, guid: a8bb01b5d4777ce47820f78b86164f60, type: 2}
+    - name: BowSkill
+      clip: {fileID: 7400000, guid: 651a88e04552813409fca96d0aaa7f08, type: 2}
+    - name: BowWalk
+      clip: {fileID: 7400000, guid: 41a65fed52616ab44bef528d4600484f, type: 2}
+    - name: BrushAttack
+      clip: {fileID: 7400000, guid: e28158859c4382345bfbb49d285da9a8, type: 2}
+    - name: BrushIdle
+      clip: {fileID: 7400000, guid: a4eae854fc0c05c4899d8a1360a04267, type: 2}
+    - name: BrushRun
+      clip: {fileID: 7400000, guid: cbc91d54dfca3db4a8d62c7403539328, type: 2}
+    - name: BrushWalk
+      clip: {fileID: 7400000, guid: 3fa6cbe5ab22a8f49b5630ab2b36a1b9, type: 2}
+    - name: CannonAttack
+      clip: {fileID: 7400000, guid: a1ed716adfcda1147a81afd4ff6fc0fe, type: 2}
+    - name: CannonIdle
+      clip: {fileID: 7400000, guid: e191f7113f00ca24a8def035324c175a, type: 2}
+    - name: CannonRun
+      clip: {fileID: 7400000, guid: d0691949b9311c74ebcfa7f9e6e32b65, type: 2}
+    - name: CannonSkill
+      clip: {fileID: 7400000, guid: 4d243166df863eb42acc2c56b2326024, type: 2}
+    - name: CannonWalk
+      clip: {fileID: 7400000, guid: eb780a74a96894e4e96f7bedfef9670b, type: 2}
+    - name: CutTree
+      clip: {fileID: 7400000, guid: c9912c4b3ff514d6388a3d19f1654a57, type: 2}
+    - name: DaggerAttack
+      clip: {fileID: 7400000, guid: 7766a0e85ca89a149afcfcd2bdcf4122, type: 2}
+    - name: DaggerIdle
+      clip: {fileID: 7400000, guid: 96b16179d771f2849b1a819fcf18e5a3, type: 2}
+    - name: DaggerRun
+      clip: {fileID: 7400000, guid: b8a65ea7ee74dc54b8d772921330630a, type: 2}
+    - name: DaggerSkill
+      clip: {fileID: 7400000, guid: 9701ab929d578ea448ca5709fb4454ae, type: 2}
+    - name: DaggerWalk
+      clip: {fileID: 7400000, guid: 45584123421ec964d91da05509f94b73, type: 2}
+    - name: FlagAttack
+      clip: {fileID: 7400000, guid: 8862265531d358c479d2fd03fb644449, type: 2}
+    - name: FlagIdle
+      clip: {fileID: 7400000, guid: ad9917e110b2dc64d8176dfbed68509e, type: 2}
+    - name: FlagRun
+      clip: {fileID: 7400000, guid: 5d1ae5ffa4668894c9deefe5a18c6cab, type: 2}
+    - name: FlagSkill
+      clip: {fileID: 7400000, guid: 25586f3f9cdf77049bfdcb9c485bc2e1, type: 2}
+    - name: FlagWalk
+      clip: {fileID: 7400000, guid: b4cf7b4942149b4449e403a5a7201c29, type: 2}
+    - name: FluteAttack
+      clip: {fileID: 7400000, guid: 465a2e3ef6e3a50438bfde68fd041304, type: 2}
+    - name: FluteIdle
+      clip: {fileID: 7400000, guid: 9035252420d1d274d842de790dbcc74f, type: 2}
+    - name: FluteRun
+      clip: {fileID: 7400000, guid: 2a32c443e86019c4ea592e4e1fe6fea0, type: 2}
+    - name: FluteSkill
+      clip: {fileID: 7400000, guid: 373593af6ec434341917fb75bebca54a, type: 2}
+    - name: FluteWalk
+      clip: {fileID: 7400000, guid: cb4022eff986a9348b8303b04227e9ff, type: 2}
+    - name: GauntletAttack
+      clip: {fileID: 7400000, guid: acd866b2808168f43b8e5468ce1fb622, type: 2}
+    - name: GauntletIdle
+      clip: {fileID: 7400000, guid: cd518cbe5105da545834a22fed21c3b4, type: 2}
+    - name: GauntletRun
+      clip: {fileID: 7400000, guid: c984d55f314772a4199759ed3f26d346, type: 2}
+    - name: GauntletSkill
+      clip: {fileID: 7400000, guid: 68dc7e93e066f0b4e830ccd5fc914d38, type: 2}
+    - name: GauntletWalk
+      clip: {fileID: 7400000, guid: 08ed7095d1fbac948a6c017c77f55d4e, type: 2}
+    - name: IdleCarryItem
+      clip: {fileID: 7400000, guid: 4d4c982e5d89f4047b2aefa324267a45, type: 2}
+    - name: IdleGetHit
+      clip: {fileID: 7400000, guid: 890ae827d7b41d7438ce7e3232eb2855, type: 2}
+    - name: LanternAttack
+      clip: {fileID: 7400000, guid: 73e6916df000c9a46a0ae73ffd735b78, type: 2}
+    - name: LanternIdle
+      clip: {fileID: 7400000, guid: 35c4d62750790ba4392590824b3deabb, type: 2}
+    - name: LanternRun
+      clip: {fileID: 7400000, guid: 3f606bc3d778df346993213dfcfa49e8, type: 2}
+    - name: LanternSkill
+      clip: {fileID: 7400000, guid: bfaaa959eeb8add4fb55ca7433e0cc7d, type: 2}
+    - name: LanternWalk
+      clip: {fileID: 7400000, guid: 6c5b1a25596fe2d4abee1625f33b497e, type: 2}
+    - name: MalaAttack
+      clip: {fileID: 7400000, guid: 7e0869c689c2ee648bc7fa9f788596e9, type: 2}
+    - name: MalaIdle
+      clip: {fileID: 7400000, guid: f8d26dc419f591443b15d6a1da033489, type: 2}
+    - name: MalaRun
+      clip: {fileID: 7400000, guid: b705ae3e22e47014190ccbccec1f75de, type: 2}
+    - name: MalaSkill
+      clip: {fileID: 7400000, guid: adf49b8198a5c6e419ca15ad25826ad2, type: 2}
+    - name: MalaWalk
+      clip: {fileID: 7400000, guid: c1f986e5bb97e284e93c5f041c75492f, type: 2}
+    - name: Shoveling
+      clip: {fileID: 7400000, guid: 13fc1dfdd500d473a947886e76609096, type: 2}
+    - name: SpearAttack
+      clip: {fileID: 7400000, guid: 4ab2799424fece44a9165425cab3d95c, type: 2}
+    - name: SpearIdle
+      clip: {fileID: 7400000, guid: 59ea1707326f52742b344a31941930c0, type: 2}
+    - name: SpearRun
+      clip: {fileID: 7400000, guid: 54e044b913994234aaa182f8d18b93f1, type: 2}
+    - name: SpearSkill
+      clip: {fileID: 7400000, guid: 0f3684479790c3d4686e12b2c6c4f0e2, type: 2}
+    - name: SpearWalk
+      clip: {fileID: 7400000, guid: 44d20daee7afacd4f846bc9879148640, type: 2}
+    - name: StaffAttack
+      clip: {fileID: 7400000, guid: 35edcfb27b3acec4fb49f7342ebe7ee8, type: 2}
+    - name: StaffIdle
+      clip: {fileID: 7400000, guid: 2791c1d699d47ee4683500a4e8051e8c, type: 2}
+    - name: StaffRun
+      clip: {fileID: 7400000, guid: 1f8bab8afede202458f78ad52b07842c, type: 2}
+    - name: StaffSkill
+      clip: {fileID: 7400000, guid: 6f9b0f6f70fa1114598d159a844adb8c, type: 2}
+    - name: StaffWalk
+      clip: {fileID: 7400000, guid: ef9b22aef86b7f5428083c99228887ba, type: 2}
+    - name: StoneHarvest
+      clip: {fileID: 7400000, guid: 3ff90b19e8cc745769b2548ea85ecf9a, type: 2}
+    - name: SwordAttack
+      clip: {fileID: 7400000, guid: 067c64778c0baa446a894222015bf434, type: 2}
+    - name: SwordIdle
+      clip: {fileID: 7400000, guid: db16bc97b8be0ad41b60eeab49a59302, type: 2}
+    - name: SwordRun
+      clip: {fileID: 7400000, guid: f23c886461cdcdb45a0fe2e9b34a60b8, type: 2}
+    - name: SwordSkill
+      clip: {fileID: 7400000, guid: 60b037e80d3100749bb8062cddef1e24, type: 2}
+    - name: SwordWalk
+      clip: {fileID: 7400000, guid: af267fa2df5bb4e4bb0ebd677641b5df, type: 2}
+    - name: TalismanAttack
+      clip: {fileID: 7400000, guid: b58c7da91bc73a240b530e4a8da7baa4, type: 2}
+    - name: TalismanIdle
+      clip: {fileID: 7400000, guid: 3f0be588aa612b9429fc869eb32b291a, type: 2}
+    - name: TalismanRun
+      clip: {fileID: 7400000, guid: cca6fe0315e8a294ebffb5b014516bbd, type: 2}
+    - name: TalismanSkill
+      clip: {fileID: 7400000, guid: e8f0fbc2e2826394fb13ef8424032652, type: 2}
+    - name: TalismanWalk
+      clip: {fileID: 7400000, guid: 042ddbe868f89ef42bf9a987dae98ee5, type: 2}
+    - name: TomeAttack
+      clip: {fileID: 7400000, guid: af0b4d03759988744b2685e9333a36af, type: 2}
+    - name: TomeIdle
+      clip: {fileID: 7400000, guid: 2355d194e185ec144969ded8bd05755e, type: 2}
+    - name: TomeRun
+      clip: {fileID: 7400000, guid: d7dfacdb63fea7d42a4642cecc37ad5f, type: 2}
+    - name: TomeSkill
+      clip: {fileID: 7400000, guid: 7c0a407ec4bd8f942ae04c62b7e658d0, type: 2}
+    - name: TomeWalk
+      clip: {fileID: 7400000, guid: f6bfc806f6933f54f956710da7b5c8da, type: 2}
+    - name: WhipAttack
+      clip: {fileID: 7400000, guid: ff91ab7da5e68b04caa6212d9f8afe4d, type: 2}
+    - name: WhipIdle
+      clip: {fileID: 7400000, guid: 221db7670961e9a468442607f734383e, type: 2}
+    - name: WhipRun
+      clip: {fileID: 7400000, guid: b4d51cf65cd13d44d81b9f19b4ab85de, type: 2}
+    - name: WhipSkill
+      clip: {fileID: 7400000, guid: 7d66207bd57fe34478ed437c7a0a2f39, type: 2}
+    - name: WhipWalk
+      clip: {fileID: 7400000, guid: abb683ccc4a9642478dca10fc13e4f48, type: 2}
+  - body: 7
+    animations:
+    - name: AxeAttack
+      clip: {fileID: 7400000, guid: a37b7e67e4a27894dab0bbf4cc943ce7, type: 2}
+    - name: AxeIdle
+      clip: {fileID: 7400000, guid: 14a691dd04428104b8df267080d0a4da, type: 2}
+    - name: AxeRun
+      clip: {fileID: 7400000, guid: 2dec17ed593ba0f4ab7a88e787b1329d, type: 2}
+    - name: AxeSkill
+      clip: {fileID: 7400000, guid: 3241bef29209c0543a7a5e8c266d2790, type: 2}
+    - name: AxeWalk
+      clip: {fileID: 7400000, guid: e3368c9ea3ea1824f823c58a3e7de917, type: 2}
+    - name: BowAttack
+      clip: {fileID: 7400000, guid: 822ce453725a4254a8ae45d4f3cdf162, type: 2}
+    - name: BowIdle
+      clip: {fileID: 7400000, guid: d1f8b9dcdde6f4c4b84e18bee1140268, type: 2}
+    - name: BowRun
+      clip: {fileID: 7400000, guid: 289efc6b83422c14a9d19d6c68f81b4e, type: 2}
+    - name: BowSkill
+      clip: {fileID: 7400000, guid: 436d396a818a1d843901313356198ee6, type: 2}
+    - name: BowWalk
+      clip: {fileID: 7400000, guid: 731320bf27d2da94e9506c48c80a81df, type: 2}
+    - name: BrushAttack
+      clip: {fileID: 7400000, guid: 38da1181108e6504c88f51dcf9476684, type: 2}
+    - name: BrushIdle
+      clip: {fileID: 7400000, guid: e2424923e3ce7414887ec842ffb84d7a, type: 2}
+    - name: BrushRun
+      clip: {fileID: 7400000, guid: 00bf77f81cf6a194597f389e00b99587, type: 2}
+    - name: BrushWalk
+      clip: {fileID: 7400000, guid: 3a601ac06f9910740a574f96f4be2c47, type: 2}
+    - name: CannonAttack
+      clip: {fileID: 7400000, guid: c16cd00ba8cecf94c92e8ebf02291fc0, type: 2}
+    - name: CannonIdle
+      clip: {fileID: 7400000, guid: c56273401a8c9d6449cf98810c61fe80, type: 2}
+    - name: CannonRun
+      clip: {fileID: 7400000, guid: aea1c65d7c5f0e7409205545e66afd59, type: 2}
+    - name: CannonSkill
+      clip: {fileID: 7400000, guid: 5087d70c9d7032648ab1838ccbe5117a, type: 2}
+    - name: CannonWalk
+      clip: {fileID: 7400000, guid: 3a75115dc90177140a977b2e919aceed, type: 2}
+    - name: CutTree
+      clip: {fileID: 7400000, guid: 413eabdb13b4d496e919fd43815caba4, type: 2}
+    - name: DaggerAttack
+      clip: {fileID: 7400000, guid: 9396926d65bc051488ed1581cab6241e, type: 2}
+    - name: DaggerIdle
+      clip: {fileID: 7400000, guid: 1951e0aa656d5cf45aa4802ecafb56cc, type: 2}
+    - name: DaggerRun
+      clip: {fileID: 7400000, guid: 1fcddb2c62fcb9340baaace6059355d3, type: 2}
+    - name: DaggerSkill
+      clip: {fileID: 7400000, guid: c3a7c81e5db227745ac4ad432d51bbd1, type: 2}
+    - name: DaggerWalk
+      clip: {fileID: 7400000, guid: 96b30068a2b2e1e47a0b6819bbe6df30, type: 2}
+    - name: FlagAttack
+      clip: {fileID: 7400000, guid: 0d2a51c3a6a2992448933e210f82a006, type: 2}
+    - name: FlagIdle
+      clip: {fileID: 7400000, guid: cb55746cc07aa7c41940a276c1f198bf, type: 2}
+    - name: FlagRun
+      clip: {fileID: 7400000, guid: 360a9a607f716f54291ffd2345a11ec3, type: 2}
+    - name: FlagSkill
+      clip: {fileID: 7400000, guid: c11882e974f54ab48bc84edce35b171a, type: 2}
+    - name: FlagWalk
+      clip: {fileID: 7400000, guid: 696d16679fd35db41aad87152734ce9a, type: 2}
+    - name: FluteAttack
+      clip: {fileID: 7400000, guid: 995e7df9584903942b320bfe052cbf2c, type: 2}
+    - name: FluteIdle
+      clip: {fileID: 7400000, guid: f5fb8b1cecf95604b92d7fe29e42b2fa, type: 2}
+    - name: FluteRun
+      clip: {fileID: 7400000, guid: e97ac7cc96ccd26479fbfa8bf0c60c2d, type: 2}
+    - name: FluteSkill
+      clip: {fileID: 7400000, guid: 1f7b253c774709b408ba0f89e6c50af6, type: 2}
+    - name: FluteWalk
+      clip: {fileID: 7400000, guid: f06b57c6e0326cb4a8c3d2ac51e14146, type: 2}
+    - name: GauntletAttack
+      clip: {fileID: 7400000, guid: eebf4b6e907119f47b965aa0b66b9aac, type: 2}
+    - name: GauntletIdle
+      clip: {fileID: 7400000, guid: 290fc7888e342fb49b81fa97b90aeaed, type: 2}
+    - name: GauntletRun
+      clip: {fileID: 7400000, guid: 5516a57e9a453454bb39797d0e7d6cca, type: 2}
+    - name: GauntletSkill
+      clip: {fileID: 7400000, guid: 2741a787344e42a46860f214fb015437, type: 2}
+    - name: GauntletWalk
+      clip: {fileID: 7400000, guid: 5805a765eed7f6e49956c97c5152fd8c, type: 2}
+    - name: LanternAttack
+      clip: {fileID: 7400000, guid: 3262eaf31bf3e1443ad6da7c5598830a, type: 2}
+    - name: LanternIdle
+      clip: {fileID: 7400000, guid: fce5069ee3649fc4b8a996aca0b6fbd6, type: 2}
+    - name: LanternRun
+      clip: {fileID: 7400000, guid: d137623498c60be4a8a31c93d1d8320d, type: 2}
+    - name: LanternSkill
+      clip: {fileID: 7400000, guid: db3ebe93691896b4ebe3fe748879778b, type: 2}
+    - name: LanternWalk
+      clip: {fileID: 7400000, guid: f80eb05c7f64d0d4aaedabd9ec161840, type: 2}
+    - name: MalaAttack
+      clip: {fileID: 7400000, guid: ccc188d64c766244896eee8d3ac24be2, type: 2}
+    - name: MalaIdle
+      clip: {fileID: 7400000, guid: fbdb5e61812333e4288f815d42f536bd, type: 2}
+    - name: MalaRun
+      clip: {fileID: 7400000, guid: 1dcb787a97f6c034699a8276e42b3984, type: 2}
+    - name: MalaSkill
+      clip: {fileID: 7400000, guid: d7785dc1b8c51134ba91f0df800b71d9, type: 2}
+    - name: MalaWalk
+      clip: {fileID: 7400000, guid: 48c9aaee19362e348a7a054cb8f3c2b2, type: 2}
+    - name: Shoveling
+      clip: {fileID: 7400000, guid: b229a7be4d5aa4e34a578c9e225b56ba, type: 2}
+    - name: SpearAttack
+      clip: {fileID: 7400000, guid: ed910835170041544b97154db5f4a4b3, type: 2}
+    - name: SpearIdle
+      clip: {fileID: 7400000, guid: da94d37ac2a632046a84a35b7ea639fb, type: 2}
+    - name: SpearRun
+      clip: {fileID: 7400000, guid: 35f965b9c6a63d54db9a7cff322dd693, type: 2}
+    - name: SpearSkill
+      clip: {fileID: 7400000, guid: 31cb451554c2eb94e8f4442439b99a8a, type: 2}
+    - name: SpearWalk
+      clip: {fileID: 7400000, guid: 640ff54a71bf4b04fa4ccaef2e649eb4, type: 2}
+    - name: StaffAttack
+      clip: {fileID: 7400000, guid: 4b12d5a214c78b44cb941891cd548922, type: 2}
+    - name: StaffIdle
+      clip: {fileID: 7400000, guid: e754b84922ccb32499891b0a46033400, type: 2}
+    - name: StaffRun
+      clip: {fileID: 7400000, guid: 5b26f38b89c3e924883f2a0fa7d38b07, type: 2}
+    - name: StaffSkill
+      clip: {fileID: 7400000, guid: 4e293496f127b5e48bb9e95881bf388d, type: 2}
+    - name: StaffWalk
+      clip: {fileID: 7400000, guid: 69561cf243863e341a34564524e9c3e0, type: 2}
+    - name: StoneHarvest
+      clip: {fileID: 7400000, guid: 43a773ee1579d436ab29562dd81ca5e2, type: 2}
+    - name: SwordAttack
+      clip: {fileID: 7400000, guid: a44c64cce969b554e958c5ad92585a5c, type: 2}
+    - name: SwordIdle
+      clip: {fileID: 7400000, guid: 0fa5cd2a446203a499155061a1699038, type: 2}
+    - name: SwordRun
+      clip: {fileID: 7400000, guid: 973cf0cd6bc950340972f5ae4edaa9cc, type: 2}
+    - name: SwordSkill
+      clip: {fileID: 7400000, guid: 54f9591f69811ac4381470102e87ae75, type: 2}
+    - name: SwordWalk
+      clip: {fileID: 7400000, guid: fe0ff13e65c3ed84097953c54da9306b, type: 2}
+    - name: TalismanAttack
+      clip: {fileID: 7400000, guid: 548396fe1613e154196e2e6b72903c48, type: 2}
+    - name: TalismanIdle
+      clip: {fileID: 7400000, guid: 0effe5074fa6ca046a10be131917d4c4, type: 2}
+    - name: TalismanRun
+      clip: {fileID: 7400000, guid: 759de2092dd917248874adaf7ea875b8, type: 2}
+    - name: TalismanSkill
+      clip: {fileID: 7400000, guid: 342f4880655f3a54f84699bfe91afb4b, type: 2}
+    - name: TalismanWalk
+      clip: {fileID: 7400000, guid: c1864ff288df5e9488e6f57aade3080d, type: 2}
+    - name: TomeAttack
+      clip: {fileID: 7400000, guid: 665b08e6006f7f14d824d3defdb2be5b, type: 2}
+    - name: TomeIdle
+      clip: {fileID: 7400000, guid: d062c34a343c98f4dbcfa74eabdd6b20, type: 2}
+    - name: TomeRun
+      clip: {fileID: 7400000, guid: 49fefc2de87513442898c33209065a45, type: 2}
+    - name: TomeSkill
+      clip: {fileID: 7400000, guid: ccb5209cb189e104797f7dce2db6d205, type: 2}
+    - name: TomeWalk
+      clip: {fileID: 7400000, guid: 90d5df235e7f4434f9f1eeb9386fa39e, type: 2}
+    - name: WhipAttack
+      clip: {fileID: 7400000, guid: d46ee355f799ef9419dd73c9e1203aac, type: 2}
+    - name: WhipIdle
+      clip: {fileID: 7400000, guid: 19a1cd0de5b45e140a65b9a72e441b12, type: 2}
+    - name: WhipRun
+      clip: {fileID: 7400000, guid: 895988a67f672744db5a96d584d0ed44, type: 2}
+    - name: WhipSkill
+      clip: {fileID: 7400000, guid: fa85de6e86df4f848bb2f6d3388e3fe2, type: 2}
+    - name: WhipWalk
+      clip: {fileID: 7400000, guid: 67c00256fd5628548ab164075338a4cd, type: 2}

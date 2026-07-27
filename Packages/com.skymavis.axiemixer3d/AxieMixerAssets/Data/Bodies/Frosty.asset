@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5967bb8eaeb7046609cefe5d07e85047, type: 3}
+  m_Name: Frosty
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 366963157778654493, guid: 395f66965d3cd485497793810fc0050a, type: 3}
+  animations:
+  - name: Dead
+    clip: {fileID: 7400000, guid: a837b51d4f5010249b8d290ef24c7de5, type: 2}
+  - name: Idle
+    clip: {fileID: 7400000, guid: 27734ab47d1c2439ebb835d543c8c4e5, type: 2}
+  - name: IdleCarryItem
+    clip: {fileID: 7400000, guid: d9ca969955cf92e4aa52fcfbe317edc8, type: 2}
+  - name: IdleGetHit
+    clip: {fileID: 7400000, guid: 6707322a40b357041af279fc47573c13, type: 2}
+  - name: Run
+    clip: {fileID: 7400000, guid: 9ea7cc2d58c744147a6c82da1331ceef, type: 2}
+  - name: RunAttack
+    clip: {fileID: 7400000, guid: 78e2a34abd6a4144986eb592c75f82b9, type: 2}
+  - name: RunCarryItem
+    clip: {fileID: 7400000, guid: 9aed94b774b155c4ebfcbdde863c30b1, type: 2}
+  - name: Stun
+    clip: {fileID: 7400000, guid: 15757423190aeab42b24f25132ad3af2, type: 2}
+  - name: Walk
+    clip: {fileID: 7400000, guid: 64d0b29b9ab524baebfad24803f4464e, type: 2}
+  - name: WalkAttack
+    clip: {fileID: 7400000, guid: 48628755fcfa55e44b92f4ad0f377887, type: 2}
+  - name: WalkCarryItem
+    clip: {fileID: 7400000, guid: 93522916e046a254f90f8ab9f8b9c617, type: 2}
