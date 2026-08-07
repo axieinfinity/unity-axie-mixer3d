@@ -109,6 +109,14 @@ namespace SkyMavis.AxieMixer3D
             var uv1 = new List<Vector2>();
             var weights = new List<BoneWeight>();
 
+            // Track which optional vertex channels at least one source actually carries. A channel that
+            // NO source has must be left OFF the combined mesh rather than fabricated as zero-fill: the
+            // mystic (Mystic_Final) shader samples uv1 to gate its gold matcap, and reads a *missing*
+            // uv1 attribute differently from a present-but-zero one. Fabricating a zero uv1 (which none
+            // of the mystic part meshes have) flips that gate and drops the gold on ears/eyes. So we
+            // pad per-source for alignment while merging, but only publish channels that genuinely exist.
+            bool anyNormals = false, anyTangents = false, anyColors = false, anyUv0 = false, anyUv1 = false;
+
             // Sub-mesh (triangle) buckets, one per unique material, in first-seen order.
             var materialToSubmesh = new Dictionary<Material, int>();
             var submeshMaterials = new List<Material>();
@@ -150,7 +158,7 @@ namespace SkyMavis.AxieMixer3D
                 var v = srcMesh.vertices;
                 var count = v.Length;
                 verts.AddRange(v);
-                AppendOrPad(normals, srcMesh.normals, count, Vector3.up);
+                anyNormals |= AppendOrPad(normals, srcMesh.normals, count, Vector3.up);
                 if (flip)
                 {
                     var srcTangents = srcMesh.tangents;
@@ -158,6 +166,7 @@ namespace SkyMavis.AxieMixer3D
                     {
                         for (var i = 0; i < srcTangents.Length; i++) srcTangents[i].w = -srcTangents[i].w;
                         tangents.AddRange(srcTangents);
+                        anyTangents = true;
                     }
                     else
                     {
@@ -166,11 +175,11 @@ namespace SkyMavis.AxieMixer3D
                 }
                 else
                 {
-                    AppendOrPad(tangents, srcMesh.tangents, count, new Vector4(1f, 0f, 0f, -1f));
+                    anyTangents |= AppendOrPad(tangents, srcMesh.tangents, count, new Vector4(1f, 0f, 0f, -1f));
                 }
-                AppendOrPad(colors, srcMesh.colors, count, Color.white);
-                AppendOrPad(uv0, srcMesh.uv, count, Vector2.zero);
-                AppendOrPad(uv1, srcMesh.uv2, count, Vector2.zero);
+                anyColors |= AppendOrPad(colors, srcMesh.colors, count, Color.white);
+                anyUv0 |= AppendOrPad(uv0, srcMesh.uv, count, Vector2.zero);
+                anyUv1 |= AppendOrPad(uv1, srcMesh.uv2, count, Vector2.zero);
 
                 // --- bone weights, remapped to unified indices ---
                 var srcWeights = srcMesh.boneWeights;
@@ -229,11 +238,14 @@ namespace SkyMavis.AxieMixer3D
             mesh = new Mesh { name = "AxieCombinedMesh" };
             if (verts.Count > 65535) mesh.indexFormat = UnityEngine.Rendering.IndexFormat.UInt32;
             mesh.SetVertices(verts);
-            mesh.SetNormals(normals);
-            mesh.SetTangents(tangents);
-            mesh.SetColors(colors);
-            mesh.SetUVs(0, uv0);
-            mesh.SetUVs(1, uv1);
+            // Only publish channels a source actually had — see anyUv1 note above. Omitting an absent
+            // channel keeps the merged mesh's vertex layout identical to the un-combined parts, so the
+            // mystic shader samples the same (missing) uv1 it does without combining.
+            if (anyNormals) mesh.SetNormals(normals);
+            if (anyTangents) mesh.SetTangents(tangents);
+            if (anyColors) mesh.SetColors(colors);
+            if (anyUv0) mesh.SetUVs(0, uv0);
+            if (anyUv1) mesh.SetUVs(1, uv1);
             mesh.boneWeights = weights.ToArray();
             mesh.bindposes = bindposes.ToArray();
             mesh.subMeshCount = submeshTris.Count;
@@ -245,10 +257,14 @@ namespace SkyMavis.AxieMixer3D
             return true;
         }
 
-        static void AppendOrPad<T>(List<T> dst, T[] src, int count, T pad)
+        // Appends src when it lines up with the source's vertex count, else pads `count` copies of `pad`
+        // to keep every stream the same length. Returns true when real data was appended (so the caller
+        // can decide whether the channel exists on any source at all).
+        static bool AppendOrPad<T>(List<T> dst, T[] src, int count, T pad)
         {
-            if (src != null && src.Length == count) { dst.AddRange(src); return; }
+            if (src != null && src.Length == count) { dst.AddRange(src); return true; }
             for (var i = 0; i < count; i++) dst.Add(pad);
+            return false;
         }
 
         static void DestroySafe(Object obj)
