@@ -1,0 +1,3653 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c7829c10f7b45fc9cf4654a27785d8, type: 3}
+  m_Name: AxieFactory
+  m_EditorClassIdentifier: 
+  _colors:
+  - index: 0
+    key: beast-00
+    skin: 0
+    class: beast
+    color_value: 0
+    primary1: fdfcf2
+    primary2: af8c56
+  - index: 1
+    key: beast-01
+    skin: 0
+    class: beast
+    color_value: 1
+    primary1: 544f44
+    primary2: edd8b8
+  - index: 2
+    key: beast-02
+    skin: 0
+    class: beast
+    color_value: 2
+    primary1: ffd500
+    primary2: fffeda
+  - index: 3
+    key: beast-03
+    skin: 0
+    class: beast
+    color_value: 3
+    primary1: fdb014
+    primary2: fef0a3
+  - index: 4
+    key: beast-04
+    skin: 0
+    class: beast
+    color_value: 4
+    primary1: f5a037
+    primary2: fde5b6
+  - index: 5
+    key: beast-06
+    skin: 0
+    class: beast
+    color_value: 6
+    primary1: 427cad
+    primary2: ffcd63
+  - index: 6
+    key: plant-00
+    skin: 0
+    class: plant
+    color_value: 0
+    primary1: fefdf1
+    primary2: 98984a
+  - index: 7
+    key: plant-01
+    skin: 0
+    class: plant
+    color_value: 1
+    primary1: 4e523e
+    primary2: efe5a7
+  - index: 8
+    key: plant-02
+    skin: 0
+    class: plant
+    color_value: 2
+    primary1: afdb1b
+    primary2: e3efdb
+  - index: 9
+    key: plant-03
+    skin: 0
+    class: plant
+    color_value: 3
+    primary1: decd00
+    primary2: f3eaba
+  - index: 10
+    key: plant-04
+    skin: 0
+    class: plant
+    color_value: 4
+    primary1: 99ff73
+    primary2: fbfdf1
+  - index: 11
+    key: aquatic-00
+    skin: 0
+    class: aquatic
+    color_value: 0
+    primary1: f4fff4
+    primary2: 3ca1d9
+  - index: 12
+    key: aquatic-01
+    skin: 0
+    class: aquatic
+    color_value: 1
+    primary1: 4d545e
+    primary2: a9ead5
+  - index: 13
+    key: aquatic-02
+    skin: 0
+    class: aquatic
+    color_value: 2
+    primary1: 00f1d2
+    primary2: befedb
+  - index: 14
+    key: aquatic-03
+    skin: 0
+    class: aquatic
+    color_value: 3
+    primary1: 00dff3
+    primary2: bffef4
+  - index: 15
+    key: aquatic-04
+    skin: 0
+    class: aquatic
+    color_value: 4
+    primary1: 00b8ff
+    primary2: c9eeff
+  - index: 16
+    key: aquatic-06
+    skin: 0
+    class: aquatic
+    color_value: 6
+    primary1: e12f64
+    primary2: 62ffe2
+  - index: 17
+    key: bug-00
+    skin: 0
+    class: bug
+    color_value: 0
+    primary1: fffaf5
+    primary2: e22737
+  - index: 18
+    key: bug-01
+    skin: 0
+    class: bug
+    color_value: 1
+    primary1: 553b39
+    primary2: ffe7e2
+  - index: 19
+    key: bug-02
+    skin: 0
+    class: bug
+    color_value: 2
+    primary1: ff606c
+    primary2: fff4f9
+  - index: 20
+    key: bug-03
+    skin: 0
+    class: bug
+    color_value: 3
+    primary1: ff433e
+    primary2: ffdcce
+  - index: 21
+    key: bug-04
+    skin: 0
+    class: bug
+    color_value: 4
+    primary1: df2e54
+    primary2: ffd8d6
+  - index: 22
+    key: bird-00
+    skin: 0
+    class: bird
+    color_value: 0
+    primary1: fff7ff
+    primary2: fa59a0
+  - index: 23
+    key: bird-01
+    skin: 0
+    class: bird
+    color_value: 1
+    primary1: 583c44
+    primary2: fec3dd
+  - index: 24
+    key: bird-02
+    skin: 0
+    class: bird
+    color_value: 2
+    primary1: ff99b0
+    primary2: ffd8f3
+  - index: 25
+    key: bird-03
+    skin: 0
+    class: bird
+    color_value: 3
+    primary1: ffafc1
+    primary2: ffe0e7
+  - index: 26
+    key: bird-04
+    skin: 0
+    class: bird
+    color_value: 4
+    primary1: ff78b4
+    primary2: ffedff
+  - index: 27
+    key: reptile-00
+    skin: 0
+    class: reptile
+    color_value: 0
+    primary1: fff7ff
+    primary2: bb68ce
+  - index: 28
+    key: reptile-01
+    skin: 0
+    class: reptile
+    color_value: 1
+    primary1: 5e436d
+    primary2: f4cdfe
+  - index: 29
+    key: reptile-02
+    skin: 0
+    class: reptile
+    color_value: 2
+    primary1: c569cf
+    primary2: ffd2fe
+  - index: 30
+    key: reptile-03
+    skin: 0
+    class: reptile
+    color_value: 3
+    primary1: 9967fb
+    primary2: dac3ff
+  - index: 31
+    key: reptile-04
+    skin: 0
+    class: reptile
+    color_value: 4
+    primary1: f8bbff
+    primary2: fff1fe
+  - index: 32
+    key: reptile-06
+    skin: 0
+    class: reptile
+    color_value: 6
+    primary1: 00c15f
+    primary2: f4aaff
+  - index: 33
+    key: dawn-00
+    skin: 0
+    class: dawn
+    color_value: 0
+    primary1: fcfbf2
+    primary2: d4f8d0
+  - index: 34
+    key: dawn-01
+    skin: 0
+    class: dawn
+    color_value: 1
+    primary1: 594026
+    primary2: fede29
+  - index: 35
+    key: dawn-02
+    skin: 0
+    class: dawn
+    color_value: 2
+    primary1: bbbaff
+    primary2: eaf8ff
+  - index: 36
+    key: dawn-03
+    skin: 0
+    class: dawn
+    color_value: 3
+    primary1: ffff8d
+    primary2: feffe3
+  - index: 37
+    key: dawn-04
+    skin: 0
+    class: dawn
+    color_value: 4
+    primary1: a5ffff
+    primary2: ffffff
+  - index: 38
+    key: dusk-00
+    skin: 0
+    class: dusk
+    color_value: 0
+    primary1: f4fefb
+    primary2: feffff
+  - index: 39
+    key: dusk-01
+    skin: 0
+    class: dusk
+    color_value: 1
+    primary1: 1d4d4f
+    primary2: d0fec0
+  - index: 40
+    key: dusk-02
+    skin: 0
+    class: dusk
+    color_value: 2
+    primary1: 0097a0
+    primary2: abffac
+  - index: 41
+    key: dusk-03
+    skin: 0
+    class: dusk
+    color_value: 3
+    primary1: 007181
+    primary2: 62feda
+  - index: 42
+    key: dusk-04
+    skin: 0
+    class: dusk
+    color_value: 4
+    primary1: 00aeb7
+    primary2: a4ffcb
+  - index: 43
+    key: mech-00
+    skin: 0
+    class: mech
+    color_value: 0
+    primary1: f6fbff
+    primary2: 929292
+  - index: 44
+    key: mech-01
+    skin: 0
+    class: mech
+    color_value: 1
+    primary1: 505050
+    primary2: e5e5e5
+  - index: 45
+    key: mech-02
+    skin: 0
+    class: mech
+    color_value: 2
+    primary1: ced5d7
+    primary2: f1fdf0
+  - index: 46
+    key: mech-03
+    skin: 0
+    class: mech
+    color_value: 3
+    primary1: ad6d3f
+    primary2: 9ae6cb
+  - index: 47
+    key: mech-04
+    skin: 0
+    class: mech
+    color_value: 4
+    primary1: 8c8e9e
+    primary2: ebe7de
+  - index: 48
+    key: body-frosty
+    skin: 1
+    class: any
+    color_value: -1
+    primary1: f3fefe
+    primary2: f3fefe
+  - index: 49
+    key: beast-summer
+    skin: 2
+    class: beast
+    color_value: -1
+    primary1: fe9701
+    primary2: fff6ec
+  - index: 50
+    key: plant-summer
+    skin: 2
+    class: plant
+    color_value: -1
+    primary1: 67e92f
+    primary2: f6fff7
+  - index: 51
+    key: aquatic-summer
+    skin: 2
+    class: aquatic
+    color_value: -1
+    primary1: 00c5d0
+    primary2: f5fffd
+  - index: 52
+    key: bug-summer
+    skin: 2
+    class: bug
+    color_value: -1
+    primary1: ff4363
+    primary2: fffdff
+  - index: 53
+    key: bird-summer
+    skin: 2
+    class: bird
+    color_value: -1
+    primary1: ff78bb
+    primary2: fffdff
+  - index: 54
+    key: reptile-summer
+    skin: 2
+    class: reptile
+    color_value: -1
+    primary1: e173ff
+    primary2: fefeff
+  - index: 55
+    key: dawn-summer
+    skin: 2
+    class: dawn
+    color_value: -1
+    primary1: ffda00
+    primary2: f8fdea
+  - index: 56
+    key: mech-summer
+    skin: 2
+    class: mech
+    color_value: -1
+    primary1: c7d7e9
+    primary2: fefeff
+  - index: 57
+    key: dusk-summer
+    skin: 2
+    class: dusk
+    color_value: -1
+    primary1: 474b84
+    primary2: fefeff
+  - index: 58
+    key: beast-nightmare
+    skin: 3
+    class: beast
+    color_value: -1
+    primary1: e6eee6
+    primary2: fe9701
+  - index: 59
+    key: plant-nightmare
+    skin: 3
+    class: plant
+    color_value: -1
+    primary1: e6eee6
+    primary2: 67e92f
+  - index: 60
+    key: aquatic-nightmare
+    skin: 3
+    class: aquatic
+    color_value: -1
+    primary1: e6eee6
+    primary2: 00c5d0
+  - index: 61
+    key: bug-nightmare
+    skin: 3
+    class: bug
+    color_value: -1
+    primary1: e6eee6
+    primary2: ff4363
+  - index: 62
+    key: bird-nightmare
+    skin: 3
+    class: bird
+    color_value: -1
+    primary1: e6eee6
+    primary2: ff78bb
+  - index: 63
+    key: reptile-nightmare
+    skin: 3
+    class: reptile
+    color_value: -1
+    primary1: e6eee6
+    primary2: e173ff
+  - index: 64
+    key: dawn-nightmare
+    skin: 3
+    class: dawn
+    color_value: -1
+    primary1: e6eee6
+    primary2: ffda00
+  - index: 65
+    key: mech-nightmare
+    skin: 3
+    class: mech
+    color_value: -1
+    primary1: e6eee6
+    primary2: c7d7e9
+  - index: 66
+    key: dusk-nightmare
+    skin: 3
+    class: dusk
+    color_value: -1
+    primary1: e6eee6
+    primary2: 474b84
+  _defaultInstantiationParams:
+    partLayerOverrides: []
+    combineMeshes: 1
+  _bodies:
+  - type: 0
+    data: {fileID: 11400000, guid: 74d553c5fd9f649649e15d839d69a73c, type: 2}
+  - type: 1
+    data: {fileID: 11400000, guid: 43680292ba97c4441886758c5d7ef5e0, type: 2}
+  - type: 2
+    data: {fileID: 11400000, guid: 8e7fa1b8a441544f8bb828dc31f476df, type: 2}
+  - type: 3
+    data: {fileID: 11400000, guid: d1b5ab947a3d644f0811fef3e7e1a0f0, type: 2}
+  - type: 4
+    data: {fileID: 11400000, guid: 24673d95a78bf4b068417f16d1e6f218, type: 2}
+  - type: 5
+    data: {fileID: 11400000, guid: 871cd470e93bf413e8e8392bb5e9ed04, type: 2}
+  - type: 6
+    data: {fileID: 11400000, guid: 287573877409f4359b26e3911f580e43, type: 2}
+  - type: 7
+    data: {fileID: 11400000, guid: 00c44b3b7e00f473691329ab7ebcb979, type: 2}
+  _parts:
+  - name: S00_Aquatic02_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 4699068325535395231, guid: 25d4b23827f8a49ff8962852abb52d26, type: 3}
+  - name: S00_Aquatic02_L1_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 1258686853008197407, guid: c85998e757f824106a83c7c21a43bebe, type: 3}
+    - type: 4
+      prefab: {fileID: 1098795868915239809, guid: c4a2fb6b090264c3f86c2a9a170f2470, type: 3}
+  - name: S00_Aquatic02_L1_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 9131735470619519193, guid: 1162f6859e6614e339f01c392cb1c727, type: 3}
+  - name: S00_Aquatic02_L1_Horn
+    rigs:
+    - type: 10
+      prefab: {fileID: 5853911099212051492, guid: 1fa7f9bd6799d43d0872010043424636, type: 3}
+    - type: 12
+      prefab: {fileID: 8051902205841220112, guid: 527ce18ff96d84eb890299e7945c09a9, type: 3}
+  - name: S00_Aquatic02_L1_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 565993809813722587, guid: f4392d2f96b754a81b21eeb5ebe263a1, type: 3}
+  - name: S00_Aquatic02_L1_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 1024999835819449979, guid: 74bf42e7013504424a5cb606dbcf3b5a, type: 3}
+  - name: S00_Aquatic02_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 600042146864677873, guid: 1ec371b47df174046b35051a478793ef, type: 3}
+  - name: S00_Aquatic02_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 2547009585070639506, guid: ff64d903aca7e48b680d7d49bf0c53bd, type: 3}
+    - type: 4
+      prefab: {fileID: 4787783185817756885, guid: 53f7d4f6617a44bcb9f059a1566041bb, type: 3}
+  - name: S00_Aquatic02_L2_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 4973529785254133835, guid: cd3f6d6df57ad40b89dc588d6cfdf2ec, type: 3}
+  - name: S00_Aquatic02_L2_Horn
+    rigs:
+    - type: 10
+      prefab: {fileID: 8766855458315249345, guid: aaa04ba0af6c9462e816da626f76ad21, type: 3}
+    - type: 12
+      prefab: {fileID: 6302671887531288040, guid: 38b062e8c05994a299cf13964796b426, type: 3}
+  - name: S00_Aquatic02_L2_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 6803194372831399175, guid: 4f2ba35f4b8404597b9df3c54bd30f70, type: 3}
+  - name: S00_Aquatic02_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 8440903275145184767, guid: f0f2fbc3e18c945cfb41cc44ab182c34, type: 3}
+  - name: S00_Aquatic04_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 193093573341527579, guid: a6351e8ffd2f645ff82a8008c0b27877, type: 3}
+  - name: S00_Aquatic04_L1_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 3841934742753019963, guid: 9372da66c7e5c407b87488f84bb76311, type: 3}
+    - type: 4
+      prefab: {fileID: 3966747622367189221, guid: c4856f2b353944b9288a7f42e6d365c1, type: 3}
+  - name: S00_Aquatic04_L1_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 7845685609903905917, guid: 37b9e85641d7b49a1b665231b2a56520, type: 3}
+  - name: S00_Aquatic04_L1_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 8134714443983536573, guid: ce69d9df897b246a8985bb880260c70b, type: 3}
+  - name: S00_Aquatic04_L1_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 7593053083979341119, guid: 16bfbfeae524941bfb29976cc2cb8650, type: 3}
+  - name: S00_Aquatic04_L1_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 2972832904913403953, guid: 7cc139380ad3c4a66ba1a7c79feffc1d, type: 3}
+  - name: S00_Aquatic04_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 2737979193114610646, guid: 8d557d63c283e4fa4b2db874e06e8831, type: 3}
+  - name: S00_Aquatic04_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 3097016514463405455, guid: aaba3c25941c6401b9a7e67f9e265e2b, type: 3}
+    - type: 4
+      prefab: {fileID: 2730010781753687528, guid: 253207cdaca2e48cb9651fff87b772e1, type: 3}
+  - name: S00_Aquatic04_L2_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 7336886198908783292, guid: d20df0037a9b846efac6edd8134ebda3, type: 3}
+  - name: S00_Aquatic04_L2_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 5463928462557894805, guid: 112997a54c3744497a0b0c3d194614b6, type: 3}
+  - name: S00_Aquatic04_L2_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 1807164365212894565, guid: 3629b5a2789b645f2a09d4bb0e31e0d2, type: 3}
+  - name: S00_Aquatic04_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 7522062670632623548, guid: 92988bb156f574cf48cecb3270649901, type: 3}
+  - name: S00_Aquatic06_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 410257125663644007, guid: 3f82ff4e3bac3407daf18b9ce3b3601e, type: 3}
+  - name: S00_Aquatic06_L1_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 1684836885402342848, guid: cd9d0c2c64bf846bc80e86543a4f675d, type: 3}
+    - type: 4
+      prefab: {fileID: 5712336641482925077, guid: 8ce78e3cb7f64443080acd2603b0a5b0, type: 3}
+  - name: S00_Aquatic06_L1_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 7932784675203868795, guid: 3ea3b8f915b044a3a8b85d9fb0ff454c, type: 3}
+  - name: S00_Aquatic06_L1_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 7340266694372425377, guid: ec99d813948a94d1f8ce900f3269ab9e, type: 3}
+  - name: S00_Aquatic06_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 2577511137169855861, guid: ebe238fb448b94e789cfef1a98238d50, type: 3}
+  - name: S00_Aquatic06_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 8867623358062480879, guid: 0adb84575b8db47d09e4bb33a3071b56, type: 3}
+    - type: 4
+      prefab: {fileID: 2976681903053129947, guid: 3e91587f5a4b2401b8b33bb365c28c80, type: 3}
+  - name: S00_Aquatic06_L2_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 8916267730691679262, guid: 45f8b6c940c8743e093c0b97a8ce26d0, type: 3}
+  - name: S00_Aquatic06_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 329850569614073481, guid: ed9d9664b60fb46ea8a693e0232599f8, type: 3}
+  - name: S00_Aquatic08_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 8073739091721443076, guid: ba383685c77f2488baa0e013810764fd, type: 3}
+  - name: S00_Aquatic08_L1_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 8423087431444132412, guid: af6c13a59ccdd436292c554ec31e6529, type: 3}
+    - type: 4
+      prefab: {fileID: 3725629823563370802, guid: 92384dedf3e7548839fa21e24c131a29, type: 3}
+  - name: S00_Aquatic08_L1_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 5838036357495990218, guid: 8efe89b4dae524be0bdefbb822ca5eb0, type: 3}
+  - name: S00_Aquatic08_L1_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 216181186009533696, guid: 66486255eba684418bde8e2d3298f123, type: 3}
+  - name: S00_Aquatic08_L1_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 4870448484016531265, guid: 2015c8c9090c449c7b0e606798b58769, type: 3}
+  - name: S00_Aquatic08_L1_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 3177942049592085756, guid: 06a84fe2ec8a04973acebbd06de4372a, type: 3}
+  - name: S00_Aquatic08_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 5387227798930467183, guid: ce31082873d944fdcbc8bc3e9a687a76, type: 3}
+  - name: S00_Aquatic08_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 1718825043655324952, guid: d06111caf81a44bb2a77466447255322, type: 3}
+    - type: 4
+      prefab: {fileID: 2287813149322190095, guid: 6e126186a3fb147489ea831d42e400fd, type: 3}
+  - name: S00_Aquatic08_L2_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 6008660206293716155, guid: c453e3fcd2eab4b0299b79c69178513a, type: 3}
+  - name: S00_Aquatic08_L2_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 7867126122847809798, guid: 69a5d579bfdfb4946a7bfebfb46f1d64, type: 3}
+  - name: S00_Aquatic08_L2_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 5109248377105536070, guid: 18024d2ea8bd542f5a56b0e7a6f49ac6, type: 3}
+  - name: S00_Aquatic08_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 7707403010192413837, guid: 00a8b094d19f8433f92b152f11ece764, type: 3}
+  - name: S00_Aquatic10_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 7443598537915705573, guid: bf3c842f3c8594d39bb73e949114d924, type: 3}
+  - name: S00_Aquatic10_L1_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 4667886446531933677, guid: 124c9b2f379344486a1d4acf6eba9d00, type: 3}
+    - type: 4
+      prefab: {fileID: 1739817577293682833, guid: 71a98f847d7bc4c78b4ebaf21d2ce1b4, type: 3}
+  - name: S00_Aquatic10_L1_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 6531612261317318411, guid: 5254cc404fb97467a9d05c248b07a272, type: 3}
+  - name: S00_Aquatic10_L1_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 7979424580653385083, guid: ce302948e3a8a48279729d78617b7cee, type: 3}
+  - name: S00_Aquatic10_L1_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 2993941149574055353, guid: 3f8a7d01c222e4b8e9d7953e3f936a0f, type: 3}
+  - name: S00_Aquatic10_L1_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 1012492418994610, guid: 39ecbc15e2aa448a9b3adcbd7c9effef, type: 3}
+  - name: S00_Aquatic10_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 118956437506866027, guid: 1f8b0cb4a1ba842a195498e19cfd3324, type: 3}
+  - name: S00_Aquatic10_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 4850892239243250130, guid: 3dafc0db49c8346eda1faa96fce67c1f, type: 3}
+    - type: 4
+      prefab: {fileID: 863406555714221127, guid: 1c0a4282e1b544afe88718d1d59dc219, type: 3}
+  - name: S00_Aquatic10_L2_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 3468453808098750336, guid: 714e9922b59324b5696cc1b5f553bf1f, type: 3}
+  - name: S00_Aquatic10_L2_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 5443247352544336539, guid: 14c399b63c13f4895ac9c4eb01dbc409, type: 3}
+  - name: S00_Aquatic10_L2_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 3718173453316765629, guid: 0bb645195a4e94f6b84602cc29648196, type: 3}
+  - name: S00_Aquatic10_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 2974940436815927798, guid: 67c0eb95918d2463a8aa622bbcb952d2, type: 3}
+  - name: S00_Aquatic12_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 7512311485302366314, guid: f341425debcbb4e35a12657108a2731b, type: 3}
+  - name: S00_Aquatic12_L1_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 4377682772728394617, guid: 1acb9ab7031e44d21b9391fa8cfffda4, type: 3}
+    - type: 4
+      prefab: {fileID: 3796524381583703070, guid: 56cf4985639a44478b85ea0e7ffedbed, type: 3}
+  - name: S00_Aquatic12_L1_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 4491385093992995522, guid: c87d2021d6a424346974f6bf5bc93cb7, type: 3}
+  - name: S00_Aquatic12_L1_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 6060008473892410369, guid: 75d774accd02c4f38a073caf47ce4894, type: 3}
+  - name: S00_Aquatic12_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 1253951247258400250, guid: 2468485ecfd054b118239162dee099cb, type: 3}
+  - name: S00_Aquatic12_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 499761140110044702, guid: e5ef58a51da8c460d8789406a6b67da9, type: 3}
+    - type: 4
+      prefab: {fileID: 7189886038818056324, guid: 084bd031f418146e899cd418fe0c84bf, type: 3}
+  - name: S00_Aquatic12_L2_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 1580371097661939074, guid: 91a7c52f509ab420e9194813ae702448, type: 3}
+  - name: S00_Aquatic12_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 3115991038642089723, guid: f537c8a94985a4793b399d4c85aed05f, type: 3}
+  - name: S00_Beast02_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 2190892902096353627, guid: f29ba48191f7e412294dc6e1ec2722df, type: 3}
+  - name: S00_Beast02_L1_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 8601419118598993395, guid: 0576718ac351c4d0cb8ce19d36934d4b, type: 3}
+    - type: 4
+      prefab: {fileID: 1637137774170910590, guid: 252c967b4ff5f40758e027c7e067a6c2, type: 3}
+  - name: S00_Beast02_L1_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 4649146882399972022, guid: abc9c5093a6f54b68915e4e3a9843d22, type: 3}
+  - name: S00_Beast02_L1_Horn
+    rigs:
+    - type: 10
+      prefab: {fileID: 6088875951781276738, guid: c188f37f19a7b45be97f6d0a3a506dde, type: 3}
+    - type: 12
+      prefab: {fileID: 1265668545056574812, guid: 584c1e058b6584b0ab17f6d29372d7ca, type: 3}
+  - name: S00_Beast02_L1_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 5379742078006852998, guid: 0c20ad3bd488348ceb199623c672a502, type: 3}
+  - name: S00_Beast02_L1_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 5302263822594018825, guid: ffa28075fa48f47e89a66194e7fb657a, type: 3}
+  - name: S00_Beast02_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 1495928699344540254, guid: af3f167aa629d456991aafc812ac98d0, type: 3}
+  - name: S00_Beast02_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 6566747436246660525, guid: c655527bc868a4856b95440ea0c22026, type: 3}
+    - type: 4
+      prefab: {fileID: 8200291701789096693, guid: 8c2376c3c343d4e938f2ca24782b059a, type: 3}
+  - name: S00_Beast02_L2_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 3837013801143605474, guid: 24c52dbab5b44466f8e4221e8ed60cec, type: 3}
+  - name: S00_Beast02_L2_Horn
+    rigs:
+    - type: 10
+      prefab: {fileID: 5164166392791837798, guid: ebcb0a62fa2964dbe886df80caf97986, type: 3}
+    - type: 12
+      prefab: {fileID: 9017574503327644263, guid: 35b27888813ee4642809aca2395dc57e, type: 3}
+  - name: S00_Beast02_L2_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 3414387792150623331, guid: fcf22961d86bc4938b809df5ea0ca636, type: 3}
+  - name: S00_Beast02_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 1215739035916464102, guid: 0d456004506ca470fb9b766aeca105a3, type: 3}
+  - name: S00_Beast04_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 8751083609569820751, guid: 7833ade74e4494571b5be39cb819a1fd, type: 3}
+  - name: S00_Beast04_L1_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 7356734975836375544, guid: 058d5d610fffd40e58de957ff90fa1b0, type: 3}
+    - type: 4
+      prefab: {fileID: 3381972186867838281, guid: 30f47dc4530824d1d85233b6f3acbe9f, type: 3}
+  - name: S00_Beast04_L1_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 8852046541246532427, guid: 52e23070b701d4a0297a350c2099da53, type: 3}
+  - name: S00_Beast04_L1_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 6572525640967609779, guid: f39fd0dcf0daf4984bdd63da94504f72, type: 3}
+  - name: S00_Beast04_L1_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 3077267306176450794, guid: 8cf435e8d4ae84b6993d320172a75582, type: 3}
+  - name: S00_Beast04_L1_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 23751097109125230, guid: 94bede4778e7647aa904daeeb2ec30e0, type: 3}
+  - name: S00_Beast04_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 294454200087029850, guid: 1e9f9e6b6b75345dabfb081ea4150eda, type: 3}
+  - name: S00_Beast04_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 1696448553334499844, guid: 4a3439f11bc3b4c948bb971965d75111, type: 3}
+    - type: 4
+      prefab: {fileID: 8802969040113520120, guid: 283069d3de833419a8036e7e94b04307, type: 3}
+  - name: S00_Beast04_L2_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 2672868011844561473, guid: 4c925e7cd6bd54455b2e833ba44b40e0, type: 3}
+  - name: S00_Beast04_L2_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 2512105627384914159, guid: edca8ab5f2e1944abb03fa5d37c443e8, type: 3}
+  - name: S00_Beast04_L2_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 210066170438267670, guid: 7bd27cecd6175496c9a9c8560a05b11f, type: 3}
+  - name: S00_Beast04_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 9155925224986584542, guid: dd9cfb2e4e70d4cb0b80480f79b0fc25, type: 3}
+  - name: S00_Beast06_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 3698242575630545368, guid: e31f028e58c394db1afbd5c7ed5a6a18, type: 3}
+  - name: S00_Beast06_L1_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 7120360916423500285, guid: 2546a3c1227dd4e73bb24b8765cfa992, type: 3}
+    - type: 4
+      prefab: {fileID: 2072436751699946653, guid: 5db1785ecb49a4833a76185948b7ecc5, type: 3}
+  - name: S00_Beast06_L1_Horn
+    rigs:
+    - type: 10
+      prefab: {fileID: 3631294429297705833, guid: 6c36e6baacce74140ac8f331811242f2, type: 3}
+    - type: 12
+      prefab: {fileID: 65959967912503189, guid: f32aaac95d03f4c6fbd4760c6902c6a8, type: 3}
+  - name: S00_Beast06_L1_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 1305321365073430583, guid: e46e75f3bf3f64142976e2b269d9d940, type: 3}
+  - name: S00_Beast06_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 5518438766109788787, guid: 0561e674239e44175bcc621099aadb99, type: 3}
+  - name: S00_Beast06_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 289008539084660721, guid: 79e0119e1e8904552b648cfd4c88456d, type: 3}
+    - type: 4
+      prefab: {fileID: 987010701500415022, guid: 53c607a8df2ec435a82c5ed7c2ac7b49, type: 3}
+  - name: S00_Beast06_L2_Horn
+    rigs:
+    - type: 10
+      prefab: {fileID: 2602693837826524978, guid: 3c2a84bc1860646868b50e0a398216eb, type: 3}
+    - type: 12
+      prefab: {fileID: 3625411076643497401, guid: ecd71df5d38e840329377a2935744cda, type: 3}
+  - name: S00_Beast06_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 5451790327271925065, guid: bdc917ebe9fe54f9cba9fce1236750b5, type: 3}
+  - name: S00_Beast08_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 3381455745250191490, guid: 56635aed73a3349658efc90bea7b99ea, type: 3}
+  - name: S00_Beast08_L1_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 1849627180255961189, guid: 3b0d877aecbbe4ff18ae84d37f732b87, type: 3}
+    - type: 4
+      prefab: {fileID: 3702259697070882449, guid: d90a746d97369496eaff4c6afb462b6b, type: 3}
+  - name: S00_Beast08_L1_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 8177738478714472049, guid: b27ca744962de46448fced4d3c53b798, type: 3}
+  - name: S00_Beast08_L1_Horn
+    rigs:
+    - type: 10
+      prefab: {fileID: 4316639027523380873, guid: 2c39fbf4673254c028dbe5af942ea806, type: 3}
+    - type: 12
+      prefab: {fileID: 2069684846084006204, guid: cadf90f469ae34d1ab4b2ab7493bcd62, type: 3}
+  - name: S00_Beast08_L1_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 4746819313450159632, guid: 1d7739be5455141b18366c2cad1010bd, type: 3}
+  - name: S00_Beast08_L1_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 4483625739615911520, guid: 62649b895e28b4d11a9476ae0fb8fae5, type: 3}
+  - name: S00_Beast08_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 6452588473728521463, guid: 16a8af85c79404567b966ec5c58f69d8, type: 3}
+  - name: S00_Beast08_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 4602471633206191643, guid: 6aada639e7d7c4d5a85536e16a0d17a0, type: 3}
+    - type: 4
+      prefab: {fileID: 999040045809822776, guid: 6ff48b59d5d0d44d8bfde53b29125dd3, type: 3}
+  - name: S00_Beast08_L2_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 5080963889295781837, guid: 62df44415ea8941bb8821fbc64068e30, type: 3}
+  - name: S00_Beast08_L2_Horn
+    rigs:
+    - type: 10
+      prefab: {fileID: 1403664577423529097, guid: 4a35b4b335a5b485f9473f30bff4b42e, type: 3}
+    - type: 12
+      prefab: {fileID: 2646602225573435172, guid: b6e475a465fdb4c38b6100a0ad97bd65, type: 3}
+  - name: S00_Beast08_L2_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 3097092466953051730, guid: 491b6e07f1d9e4e50978a7912252c661, type: 3}
+  - name: S00_Beast08_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 531092184367863412, guid: 696792d5bc2f84f73a2463e8173e4e6d, type: 3}
+  - name: S00_Beast10_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 576798300737376819, guid: cec85008d64c342d4bc433c1d25bd934, type: 3}
+  - name: S00_Beast10_L1_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 4745341505542218951, guid: c10e5aeae28dd49efbfc94cb80be2c8e, type: 3}
+    - type: 4
+      prefab: {fileID: 545408553840847883, guid: 510596ae674f54a9b863924ecbff15d9, type: 3}
+  - name: S00_Beast10_L1_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 3773454994819721362, guid: 2e340aa9f68924bab97611662f8570ed, type: 3}
+  - name: S00_Beast10_L1_Horn
+    rigs:
+    - type: 10
+      prefab: {fileID: 3695848948057424136, guid: e74e3f4934ea143bd9195de04006845e, type: 3}
+    - type: 12
+      prefab: {fileID: 2413151904472989662, guid: 821ba2da77ce34bb999cf6110f46e5b2, type: 3}
+  - name: S00_Beast10_L1_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 177853332266278697, guid: b6b32db60bae944f99034b3016e98825, type: 3}
+  - name: S00_Beast10_L1_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 1512337127448455814, guid: ec6e9dee010894ecb9b3a39d07cb110c, type: 3}
+  - name: S00_Beast10_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 6342592203419205446, guid: 345d8c96d3481428b82a718fd6d79162, type: 3}
+  - name: S00_Beast10_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 2260498630627862676, guid: d6a54c4bebc924d8ea70edb93e4e7766, type: 3}
+    - type: 4
+      prefab: {fileID: 3936476481733357244, guid: db0da0fc377f44c3c92672e91ecfaddb, type: 3}
+  - name: S00_Beast10_L2_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 8941771907769409034, guid: 53921ff446d884eaf8bcc2a8dddf24b3, type: 3}
+  - name: S00_Beast10_L2_Horn
+    rigs:
+    - type: 10
+      prefab: {fileID: 1236687567579506781, guid: 437f8ccd74c454a12a5fefc61f629486, type: 3}
+    - type: 12
+      prefab: {fileID: 6122300651494494203, guid: d80c06b3b8d5e4199945a518f9db0615, type: 3}
+  - name: S00_Beast10_L2_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 5626803410286305307, guid: d2feac729d2824a068078187feb67d5b, type: 3}
+  - name: S00_Beast10_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 2562001687897535812, guid: d40276c0b3f664ad0a9fcb791e8d0925, type: 3}
+  - name: S00_Beast12_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 358530348335044759, guid: 3419a376eaf6443e4b8d9fb6fe452d8b, type: 3}
+  - name: S00_Beast12_L1_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 3452612313857871075, guid: 9a8c0d85e8c664a87b42e8def21ca862, type: 3}
+    - type: 4
+      prefab: {fileID: 7430208920038246128, guid: d3700a196651545d998467b924136fc6, type: 3}
+  - name: S00_Beast12_L1_Horn
+    rigs:
+    - type: 10
+      prefab: {fileID: 2090652949614286721, guid: f72f1b50b2d724d03a1da59a6b2df57f, type: 3}
+    - type: 12
+      prefab: {fileID: 109533746411043422, guid: c74b3cc7c5c1141d68fc1e18fff4d110, type: 3}
+  - name: S00_Beast12_L1_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 568601068639153512, guid: ff0d0e9f0f41847f181296e490181b58, type: 3}
+  - name: S00_Beast12_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 1593463007879027100, guid: bbb332b8a33b5476f86d9830c0d9b985, type: 3}
+  - name: S00_Beast12_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 4705871241107974629, guid: f060a3a0db79d435d802309a78eeabc1, type: 3}
+    - type: 4
+      prefab: {fileID: 462669673635331890, guid: 903c7bed5878b4b1d8257e8d51cf3354, type: 3}
+  - name: S00_Beast12_L2_Horn
+    rigs:
+    - type: 10
+      prefab: {fileID: 4265077914288863300, guid: 4f1de10a099954ccfb658b200c9db00a, type: 3}
+    - type: 12
+      prefab: {fileID: 661668453990712270, guid: d64cf1adc917b4799ad168b55f1e2942, type: 3}
+  - name: S00_Beast12_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 1957388301408065223, guid: de1dd7a591ff34b5fa89b78e5f396638, type: 3}
+  - name: S00_Bird02_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 7032518737702065601, guid: c54d1707e47264e99b1c6c5088057ce1, type: 3}
+  - name: S00_Bird02_L1_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 8776578594534680598, guid: 0ff6e4d315548458c90fb785f0914230, type: 3}
+    - type: 4
+      prefab: {fileID: 1397153607437413143, guid: fdb06516c428a4852b0fe4479bad6c95, type: 3}
+  - name: S00_Bird02_L1_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 1570691770857891470, guid: 342ada41691be4c8897d9fee9a12361e, type: 3}
+  - name: S00_Bird02_L1_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 1726309669152812599, guid: 7bf712b22e5844e1890ac313a4e45201, type: 3}
+  - name: S00_Bird02_L1_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 4162817065723914676, guid: cdd6706fa27be4237900406a1a61d8b1, type: 3}
+  - name: S00_Bird02_L1_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 5635125051464468903, guid: 0b56c5d67098e4fd890ba22808fe87af, type: 3}
+  - name: S00_Bird02_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 3668881065492175425, guid: 178518d812be94702a575ec382a4600d, type: 3}
+  - name: S00_Bird02_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 5315885448126517463, guid: 02d69e4599d774440aead0f80d32b439, type: 3}
+    - type: 4
+      prefab: {fileID: 9138813737729849651, guid: 91c0f067e1c9b4b0794c95f0f9acec2a, type: 3}
+  - name: S00_Bird02_L2_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 7271617470738176197, guid: 4636151adf7ee4264a998183a5cb922e, type: 3}
+  - name: S00_Bird02_L2_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 1469880003505820519, guid: a8f4de021e6bd464b9d3692bef3b3f86, type: 3}
+  - name: S00_Bird02_L2_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 3402687181815192268, guid: e500b5099713d445b805fb87355067c0, type: 3}
+  - name: S00_Bird02_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 5144648663144777552, guid: 84489b1d038704e269ae0448eea0b031, type: 3}
+  - name: S00_Bird04_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 3145887318310643766, guid: e6f90e88548814d89bdb6f816ba219d5, type: 3}
+  - name: S00_Bird04_L1_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 116979274280406532, guid: f42d0c020b9fe424fa92ed95bd244582, type: 3}
+    - type: 4
+      prefab: {fileID: 4456924203700992268, guid: 9e1c6f610b28342d2bc1d2422e085da8, type: 3}
+  - name: S00_Bird04_L1_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 1676004428150681063, guid: 948bf826db8c742af92ae032f501d5c2, type: 3}
+  - name: S00_Bird04_L1_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 1760763998930019411, guid: d448032afbcd4428b906535990eda48a, type: 3}
+  - name: S00_Bird04_L1_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 5195307362076798787, guid: f905168631c784a24b48a3561bde2a5e, type: 3}
+  - name: S00_Bird04_L1_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 7246562754203766685, guid: d0849c7f55434427abcd4b3f442fbe2d, type: 3}
+  - name: S00_Bird04_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 8318705432756874255, guid: 18b97d5194bd044989177ffa49647595, type: 3}
+  - name: S00_Bird04_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 1895726043074442696, guid: d88e3d9fa1a884bed9be795ced45a568, type: 3}
+    - type: 4
+      prefab: {fileID: 5546466830619402330, guid: bef2d3b85b60f4f81ac8f92deef71691, type: 3}
+  - name: S00_Bird04_L2_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 2768136727785575147, guid: c23b8fa298a8f4a18a193968d0267fb3, type: 3}
+  - name: S00_Bird04_L2_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 8814634377452195307, guid: c75a14315963d4fa4a2049ebcae2e6fc, type: 3}
+  - name: S00_Bird04_L2_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 453314315187073940, guid: 217ac9b31530a4de9b85c40e06470420, type: 3}
+  - name: S00_Bird04_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 1884002313209922109, guid: cf942cf474abb41b3a79aef8e5010296, type: 3}
+  - name: S00_Bird06_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 4509829862283012342, guid: db2b2117ad5d641e3b567539d15ce3db, type: 3}
+  - name: S00_Bird06_L1_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 4382546139200602336, guid: 1d0cf1bf97030479ca5129b3d97bc160, type: 3}
+    - type: 4
+      prefab: {fileID: 151049614192487190, guid: 217921e1b2eac48f0b8853ab386953c3, type: 3}
+  - name: S00_Bird06_L1_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 7488575866831705480, guid: 6d988d39afe524a7f973e0b3562394d9, type: 3}
+  - name: S00_Bird06_L1_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 2536614496071717690, guid: c265bc0722cd1494fb2a51c81d0176bd, type: 3}
+  - name: S00_Bird06_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 3430706161252300053, guid: 0daf1c29786ca4660b7bd82b3abff117, type: 3}
+  - name: S00_Bird06_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 6055996912521123787, guid: 035f5f057026444c39a173ecb8b7ab03, type: 3}
+    - type: 4
+      prefab: {fileID: 6543201976594768052, guid: 1c3e2b693d0544af0a46af3024178021, type: 3}
+  - name: S00_Bird06_L2_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 8272744202063082380, guid: 539b71accbe9b4eeeba7d99f0b5dc27f, type: 3}
+  - name: S00_Bird06_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 7066826092565797310, guid: d64529d7de071463e98e4e215496c417, type: 3}
+  - name: S00_Bird08_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 8393003526682309019, guid: 6cc991e5166a34dd28d9f6b20d6701c5, type: 3}
+  - name: S00_Bird08_L1_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 8947203419328763227, guid: 4e04697d6c08848afbcbb0e6af44acd4, type: 3}
+    - type: 4
+      prefab: {fileID: 5576176370102887734, guid: d31af0253beab469ba8ace816ba66917, type: 3}
+  - name: S00_Bird08_L1_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 2933037260289182790, guid: 7aae8b69c1af7425594758a4d6b000b6, type: 3}
+  - name: S00_Bird08_L1_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 7114694018856629150, guid: b276bbfbd40c544e68381c7506cf52bd, type: 3}
+  - name: S00_Bird08_L1_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 6860783900195807093, guid: 02d9d998493a34034a2c7a47b74571cb, type: 3}
+  - name: S00_Bird08_L1_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 62555351654844297, guid: 5ded24e78485a46d693437268cfb87d3, type: 3}
+  - name: S00_Bird08_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 765372876328559993, guid: d2774a115c84b4e3a964e5fe361de783, type: 3}
+  - name: S00_Bird08_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 1348590698102288360, guid: b3eea93ce5556485eabd55c8185d96fe, type: 3}
+    - type: 4
+      prefab: {fileID: 5841579766766998956, guid: 6a7de0d324acf4128abeb786797f0cbe, type: 3}
+  - name: S00_Bird08_L2_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 8924429986718465481, guid: 2e70d610b4ecc4ade834ca16f9b27a80, type: 3}
+  - name: S00_Bird08_L2_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 7188731116883871907, guid: 9fecb92f7b81142aa841ba2e861645e7, type: 3}
+  - name: S00_Bird08_L2_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 4525270382553783573, guid: 07d660481aeaa4ba48a6158d5e322050, type: 3}
+  - name: S00_Bird08_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 23295230313071105, guid: 340d05e3c354d4410aaaf6308624044c, type: 3}
+  - name: S00_Bird10_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 535617439990687007, guid: 691b822f16a424bf79d5a55f782fe241, type: 3}
+  - name: S00_Bird10_L1_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 2455256632266509176, guid: 271a29baf00cc4442a2a69eb99b29eea, type: 3}
+    - type: 4
+      prefab: {fileID: 4081545791217155316, guid: 4180ff729ba3849d1b5f22f0ac9c00c0, type: 3}
+  - name: S00_Bird10_L1_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 2368832657775677086, guid: 6c88205d94af245a0b2a5282a8dc8a00, type: 3}
+  - name: S00_Bird10_L1_Horn
+    rigs:
+    - type: 10
+      prefab: {fileID: 636288467736666808, guid: 65a90d4e9a0fa4103b3a055721cee95d, type: 3}
+    - type: 12
+      prefab: {fileID: 4531556184112661878, guid: 75d4f2d5b617449669a40e2964c5669f, type: 3}
+  - name: S00_Bird10_L1_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 4258523527939913359, guid: d8605b69f8c5d46968e29cc3dc5e88c6, type: 3}
+  - name: S00_Bird10_L1_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 2965625596580078048, guid: 96e878f3cec524ca8899cf51bf08398a, type: 3}
+  - name: S00_Bird10_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 4770135608540915187, guid: 21ce7d84179e84a2b888027272d21c2b, type: 3}
+  - name: S00_Bird10_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 4830504421225035967, guid: 8be6c5e064fa444b580a84c082b8acba, type: 3}
+    - type: 4
+      prefab: {fileID: 5408163149629612759, guid: b0776a886b66d41529cb9956bf6aaff5, type: 3}
+  - name: S00_Bird10_L2_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 3159123035370440650, guid: b1f835a33171e49df9897ff7e390c784, type: 3}
+  - name: S00_Bird10_L2_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 4496994005239498725, guid: caea0ebec04fc4c6db207203354cf8d8, type: 3}
+  - name: S00_Bird10_L2_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 5226062877143846078, guid: b129ad52b0c894a55a1db4ddd43e6503, type: 3}
+  - name: S00_Bird10_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 7878876031923723637, guid: 02428cfb43a5a4b28b64deff358d9f28, type: 3}
+  - name: S00_Bird12_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 7788399571609566698, guid: 7fd622df9d6384f5786411428ebd302f, type: 3}
+  - name: S00_Bird12_L1_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 7118865283853003590, guid: 442dde81b66c64f638bf893824fbe08c, type: 3}
+    - type: 4
+      prefab: {fileID: 4764369578153569732, guid: 9cee7ed42e8524c25a05f311f977ecf5, type: 3}
+  - name: S00_Bird12_L1_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 8325988617445058466, guid: 90cd602911aed48a69b821cdd48b83ed, type: 3}
+  - name: S00_Bird12_L1_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 8763084544407697924, guid: 48d4f972d14ab4f51a5ce6bb8bd4ce7d, type: 3}
+  - name: S00_Bird12_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 9096229714252177765, guid: c5ac8db0bc0fd481187a020aa415f58e, type: 3}
+  - name: S00_Bird12_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 8691928185611049444, guid: a3ab5f1e52c914d2082c7dc3ac8b7d38, type: 3}
+    - type: 4
+      prefab: {fileID: 3487388577708073526, guid: c7a37fd52d0184d09872104fa8d778e9, type: 3}
+  - name: S00_Bird12_L2_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 8848219979838692470, guid: 6a730a71e8aad413c97602927119241f, type: 3}
+  - name: S00_Bird12_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 4909625197921103224, guid: 7e916a2eae86e44ea97a90d4a2d0c962, type: 3}
+  - name: S00_Bug02_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 1974364260958656686, guid: 268d843a82ff748118cd72b254d8f38b, type: 3}
+  - name: S00_Bug02_L1_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 1784333278030063637, guid: 2077a851a532543f289c4313bde4b432, type: 3}
+    - type: 4
+      prefab: {fileID: 5496182878971867498, guid: f6970be142b294c90b78e4a87d211b21, type: 3}
+  - name: S00_Bug02_L1_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 2549093648923059690, guid: 554cb9fac9b404ffc9b3ab12983c256b, type: 3}
+  - name: S00_Bug02_L1_Horn
+    rigs:
+    - type: 10
+      prefab: {fileID: 376681777785547303, guid: 19fc09f0c763140da82a13a9d0087be3, type: 3}
+    - type: 12
+      prefab: {fileID: 8857591024623850735, guid: 18f9d303bfdbe4ec2ab304bdaf6de8f0, type: 3}
+  - name: S00_Bug02_L1_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 4842353727741668825, guid: b32e3d58f0e8844b382c2d2d4ae57719, type: 3}
+  - name: S00_Bug02_L1_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 689406032317293961, guid: 7a2e769b815ab4dfa9aa0d5b608478cd, type: 3}
+  - name: S00_Bug02_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 2389610300288500952, guid: f0d6be77242f44399bdc29b7dd3b3d3b, type: 3}
+  - name: S00_Bug02_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 8699337611593045267, guid: 08a6c521e7b0f431bba1668d5fa6c8e4, type: 3}
+    - type: 4
+      prefab: {fileID: 5819491164227804708, guid: 5c29327d8f69049edb2c57ad5435e8f3, type: 3}
+  - name: S00_Bug02_L2_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 7573517482180030884, guid: 0282b98f109b148de8e207e0360dc5c3, type: 3}
+  - name: S00_Bug02_L2_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 467374427414741401, guid: 3ddf32a8344ff4474aee70541be949bf, type: 3}
+  - name: S00_Bug02_L2_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 5476314897995633388, guid: 1a34b175ee1ed405987e95368a4b9cb7, type: 3}
+  - name: S00_Bug02_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 1235484125512952430, guid: 8d8c4e1ad882f4e9e8acdb0474024c30, type: 3}
+  - name: S00_Bug04_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 6247516473677165570, guid: deb5c5446dde343c0b5d8bc63a13a491, type: 3}
+  - name: S00_Bug04_L1_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 57118133027996657, guid: 09b8017378c54415b88feedc8e59e999, type: 3}
+    - type: 4
+      prefab: {fileID: 6142807245862252660, guid: 1c8fff524ce5a489e872a0a32c70cb4d, type: 3}
+  - name: S00_Bug04_L1_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 929910184741076809, guid: 556bd9730b9eb495680e354dd3a3affe, type: 3}
+  - name: S00_Bug04_L1_Horn
+    rigs:
+    - type: 10
+      prefab: {fileID: 3078229855886330159, guid: 80eaf73c1b76a475c9c4c77f377d0544, type: 3}
+    - type: 12
+      prefab: {fileID: 8682938934270350104, guid: 9cac394330f424df6a3568f81e5ea0a4, type: 3}
+  - name: S00_Bug04_L1_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 8000633956526124287, guid: 65d2a00a66e8b417baa16bbdb5679f31, type: 3}
+  - name: S00_Bug04_L1_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 4667164762027980460, guid: 8c6235b7accf54dbc9f35192303c39e8, type: 3}
+  - name: S00_Bug04_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 2169908069497267661, guid: dcc0f6be15a8f43bebdcac99fb60945e, type: 3}
+  - name: S00_Bug04_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 979299753281198706, guid: d67902690be1c4298bd8c4875207427b, type: 3}
+    - type: 4
+      prefab: {fileID: 700638210501181770, guid: 49d4909d93dc0462fbc5a08b53ada1e3, type: 3}
+  - name: S00_Bug04_L2_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 2823000988542391353, guid: 0f9018a6932ce4eba9fd1dbc298694a7, type: 3}
+  - name: S00_Bug04_L2_Horn
+    rigs:
+    - type: 10
+      prefab: {fileID: 7688858491901058717, guid: f5c0726dd949645fc8b65ea53e00a897, type: 3}
+    - type: 12
+      prefab: {fileID: 8827064564439035236, guid: b4cee13e3bf3f431d8072a104adacdab, type: 3}
+  - name: S00_Bug04_L2_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 1332142428376349441, guid: 1b2160e2e0b79423db6dcb2261fb242a, type: 3}
+  - name: S00_Bug04_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 382863788005289861, guid: b3e0c61c3131c47e8a94a59ef3e3ec04, type: 3}
+  - name: S00_Bug06_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 568168012640644508, guid: d5af43939673845d8a615b5da4ba6588, type: 3}
+  - name: S00_Bug06_L1_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 1419543811298486444, guid: 4f8b904c7def445f48ebff1cf21c08a9, type: 3}
+    - type: 4
+      prefab: {fileID: 1096901788881143126, guid: 673ea992c871e454a987f13f54f68724, type: 3}
+  - name: S00_Bug06_L1_Horn
+    rigs:
+    - type: 10
+      prefab: {fileID: 8410586396943747315, guid: 91413a885994842d7b4fdb2857773ad0, type: 3}
+    - type: 12
+      prefab: {fileID: 128958221365752841, guid: c93926c7c1f3b4f9fa2aec860843473b, type: 3}
+  - name: S00_Bug06_L1_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 5418233541181050336, guid: d08d5b3559edc4ec6989f36f22cca358, type: 3}
+  - name: S00_Bug06_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 6662261527619227979, guid: d1e21e7f35b3c4674a1ba70e4ccbcae0, type: 3}
+  - name: S00_Bug06_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 364127686470073536, guid: fb21d2a88c01c4cb3ab8aba68811f67b, type: 3}
+    - type: 4
+      prefab: {fileID: 3869961641655127581, guid: 0687f7a6cde0747818ca2754662feaf5, type: 3}
+  - name: S00_Bug06_L2_Horn
+    rigs:
+    - type: 10
+      prefab: {fileID: 7990507620505483266, guid: d8f1b4635d3434ec0936cb53e4df1c22, type: 3}
+    - type: 12
+      prefab: {fileID: 707810560324477677, guid: 0dc9d68dfb5904efdb771d38ca60230b, type: 3}
+  - name: S00_Bug06_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 5269485355213482806, guid: 6ca88b46a167a4218ad2f4ceaad9a8b3, type: 3}
+  - name: S00_Bug08_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 3970693315209836072, guid: f8f39319d19d24e5dbe3906ee05862d5, type: 3}
+  - name: S00_Bug08_L1_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 7460354079171455405, guid: 2adb2bb9e74a141d0b30b97d6430dbb2, type: 3}
+    - type: 4
+      prefab: {fileID: 1822245025276929809, guid: 282f74f8dc1f04a56bc4d3784c62289a, type: 3}
+  - name: S00_Bug08_L1_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 914800535797209194, guid: 808d46a3ef11e4df58ac801080c0cf2c, type: 3}
+  - name: S00_Bug08_L1_Horn
+    rigs:
+    - type: 10
+      prefab: {fileID: 7360916746403163933, guid: 2a1757ed1d4d44d0784353e6535fac08, type: 3}
+    - type: 12
+      prefab: {fileID: 3902093700150199980, guid: 16dffb0f7e93543199ec2e3927c16abb, type: 3}
+  - name: S00_Bug08_L1_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 3302935431643662107, guid: eb8ec28bbc6f34167b7c871052572577, type: 3}
+  - name: S00_Bug08_L1_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 2904846836638124885, guid: 03cdad2e1ef0c49198bfd7e9aaaf62e0, type: 3}
+  - name: S00_Bug08_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 2132003199861952181, guid: c4e3e9277dd404fb89f075b6773de283, type: 3}
+  - name: S00_Bug08_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 6150907008805689885, guid: 559639ef450d64347bc7c06ecfa07303, type: 3}
+    - type: 4
+      prefab: {fileID: 701974614663887516, guid: 1e8f6b12fed4c45f6b786694bb2b715f, type: 3}
+  - name: S00_Bug08_L2_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 6455518404440624519, guid: 7890f4201fdf74473a3c168a88bbdaf7, type: 3}
+  - name: S00_Bug08_L2_Horn
+    rigs:
+    - type: 10
+      prefab: {fileID: 3046342306675026044, guid: 8b4d28d861d8a43afb35fb97ad804010, type: 3}
+    - type: 12
+      prefab: {fileID: 4611622762691883434, guid: 1c95099a65ff64edaa0dd275acd58362, type: 3}
+  - name: S00_Bug08_L2_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 7875909205713992360, guid: c01fe4215a6304111a82f3463d7e6f7c, type: 3}
+  - name: S00_Bug08_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 7856843347874335052, guid: ac2cb9ffcda8e4bc487a3adce2dcaf54, type: 3}
+  - name: S00_Bug10_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 2509684756914503525, guid: 0726cff4d880944568730858599e7275, type: 3}
+  - name: S00_Bug10_L1_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 5567541029534705550, guid: 5caf467e132c44fe39befca3760d202f, type: 3}
+    - type: 4
+      prefab: {fileID: 6187386445751272468, guid: 82f56dbe91c514956a71d72ef86dc90f, type: 3}
+  - name: S00_Bug10_L1_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 8450471422850852828, guid: 68895f4c1dcd84abd9fd5e6185fc8da1, type: 3}
+  - name: S00_Bug10_L1_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 4822569274286676880, guid: c7781981aec924c2e943cbae30f92a78, type: 3}
+  - name: S00_Bug10_L1_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 7031630589300771116, guid: 0ea3bbaa92dc84a7cbb763202bd6f8ab, type: 3}
+  - name: S00_Bug10_L1_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 4474027790408695844, guid: 359763dc059ce460f919219f2bb4110f, type: 3}
+  - name: S00_Bug10_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 7728028054445445877, guid: d3ca3085918754ab694c100fd9ebb31d, type: 3}
+  - name: S00_Bug10_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 5661748671607980477, guid: 9bd3bf1a07b7348eba713e3137c166d4, type: 3}
+    - type: 4
+      prefab: {fileID: 4696884952653819512, guid: f10095864db67446486e84f8903acc74, type: 3}
+  - name: S00_Bug10_L2_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 8592667536097943784, guid: ad36e4187e45741a3aabaa3dd2830278, type: 3}
+  - name: S00_Bug10_L2_Horn
+    rigs:
+    - type: 10
+      prefab: {fileID: 3921172259918320309, guid: 76380c3cc150b40de8844ae5668852cd, type: 3}
+    - type: 12
+      prefab: {fileID: 8444710555292384796, guid: d31f7282f3da3416b8ed097a9a5c932b, type: 3}
+  - name: S00_Bug10_L2_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 4275630154269183050, guid: 784e36b7cd2d048acb377079cbcc06ea, type: 3}
+  - name: S00_Bug10_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 1716429968365402177, guid: f31e0477352df46a69315f9f52a183b7, type: 3}
+  - name: S00_Bug12_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 6013372794860996833, guid: 2d6aa1b00f703457d8e5cb2883c78304, type: 3}
+  - name: S00_Bug12_L1_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 8478135545932821035, guid: 94d18e4dde9424ec8bb5039b15238e22, type: 3}
+    - type: 4
+      prefab: {fileID: 2148639875047858681, guid: 58ba302aaf90d479f983a0b9d443cfcf, type: 3}
+  - name: S00_Bug12_L1_Horn
+    rigs:
+    - type: 10
+      prefab: {fileID: 6667517516219995079, guid: 27e459cce56814599a11545a117a1fca, type: 3}
+    - type: 12
+      prefab: {fileID: 8306197508649592812, guid: 712224c95bfbb4eb290c2c9d2641e2dd, type: 3}
+  - name: S00_Bug12_L1_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 624946779333539168, guid: ca683881a00fc4b438e19bcf07a17aeb, type: 3}
+  - name: S00_Bug12_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 3641441431819664050, guid: 12b7abc6f54e344c7bbd0df5237eda95, type: 3}
+  - name: S00_Bug12_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 3913604580851563261, guid: b87f9899e588d41c482f6866c3dff818, type: 3}
+    - type: 4
+      prefab: {fileID: 91364652437851991, guid: 09e46b045096e4657b3419545ee3c3a9, type: 3}
+  - name: S00_Bug12_L2_Horn
+    rigs:
+    - type: 10
+      prefab: {fileID: 2015488503816455490, guid: 3f2540234e9204318a335fc2ca6cab6b, type: 3}
+    - type: 12
+      prefab: {fileID: 9055295379759518837, guid: 79e6681ff0e7640a3b69d2106053686b, type: 3}
+  - name: S00_Bug12_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 7926611714901343961, guid: 0cf0e223a897c4d4a9b45a816dcf8bf3, type: 3}
+  - name: S00_Plant02_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 3134316743013481549, guid: f3431547f5c7849cbbdb47d90b8bf38a, type: 3}
+  - name: S00_Plant02_L1_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 5774315497766648711, guid: d29c41fb738c94340970a8f2a3d7f8ba, type: 3}
+    - type: 4
+      prefab: {fileID: 972311712455254807, guid: f55ec60b265784c66b63af79d660963e, type: 3}
+  - name: S00_Plant02_L1_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 4278750588409255916, guid: eacb143d9181b482593b06036035f4e3, type: 3}
+  - name: S00_Plant02_L1_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 5564178768747908697, guid: c1e14c32fbbe94256af2d759d2ddc241, type: 3}
+  - name: S00_Plant02_L1_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 1475119072735177674, guid: 72d8e3d295be14e2889a7f4f2d743f04, type: 3}
+  - name: S00_Plant02_L1_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 4034000337103750258, guid: f88e4fe8dd5d14f73871ac947e46d7c0, type: 3}
+  - name: S00_Plant02_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 8452224325099863473, guid: e76093e3fb8a147ffa74beae3161df52, type: 3}
+  - name: S00_Plant02_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 5295052475145212004, guid: 35d1298a78e5b496f8ef5bfab81744fb, type: 3}
+    - type: 4
+      prefab: {fileID: 2835549305556433037, guid: d2804da612c454a3ba1645e4f8198279, type: 3}
+  - name: S00_Plant02_L2_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 6177800237113511349, guid: 8d3c3e59e79a548e7b8b824e2504bc64, type: 3}
+  - name: S00_Plant02_L2_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 5446450256454011339, guid: 3989e5df064cf41b9a69fbd37e8974a1, type: 3}
+  - name: S00_Plant02_L2_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 3898600050661639719, guid: 177d9bdfa1aba479295b5f2775576a2f, type: 3}
+  - name: S00_Plant02_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 6034106384429325931, guid: defb407612d454a73ba5a3904960b423, type: 3}
+  - name: S00_Plant04_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 2529882905320283130, guid: f56a5b5059201470caa6d953801397be, type: 3}
+  - name: S00_Plant04_L1_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 214750439722636072, guid: 9712509c7cc7d4b5fbc1ccb7be83f47e, type: 3}
+    - type: 4
+      prefab: {fileID: 2612972874117107413, guid: 7f25e5c37fb044b59bb931739267a9ec, type: 3}
+  - name: S00_Plant04_L1_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 4911158583120915555, guid: 443b424eb70fd4932960ecb2440a0730, type: 3}
+  - name: S00_Plant04_L1_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 556999919795856691, guid: 269afc1336fe142e0932783c3b5e425b, type: 3}
+  - name: S00_Plant04_L1_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 5164251996158720828, guid: 12ddd16bcb5fb4ed1be5ec1c6adad356, type: 3}
+  - name: S00_Plant04_L1_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 2165536980452820228, guid: 823c47e7d557f49399aabaa3f02d1031, type: 3}
+  - name: S00_Plant04_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 840384646276194501, guid: 85daa4efc22554d99a0ba42db8319b2b, type: 3}
+  - name: S00_Plant04_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 390078215000219919, guid: 5aaf5bc9004384c348777c03692bd9ba, type: 3}
+    - type: 4
+      prefab: {fileID: 4893273602308400081, guid: 4c9c3ae2f0cb04c0f9846c9079bd07bc, type: 3}
+  - name: S00_Plant04_L2_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 6791646556299427091, guid: b78f61493d25b435d82ead89bb8d14de, type: 3}
+  - name: S00_Plant04_L2_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 4554394808437631591, guid: 8c41c890c967e432fafd67214cee487c, type: 3}
+  - name: S00_Plant04_L2_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 6309637667084563419, guid: 74062607beb394a47bc8c4d25623093f, type: 3}
+  - name: S00_Plant04_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 4376322947527572582, guid: bedb75c938e0241f19bf2b8388993649, type: 3}
+  - name: S00_Plant06_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 784981527897720289, guid: d6a1be077b5d345e9a47c12f2530f74a, type: 3}
+  - name: S00_Plant06_L1_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 2290257382155667167, guid: 4bfc18409664e421c9670275eba40275, type: 3}
+    - type: 4
+      prefab: {fileID: 1118123181580646634, guid: 7125fac98da784506bb1298c94c61b18, type: 3}
+  - name: S00_Plant06_L1_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 417393309634111471, guid: 9a8aad80805be445292b303feb321733, type: 3}
+  - name: S00_Plant06_L1_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 4117265658922614148, guid: f82a021fd79354e5794d19ad62e500bf, type: 3}
+  - name: S00_Plant06_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 3237788452575833360, guid: 319b549a9b16f4882ac78be0be05c37a, type: 3}
+  - name: S00_Plant06_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 4468648419084849170, guid: b205be36beb0e4b8c94ba438a3c02e1b, type: 3}
+    - type: 4
+      prefab: {fileID: 36582885161826569, guid: 094e11a0fcd864d7e837aabf1fc05f9a, type: 3}
+  - name: S00_Plant06_L2_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 77692043735798607, guid: b47f0077cfaca4be7a51b30cde10973a, type: 3}
+  - name: S00_Plant06_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 6065970285012673755, guid: 664796c62bb7044c0918b861cb5e02f7, type: 3}
+  - name: S00_Plant08_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 7070051225000589194, guid: 0e74c6b394d7a4f9aa337d6b2cc690c1, type: 3}
+  - name: S00_Plant08_L1_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 2404478045733587227, guid: 6f900182dea8e4f0fb32f2036bdf92ef, type: 3}
+    - type: 4
+      prefab: {fileID: 6354815713876397405, guid: b1ec9f7b523ef4824a1ce8f7c6a0f382, type: 3}
+  - name: S00_Plant08_L1_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 1591655385048543067, guid: 3afd105c76f8741b085154359bb8a59d, type: 3}
+  - name: S00_Plant08_L1_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 9111944469903710966, guid: 562e9ccc2c14f4a0fbfe5ce540109573, type: 3}
+  - name: S00_Plant08_L1_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 6733549300637572248, guid: 508fb34b4e5c94070b6e78112bd6e153, type: 3}
+  - name: S00_Plant08_L1_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 3659208254847096811, guid: 8d97bfb0c03744954aa044e6f5380730, type: 3}
+  - name: S00_Plant08_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 8566055996494696324, guid: 792410f77015549eaa730a811984e858, type: 3}
+  - name: S00_Plant08_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 2456590681657748307, guid: 85694494d385148d8829199198799c81, type: 3}
+    - type: 4
+      prefab: {fileID: 3642680717501718120, guid: c4c5b8d84ad714a8f81ce3423ef98532, type: 3}
+  - name: S00_Plant08_L2_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 4858563510240424445, guid: 73e2309333b804f17b6cd1d6239de54a, type: 3}
+  - name: S00_Plant08_L2_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 3560810845831612385, guid: 79f071e9b6ace45fb91498a008f0a4f6, type: 3}
+  - name: S00_Plant08_L2_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 4294468854073270965, guid: d793771c7815d442d83cda4f1d896701, type: 3}
+  - name: S00_Plant08_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 8488335273397653842, guid: fb95b3033009b45c59d706dd5cfbf555, type: 3}
+  - name: S00_Plant10_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 3769332916323422842, guid: 28b595f33eaf3432e98fdf529b1d0396, type: 3}
+  - name: S00_Plant10_L1_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 3458929027854065439, guid: 97d3c5d874dd245e7b981eb8237d46b7, type: 3}
+    - type: 4
+      prefab: {fileID: 4240883575847428976, guid: 101109a9e49314dc1b855862e5f48373, type: 3}
+  - name: S00_Plant10_L1_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 6785953187175678427, guid: 19f9c39d9eeb64d3e8f9b53eefdc860d, type: 3}
+  - name: S00_Plant10_L1_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 516733938624455687, guid: 6d998b3ac099f4ca4bf468af2636002b, type: 3}
+  - name: S00_Plant10_L1_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 5850510819011035451, guid: 7316c65701f14430c997fb6ac0bc2486, type: 3}
+  - name: S00_Plant10_L1_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 1177185430471708833, guid: ceee7e6a934ea49d0af1be5e8d9cfc9f, type: 3}
+  - name: S00_Plant10_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 6084573292806355658, guid: abf0a89768f984c7d9ac98daf8fc81ec, type: 3}
+  - name: S00_Plant10_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 5386884120041177686, guid: 1ffbfdfb61a6d499698f44a915d93dbe, type: 3}
+    - type: 4
+      prefab: {fileID: 9202365584329824679, guid: 6b956c69fd2934eff98a2a0fc9a5e50f, type: 3}
+  - name: S00_Plant10_L2_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 3608363409576755780, guid: f038abb1089f3416793868f309c6af14, type: 3}
+  - name: S00_Plant10_L2_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 4779575203416048987, guid: 2b6d059530bde4f63978e22d67ea6757, type: 3}
+  - name: S00_Plant10_L2_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 1619810103973287122, guid: b716119f1ecf744c7a51295cb457f245, type: 3}
+  - name: S00_Plant10_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 1378866644363219076, guid: 5d3faf55ecf8e40bbb8f392218b41825, type: 3}
+  - name: S00_Plant12_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 8572946149422259059, guid: c1bd4cd7a014e41b49bf7f4610285eb0, type: 3}
+  - name: S00_Plant12_L1_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 3487351393445192253, guid: ff32fcc166fe4401aab02fe80e22a1bd, type: 3}
+    - type: 4
+      prefab: {fileID: 1085748210539079651, guid: bc7f179f97eb1415d8a88e2c34ba1a22, type: 3}
+  - name: S00_Plant12_L1_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 249928575915558649, guid: e22d4b74fd82f4e219854771f60a7484, type: 3}
+  - name: S00_Plant12_L1_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 4439608500560834272, guid: f86761455bc58492ea368156f928ae76, type: 3}
+  - name: S00_Plant12_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 6758833770427566168, guid: d6da126c20aa04c2199fd3a6204b06f5, type: 3}
+  - name: S00_Plant12_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 3262701985362843304, guid: dc68f5ac6d4e548f3bd428785bed5486, type: 3}
+    - type: 4
+      prefab: {fileID: 2739443315127721565, guid: 301c8640b1f814d30b90e57d25c92998, type: 3}
+  - name: S00_Plant12_L2_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 2506295919580227910, guid: 3a19ef8bc5bfb4fb58fbac7913e89add, type: 3}
+  - name: S00_Plant12_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 7275765366038926285, guid: db564abc07f414d93a93b9c138dce63e, type: 3}
+  - name: S00_Reptile02_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 4981746570779535368, guid: c02439322cf984c61a808fa90e6061a3, type: 3}
+  - name: S00_Reptile02_L1_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 8283604368438448990, guid: cc4a01fbb89194651bd41f687eb8fb0c, type: 3}
+    - type: 4
+      prefab: {fileID: 3268860719227299312, guid: 68a7b3b77d859416d9f1969df129335a, type: 3}
+  - name: S00_Reptile02_L1_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 5043077983334559826, guid: d57e2964e99434ce9b67f63d426bf3ea, type: 3}
+  - name: S00_Reptile02_L1_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 4957202488730563121, guid: 1eae272c2d0f54646ba81ca2fcb8fb1f, type: 3}
+  - name: S00_Reptile02_L1_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 661323816266180421, guid: e364fd68916b74860ad4fe93ed1ad990, type: 3}
+  - name: S00_Reptile02_L1_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 3140584787230936408, guid: 0c13d69a6af38480e8b2d24469c6164d, type: 3}
+  - name: S00_Reptile02_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 2043988180707815802, guid: 56b5cd194046546c3bb508d25d628e69, type: 3}
+  - name: S00_Reptile02_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 3784260390100059512, guid: bb81622ba75ea42bfb19e9d3f5166fac, type: 3}
+    - type: 4
+      prefab: {fileID: 5768272322224550136, guid: d4e702e2d314a46febf8a4f1f3f03a3e, type: 3}
+  - name: S00_Reptile02_L2_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 3040242416281059405, guid: 386a07012a85b4f4485979aeaf06201f, type: 3}
+  - name: S00_Reptile02_L2_Horn
+    rigs:
+    - type: 10
+      prefab: {fileID: 5968420428051316195, guid: 7d6849a9e007343abb868d7989af5e51, type: 3}
+    - type: 12
+      prefab: {fileID: 6737486351667899121, guid: ba83501551a7846d7ac4049de4d87f2d, type: 3}
+  - name: S00_Reptile02_L2_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 5663886346789203159, guid: 3e0c6f8876ef5413e8e7d04e0f6faec5, type: 3}
+  - name: S00_Reptile02_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 4328077178284528426, guid: f71259fba8b70408983baa4bf6354bf9, type: 3}
+  - name: S00_Reptile04_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 7996535817755059532, guid: e76e46953ae7b4cc1adb39d7fe3bd18f, type: 3}
+  - name: S00_Reptile04_L1_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 9139106556213783680, guid: 63913ecbf1445461dbbb0b3909590538, type: 3}
+    - type: 4
+      prefab: {fileID: 8361912465949545849, guid: ba53fcf532fb4445baf4370614d58b07, type: 3}
+  - name: S00_Reptile04_L1_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 4192010129107470496, guid: 21f5a533dd25a474aa5c61be7a5d8397, type: 3}
+  - name: S00_Reptile04_L1_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 693368921494310340, guid: bb8983131b60f42339d533d4ad2679f8, type: 3}
+  - name: S00_Reptile04_L1_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 5248106332895682783, guid: 27c29c3237ca84669b86d6ab48b6a967, type: 3}
+  - name: S00_Reptile04_L1_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 1622200085406970541, guid: a45c05c3a80154b468ddd70050d646be, type: 3}
+  - name: S00_Reptile04_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 1892462012732239475, guid: 7ab51ca6ecc664a629a171bcba00cdff, type: 3}
+  - name: S00_Reptile04_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 290701529036343603, guid: 7f4b599d5b20345bf906e9e1fd39ff13, type: 3}
+    - type: 4
+      prefab: {fileID: 6145793596384514829, guid: 91de735e86e64400a941cb76217f4e79, type: 3}
+  - name: S00_Reptile04_L2_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 8470169355817511451, guid: 0ba7532724dd7463fa2013aafeb419a1, type: 3}
+  - name: S00_Reptile04_L2_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 8292909894823873388, guid: cc0cfe74d97aa490e80985a13d47c9aa, type: 3}
+  - name: S00_Reptile04_L2_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 5274624199967638654, guid: 23dc76d505b5e40239f5fec95c5e7f54, type: 3}
+  - name: S00_Reptile04_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 8957746061077913465, guid: 947cba5166a7f4ec79d5e5a4d9c13c9c, type: 3}
+  - name: S00_Reptile06_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 5909524078601303618, guid: 994e5c8fd7c2d4244ac6e5a7170b47d6, type: 3}
+  - name: S00_Reptile06_L1_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 4100509307448815182, guid: b15f9e0859ee644faa724ca33663e2e5, type: 3}
+    - type: 4
+      prefab: {fileID: 4870991015869843750, guid: f54393a94874b4c33b35d7c03bc63200, type: 3}
+  - name: S00_Reptile06_L1_Horn
+    rigs:
+    - type: 10
+      prefab: {fileID: 194659438258503050, guid: 5b6369813dd334c7e9e6bf69830f9121, type: 3}
+    - type: 12
+      prefab: {fileID: 7613814737146054360, guid: 490c720e61ea548a38abb94122dbd752, type: 3}
+  - name: S00_Reptile06_L1_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 7044676302820178251, guid: 62a0588edcc4f46fdaf40cf1e2c63be3, type: 3}
+  - name: S00_Reptile06_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 4634780474825060697, guid: df602129834164c75b2189a6f31d7ef1, type: 3}
+  - name: S00_Reptile06_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 8916771631894131829, guid: 094761895b3004338abc16f012ab2032, type: 3}
+    - type: 4
+      prefab: {fileID: 2559231268670818402, guid: f5c9589924ace4b1593da11f03d85345, type: 3}
+  - name: S00_Reptile06_L2_Horn
+    rigs:
+    - type: 10
+      prefab: {fileID: 2917239747519805450, guid: 9a5fd54060f0c4737a115f01ef77a419, type: 3}
+    - type: 12
+      prefab: {fileID: 8084228468275229668, guid: 9f6f54671c9c44fd7856bb1616aae07f, type: 3}
+  - name: S00_Reptile06_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 1468341511788795738, guid: fb761a07e6e4b47c39985c3bb7426d9c, type: 3}
+  - name: S00_Reptile08_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 819793125166331738, guid: c7a08ec2f6cf84bd288874d8accb3a30, type: 3}
+  - name: S00_Reptile08_L1_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 1368472715269653698, guid: 4fadd86af79f248a8b8797fa0334377e, type: 3}
+    - type: 4
+      prefab: {fileID: 3210849559720191998, guid: 5095593f6643e457993b33bba3d0e271, type: 3}
+  - name: S00_Reptile08_L1_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 451634921452250528, guid: da01c886af55f4b328e319fe009e6618, type: 3}
+  - name: S00_Reptile08_L1_Horn
+    rigs:
+    - type: 10
+      prefab: {fileID: 7556639532326040914, guid: 2a715a397519746c7840ea4dd70d6307, type: 3}
+    - type: 12
+      prefab: {fileID: 7692119053625515805, guid: 5f326a6e95452498c921472fd8c572d6, type: 3}
+  - name: S00_Reptile08_L1_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 2789767052358981738, guid: c9252a2eab3024bba8b80a98e0337a81, type: 3}
+  - name: S00_Reptile08_L1_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 6892083563023863099, guid: b130dae47769d45d281f137129edad24, type: 3}
+  - name: S00_Reptile08_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 1188345755961323208, guid: 37ea2fbc692a7423387ccfcfe0b97800, type: 3}
+  - name: S00_Reptile08_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 1597762606360678975, guid: 956f179fe95f34f77ad4ec8f609e2b9f, type: 3}
+    - type: 4
+      prefab: {fileID: 5616483119719265834, guid: 935085083727e4554b4a288b0f84be79, type: 3}
+  - name: S00_Reptile08_L2_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 7676196845872545731, guid: bf67a70cf158b4857a1e3c9d4a0853b2, type: 3}
+  - name: S00_Reptile08_L2_Horn
+    rigs:
+    - type: 10
+      prefab: {fileID: 6786071386536057235, guid: 42ca9786e0ad145a6b8ffe3e81158d9b, type: 3}
+    - type: 12
+      prefab: {fileID: 7843018508239742839, guid: 05153189668de46b0ac022a47b5c4f20, type: 3}
+  - name: S00_Reptile08_L2_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 6531650664434408879, guid: 0c2540aca1d574a54b125d95c9db850e, type: 3}
+  - name: S00_Reptile08_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 3038875227572412679, guid: b5a78366fbd494674a09365a8e312074, type: 3}
+  - name: S00_Reptile10_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 8627492010852702785, guid: c099caa6d11fe43688db5eb6a1ebf7de, type: 3}
+  - name: S00_Reptile10_L1_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 2949271159946353783, guid: 3220e73f714fe44ee8da704f433b2ca1, type: 3}
+    - type: 4
+      prefab: {fileID: 8174051490456338058, guid: f1aece01e2aea4880a3ceb4c5347692c, type: 3}
+  - name: S00_Reptile10_L1_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 455930815456886870, guid: aae5ecb5f4afd4818b0090a2eb761d84, type: 3}
+  - name: S00_Reptile10_L1_Horn
+    rigs:
+    - type: 10
+      prefab: {fileID: 8142952429760864930, guid: 69a42d3f47d174ef790ed212782cd971, type: 3}
+    - type: 12
+      prefab: {fileID: 7111093603428149566, guid: 2578748d060f2485a8efd9f0a90ecbc6, type: 3}
+  - name: S00_Reptile10_L1_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 3971112122131415568, guid: d2179e1dcb0e14e678b5e264bf2862d5, type: 3}
+  - name: S00_Reptile10_L1_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 1251725461149237561, guid: 39ff82ea114eb4a2aafebc0ebe9c8d1a, type: 3}
+  - name: S00_Reptile10_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 8707425004519764180, guid: 845c09422714f4db890a6827a4922517, type: 3}
+  - name: S00_Reptile10_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 6542345673213187980, guid: 7c9568ca52fb64d199aa3fe80bc28562, type: 3}
+    - type: 4
+      prefab: {fileID: 669604161546785043, guid: d3f6a82baedfb41c6ab3d4938ada1f1a, type: 3}
+  - name: S00_Reptile10_L2_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 5255470433051547458, guid: adaa8ed9943ce4d599bb8868d4307f2f, type: 3}
+  - name: S00_Reptile10_L2_Horn
+    rigs:
+    - type: 10
+      prefab: {fileID: 512431956632868660, guid: b4d4556bb1a974919ae01ba3dbc25f8a, type: 3}
+    - type: 12
+      prefab: {fileID: 4191575726098471903, guid: 2b010af030560451da3c498a79f0e723, type: 3}
+  - name: S00_Reptile10_L2_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 5877336859304824210, guid: ca09cad88a6ab4ca9854f27eb57899d8, type: 3}
+  - name: S00_Reptile10_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 1100129962648763371, guid: e76195c80a87e4d89a00b4fd1f8e05ef, type: 3}
+  - name: S00_Reptile12_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 9020325754419327587, guid: c0771423b6ea0481d94813c9f35608f9, type: 3}
+  - name: S00_Reptile12_L1_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 1716064151782480109, guid: 2fb1654486af940ab82c661643f82ac3, type: 3}
+    - type: 4
+      prefab: {fileID: 7222665261037041353, guid: 6fed39d402b63420896b793b15f0a0e5, type: 3}
+  - name: S00_Reptile12_L1_Horn
+    rigs:
+    - type: 10
+      prefab: {fileID: 8054938525483496772, guid: 659d9f911adb447b4839cc6bce15f9b5, type: 3}
+    - type: 12
+      prefab: {fileID: 1722875171164070635, guid: ebac4f5a46dda4228b4b0fb67f54d745, type: 3}
+  - name: S00_Reptile12_L1_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 5740264413360798856, guid: a70331673e2d74d09ae22980e7c44e48, type: 3}
+  - name: S00_Reptile12_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 5524186542016443771, guid: f699306f268e4431784caa319ef2e13b, type: 3}
+  - name: S00_Reptile12_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 3961816470488475347, guid: 40d84dbb4ee3e4ab090d96cc07ee25bb, type: 3}
+    - type: 4
+      prefab: {fileID: 1252949945638318680, guid: 478f411aeee984579916a4fa52ca8f73, type: 3}
+  - name: S00_Reptile12_L2_Horn
+    rigs:
+    - type: 10
+      prefab: {fileID: 1388147717802046790, guid: adcf73f32718440e4a422148487981d8, type: 3}
+    - type: 12
+      prefab: {fileID: 5710053564756371562, guid: 58bb17ad97bab4263b14e03ed1ebc485, type: 3}
+  - name: S00_Reptile12_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 1732677740819016835, guid: ccd85a2d91853422d952bb5f6cafe140, type: 3}
+  - name: S01_Aquatic02_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 2666050088998353465, guid: 56e55d2a425674588b468c19f16e85f6, type: 3}
+  - name: S01_Aquatic02_L1_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 7681399506825678454, guid: aa6691a9b5d0d4d9d84a96ce6912781b, type: 3}
+    - type: 4
+      prefab: {fileID: 2168496762882910612, guid: b1d4a04b63be04cbe902d06cd21c9d14, type: 3}
+  - name: S01_Aquatic02_L1_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 6635706828744056907, guid: 8e0f07209f95c42f0a50d09b560429a7, type: 3}
+  - name: S01_Aquatic02_L1_Horn
+    rigs:
+    - type: 10
+      prefab: {fileID: 3182170033327065078, guid: 4dd166bd32cc645af81a68aff158502a, type: 3}
+    - type: 12
+      prefab: {fileID: 7372166240324755335, guid: eec2127cc194d41c484259c59d911cb6, type: 3}
+  - name: S01_Aquatic02_L1_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 6539623372977387354, guid: 035b3dace6bf7411a9a3ef87f05691bd, type: 3}
+  - name: S01_Aquatic02_L1_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 3006484545465826808, guid: 617fbf9dffa594ffdbb9a3422b44ff5d, type: 3}
+  - name: S01_Aquatic02_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 1474593659706731915, guid: fe022233606d54f4e91a619b30b7fc24, type: 3}
+  - name: S01_Aquatic02_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 5925614846000417024, guid: 5610a25c20fee4974901e18b15c06f32, type: 3}
+    - type: 4
+      prefab: {fileID: 2096940498192819821, guid: 20b675d1ee7124dba8c981ff0970124a, type: 3}
+  - name: S01_Aquatic02_L2_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 3899357563730788420, guid: 600808414ebcd423d8afc0c2fbb084bc, type: 3}
+  - name: S01_Aquatic02_L2_Horn
+    rigs:
+    - type: 10
+      prefab: {fileID: 4314350947443046376, guid: 5066a3bea97f04d67ade23ecfa192bc1, type: 3}
+    - type: 12
+      prefab: {fileID: 5016510025080197905, guid: 5bd0aea7a01b44db2847a3dc48bb519d, type: 3}
+  - name: S01_Aquatic02_L2_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 4633464486803108911, guid: 007cbd4eaa6dd4f378b10dc942282df3, type: 3}
+  - name: S01_Aquatic02_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 5124245713506437597, guid: 933f26ecb5bb541f0a315718b9328a7a, type: 3}
+  - name: S01_Beast02_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 5457226223400574670, guid: 55b372a0f1ec94fe6be40248e400c299, type: 3}
+  - name: S01_Beast02_L1_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 2451404657203980814, guid: 404c8158290af4fa490fb2607fc458df, type: 3}
+    - type: 4
+      prefab: {fileID: 3093725815703717002, guid: 774a7bb4986ca4069a5041c10a6c319f, type: 3}
+  - name: S01_Beast02_L1_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 4962489312149919701, guid: 0cc1ed7128623422189073e3f7211fa4, type: 3}
+  - name: S01_Beast02_L1_Horn
+    rigs:
+    - type: 10
+      prefab: {fileID: 8009623068826519276, guid: ccc4340f75b154faba2c972fed6cb435, type: 3}
+    - type: 12
+      prefab: {fileID: 3424637969091489256, guid: 9c20e2a003cc344c5a35b41fb969a295, type: 3}
+  - name: S01_Beast02_L1_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 2586490567053276091, guid: 875558ace4abe483b87eb89e545d1e1d, type: 3}
+  - name: S01_Beast02_L1_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 5586786582213419711, guid: 9a2e70f7314e6421caea2d83b4e5d174, type: 3}
+  - name: S01_Beast02_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 6362609856051936139, guid: 65607c961a11f4f9681c7b4ced557d14, type: 3}
+  - name: S01_Beast02_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 8122894829093973452, guid: 87fa28c95713f4ad38e413016d1d551f, type: 3}
+    - type: 4
+      prefab: {fileID: 4932990237759220201, guid: 859bc106707234abea50982110038a1e, type: 3}
+  - name: S01_Beast02_L2_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 3815260785459867209, guid: 34c080225d6f3444292a65d8e3bc9eaf, type: 3}
+  - name: S01_Beast02_L2_Horn
+    rigs:
+    - type: 10
+      prefab: {fileID: 7624483859079133635, guid: ff9f73b32bdff46429bc4bef36b9f366, type: 3}
+    - type: 12
+      prefab: {fileID: 1038020850966348533, guid: 9304530f3e0214daabf046fe8b407a2c, type: 3}
+  - name: S01_Beast02_L2_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 1900729528583305193, guid: 58127b1443e474e23a49774e47a46379, type: 3}
+  - name: S01_Beast02_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 6467465189257834489, guid: a772c3d6dad3048c7b8aaf654c02fa3e, type: 3}
+  - name: S01_Bird02_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 719033775984393731, guid: faf7e2d0ef8014a5d8541f26a39edadb, type: 3}
+  - name: S01_Bird02_L1_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 6188673250712949110, guid: 229506086d0404da0b32fce75e42d348, type: 3}
+    - type: 4
+      prefab: {fileID: 966558377995556538, guid: 7ab3945ac9aa64e02ba0c65194d785a9, type: 3}
+  - name: S01_Bird02_L1_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 2794597089717953996, guid: b68efd18732cf45848bb5a22ae55226e, type: 3}
+  - name: S01_Bird02_L1_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 3833076216221550063, guid: ba1dd2443a6d94670b3592eeae560737, type: 3}
+  - name: S01_Bird02_L1_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 6320976065873105523, guid: 46169cb980f5145acae2644c3dbe8944, type: 3}
+  - name: S01_Bird02_L1_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 7959845088410105294, guid: f8fb8cb3ec50246a7a128d3fbc89128b, type: 3}
+  - name: S01_Bird02_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 28510556750145854, guid: 01c753331e5fe46d9858b8c6bf751ba0, type: 3}
+  - name: S01_Bird02_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 8649918715063944433, guid: f32b9cf88d62c43609d3b1f2c065c737, type: 3}
+    - type: 4
+      prefab: {fileID: 6870945007155724952, guid: f79eee287c28a45f5950cdefb042b186, type: 3}
+  - name: S01_Bird02_L2_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 5159205975638101260, guid: 5aeb05f94817a4460b6a0c30de9a2632, type: 3}
+  - name: S01_Bird02_L2_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 2350626046463493634, guid: b14d291e7b3bf4a9c89ff96243a95c7c, type: 3}
+  - name: S01_Bird02_L2_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 7707218918123584975, guid: 1892dcaa8ef8443b891a570301d181a1, type: 3}
+  - name: S01_Bird02_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 9145875378791558896, guid: accae133bee79437dbe6cbf1be13eac4, type: 3}
+  - name: S01_Bug02_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 5724400581588153570, guid: dc6c3985aa9844a039cccfd78ba336a7, type: 3}
+  - name: S01_Bug02_L1_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 1503963812726703902, guid: a65d9590c04c84fd48b1d7271105af76, type: 3}
+    - type: 4
+      prefab: {fileID: 8264573422947052439, guid: e65f6e4f7e19843c5a9d79caee2cde8a, type: 3}
+  - name: S01_Bug02_L1_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 5051394047804884365, guid: 3cf479f82831a4a5991046715b123b72, type: 3}
+  - name: S01_Bug02_L1_Horn
+    rigs:
+    - type: 10
+      prefab: {fileID: 943629384209066238, guid: 9e066a87081b94d1dba5c1d4bfa2ae27, type: 3}
+    - type: 12
+      prefab: {fileID: 8372044841871422839, guid: 313f14cb20b6e486597e1e3be170cefb, type: 3}
+  - name: S01_Bug02_L1_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 6240941912723312552, guid: 9272ea29ce4e343e8ae03c1c3a830936, type: 3}
+  - name: S01_Bug02_L1_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 4303763780903401804, guid: f41170cab2a5d44c3816c5b6d5e75638, type: 3}
+  - name: S01_Bug02_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 905615388797224319, guid: 89864233335d34580a3355c843963884, type: 3}
+  - name: S01_Bug02_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 614067056671307063, guid: 75563e0a16e2f459e9dd09c64b8c783e, type: 3}
+    - type: 4
+      prefab: {fileID: 4512576002017620884, guid: 0ef7aa5ee0b5f4a5694e9c198894d1ab, type: 3}
+  - name: S01_Bug02_L2_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 1070622260566437510, guid: e98205941fef74c8a8177bf3bf12e6db, type: 3}
+  - name: S01_Bug02_L2_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 4927117807977175624, guid: 156f2149e3412446c9d13690f01d3c70, type: 3}
+  - name: S01_Bug02_L2_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 3958422354325441000, guid: f5391ad287ce44e60b7f0491a082ce17, type: 3}
+  - name: S01_Bug02_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 4750507170593994163, guid: 57e578817765f40eaade0797cf027d3f, type: 3}
+  - name: S01_Plant02_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 1549411451616445231, guid: 3b69df5c5d150428293f3391768f20c4, type: 3}
+  - name: S01_Plant02_L1_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 8404457252961767582, guid: b785e0250989c487f80429e88be00ab1, type: 3}
+    - type: 4
+      prefab: {fileID: 3886981618469809123, guid: 40190fbc736a44da08b4979e4a5c1504, type: 3}
+  - name: S01_Plant02_L1_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 8360326827288232295, guid: 7b312428a991e4cc6ab6e89f30237519, type: 3}
+  - name: S01_Plant02_L1_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 2977084808032229991, guid: 0194b427fa7464759a6ea4f0ac5047ce, type: 3}
+  - name: S01_Plant02_L1_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 4526890935778591023, guid: 467cb815c4002481f8ae5ea9023b707b, type: 3}
+  - name: S01_Plant02_L1_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 2669256222908791191, guid: 4018d19262cd84bf394881710ad1f34f, type: 3}
+  - name: S01_Plant02_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 1017006686158223352, guid: 93cae8b14f0b64530998ab9fa85d34b6, type: 3}
+  - name: S01_Plant02_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 8692785457659343928, guid: 0872553a2b3b649bfaf1005ae5fbb1de, type: 3}
+    - type: 4
+      prefab: {fileID: 5242209011008821870, guid: 84b029e0b97344d33b97f7d090e6681b, type: 3}
+  - name: S01_Plant02_L2_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 3895176328092708978, guid: b3cf20a0f820a477db24991f33451070, type: 3}
+  - name: S01_Plant02_L2_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 6130549969502322671, guid: cadba30649ef74e448a0a1a548f6be98, type: 3}
+  - name: S01_Plant02_L2_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 7680283066301684955, guid: 94dc8cc6e16f34b5ab11bafe224d6dca, type: 3}
+  - name: S01_Plant02_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 6262092707504965963, guid: 8596fa793770c4f8cbe65ec5b77f2344, type: 3}
+  - name: S01_Reptile02_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 5407035149095137543, guid: 0d5751fa8d2224e1e84b369131c38b6c, type: 3}
+  - name: S01_Reptile02_L1_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 8846921399524879501, guid: 8e5114a70af5a4cd09bd806cc04e5b28, type: 3}
+    - type: 4
+      prefab: {fileID: 3275708659194693794, guid: a58978e9b6fdb4bcba0b73e361c58984, type: 3}
+  - name: S01_Reptile02_L1_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 2434910028894456385, guid: 5f1b271bb409748daba9dfb466517481, type: 3}
+  - name: S01_Reptile02_L1_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 1329471852616297842, guid: 8c6f38ff7e9e248b78b9222f415a0f74, type: 3}
+  - name: S01_Reptile02_L1_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 160869478318010609, guid: c68117616918b461f862d7df6d1fbf8f, type: 3}
+  - name: S01_Reptile02_L1_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 8010560341892603496, guid: 370004ec77d384b36a4d81ecc0983931, type: 3}
+  - name: S01_Reptile02_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 4016853467993208021, guid: 26fc68e88bb3f4ff79079579a36edf47, type: 3}
+  - name: S01_Reptile02_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 4008245873692121803, guid: 253a3349c29ab4658bf18f5cd1d91e69, type: 3}
+    - type: 4
+      prefab: {fileID: 5707433851613265774, guid: c6629704c2ecd4cb59043b79c04057e3, type: 3}
+  - name: S01_Reptile02_L2_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 4877986875004586198, guid: cdf18d702889f41bca0291812d700d23, type: 3}
+  - name: S01_Reptile02_L2_Horn
+    rigs:
+    - type: 10
+      prefab: {fileID: 3193495647482868980, guid: 9418baae14bb442188924cc634c9268f, type: 3}
+    - type: 12
+      prefab: {fileID: 1709927367520072025, guid: 302e5cd974ea043f0997cbb9572f257c, type: 3}
+  - name: S01_Reptile02_L2_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 3122654834432594678, guid: 1a5edbf5b9108454ebc0c77045e227cd, type: 3}
+  - name: S01_Reptile02_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 3249399181416549698, guid: eb39114508b834e338b614ca5cbdf0f6, type: 3}
+  - name: S02_Aquatic12_L1_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 2484807697777468641, guid: 52508a24411674f0b9dcfba4e58859b0, type: 3}
+  - name: S02_Aquatic12_L2_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 8032591241534992512, guid: 52c67cbb17d574a47b8a97368662ed6a, type: 3}
+  - name: S02_Bug10_L1_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 3029646611434432525, guid: 53b0198689e3d4fe1a77727b74a08cb4, type: 3}
+  - name: S02_Bug10_L2_Horn
+    rigs:
+    - type: 10
+      prefab: {fileID: 8654149139512570227, guid: 7d5a24690bbba49fa9fb1d754d84c2e6, type: 3}
+    - type: 12
+      prefab: {fileID: 7179391448898875996, guid: 5d0858b465c0742d3abb7f0a49a7e454, type: 3}
+  - name: S02_Reptile08_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 4974193047280822972, guid: 13fcd6005c2fd416ba7e7a4f1a6316fa, type: 3}
+  - name: S02_Reptile08_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 4379690229944294808, guid: 41f146bf9afc546b7b4dcf17ed6189a3, type: 3}
+  - name: S03_Aquatic02_L1_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 5960190288976730036, guid: a3430844811de446da43c188161c8493, type: 3}
+  - name: S03_Aquatic02_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 937500891175623069, guid: eb5d5d945ecff442ebfefe3a230c88c1, type: 3}
+  - name: S03_Aquatic10_L1_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 6920652817663207596, guid: b0b87ae7296684692bca4e6f7841cc5a, type: 3}
+  - name: S03_Aquatic10_L2_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 5089256221477864720, guid: 177482e3820534486ae748f54625154e, type: 3}
+  - name: S03_Beast04_L1_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 3003083374940308331, guid: 36c95bbc5292f4b1e8350729d5efa9ef, type: 3}
+  - name: S03_Beast04_L2_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 1260125146943214845, guid: 8bdce4feebc2a4e38805095cc1047b56, type: 3}
+  - name: S03_Beast08_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 5660066798799344317, guid: 4e7e5d2ab93d443d9827170aaf3ac295, type: 3}
+  - name: S03_Beast08_L1_Horn
+    rigs:
+    - type: 10
+      prefab: {fileID: 7863366949493752, guid: 5b3c164215ae844fe9ce00a84b95030b, type: 3}
+    - type: 12
+      prefab: {fileID: 4031571440946760420, guid: f3a9689b54a4747078da5d717ed2fbf4, type: 3}
+  - name: S03_Beast08_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 4568328755265184329, guid: 83497bdcf3e834316a18ed1683fea02e, type: 3}
+  - name: S03_Beast08_L2_Horn
+    rigs:
+    - type: 10
+      prefab: {fileID: 7846124175598012638, guid: 8ddca1a5d8dd540b29042a089be82a45, type: 3}
+    - type: 12
+      prefab: {fileID: 2642886729510591155, guid: 5cde36ba4e35a4d74b652fd8884285f9, type: 3}
+  - name: S03_Bird04_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 6629916869766871116, guid: dc8f084c2765e41a1a2a3fb2162d5fc6, type: 3}
+  - name: S03_Bird04_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 2796726633901810644, guid: 849815f93abf74011a6a4cc9a3dda37c, type: 3}
+  - name: S03_Bird10_L1_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 96754856279355605, guid: c7427a1f0f2dd48589dd864046cfe0e2, type: 3}
+  - name: S03_Bird10_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 8407252634408191494, guid: 6b8677ad03e4645b0a6cdb326ebf338c, type: 3}
+  - name: S03_Bird12_L1_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 6880258342707883116, guid: b834be52b4aba48ab94904efb8b6aa61, type: 3}
+    - type: 4
+      prefab: {fileID: 1967927162912890534, guid: dbeddf755c2504863943c006a471266c, type: 3}
+  - name: S03_Bird12_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 4746458761358120818, guid: 6d87dc75a1a8841deb21fc77d4396b5b, type: 3}
+    - type: 4
+      prefab: {fileID: 5728792484047288430, guid: 003161cd121f4479cb1db2ef6a1ba4d8, type: 3}
+  - name: S03_Bug06_L1_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 6250594479476094305, guid: 6f8e9c0f77c584e73b4a105562b7c9fe, type: 3}
+  - name: S03_Bug06_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 9002830143300425083, guid: b0f449797d6ef4f68b28f75899aba0ba, type: 3}
+  - name: S03_Bug08_L1_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 1497893159082284524, guid: 4ac3574d45fb64ac08a06ec39488f0a2, type: 3}
+  - name: S03_Bug08_L2_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 3323091249615563608, guid: da654da14c7ea4d2ca80e79c802022b7, type: 3}
+  - name: S03_Bug12_L1_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 718376965660214324, guid: e6c631d6d2ebf45fbb8108f006f38178, type: 3}
+    - type: 4
+      prefab: {fileID: 5577163589848709338, guid: 79eb4225dc3f7413eab0686b30e84ea1, type: 3}
+  - name: S03_Bug12_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 8157472888742404111, guid: 2c96bb87d95ed44b9a640abc42d1d625, type: 3}
+    - type: 4
+      prefab: {fileID: 2398584389855784684, guid: 63f7e1c8e15ac46baab34542d9c93b35, type: 3}
+  - name: S03_Plant04_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 9148541514920431567, guid: 749581e61f3924aeeab06b965fc710f4, type: 3}
+  - name: S03_Plant04_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 7931637574967588141, guid: 123bec5816f2d4dc7a7ddfd16a6326ab, type: 3}
+  - name: S03_Plant08_L1_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 2263488656900225220, guid: 22023454963d74373b7e77e3eb2ebb5f, type: 3}
+    - type: 4
+      prefab: {fileID: 3051805609412013548, guid: 2f1b33da5e72e4d57a449dd97b35f18d, type: 3}
+  - name: S03_Plant08_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 2592161761000502177, guid: 89b9e472e3c8f48a9953ccdf7cd01dbf, type: 3}
+    - type: 4
+      prefab: {fileID: 6009457639044244224, guid: adc023f5263f84c0f9d65a7247d6d58f, type: 3}
+  - name: S03_Reptile08_L1_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 8772249768616874187, guid: 645b7c5b03fa04cbd9ce15a22267e4a6, type: 3}
+  - name: S03_Reptile08_L2_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 864828296122621646, guid: 5c5e448f533504778adedf564057d7ff, type: 3}
+  - name: S03_Reptile10_L1_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 4313896015528119210, guid: 265425c255ea744eba39cbb9b37e54fd, type: 3}
+  - name: S03_Reptile10_L1_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 2004731203043689325, guid: 6b9b481a3b98245d2a052fcda97effb3, type: 3}
+  - name: S03_Reptile10_L2_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 7479235209791086658, guid: 246e2662fffe94f05a115235db14914a, type: 3}
+  - name: S03_Reptile10_L2_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 5393504754205959509, guid: de75bcf74f5104334bae540248c2d88b, type: 3}
+  - name: S04_Beast04_L1_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 5670045419499895467, guid: b8e380cf6b31e4d42895dc8d5be97533, type: 3}
+  - name: S04_Beast04_L2_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 8810158437171478429, guid: 6ef828b29c41541bc8c4c143b5b0942b, type: 3}
+  - name: S04_Beast06_L1_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 8326210859382208855, guid: 25507e384752b4e74ac0708a2e40fab2, type: 3}
+    - type: 4
+      prefab: {fileID: 970709251821375222, guid: 83100410aa4b64702912a3de5f089ce9, type: 3}
+  - name: S04_Beast06_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 8326210859382208855, guid: cd4be135007e84cb798bbab22ebd47b1, type: 3}
+    - type: 4
+      prefab: {fileID: 970709251821375222, guid: 1af7672c320c74139ad9648886a90ff9, type: 3}
+  - name: S04_Bird12_L1_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 5768189486776368343, guid: a9b45f83201694acb9b5f27410d91216, type: 3}
+  - name: S04_Bird12_L2_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 6330451076997409856, guid: 5fe0b752a07614f5b8c289b9721d71db, type: 3}
+  - name: S04_Bug04_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 6291428377008459734, guid: c671f8dd744894a698f43fc3c2c1964d, type: 3}
+  - name: S04_Bug04_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 7539575395709439013, guid: de456a9a1c1f743e0bc8b120c3356411, type: 3}
+  - name: S04_Plant04_L1_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 2770779282333149764, guid: 5a8c3d869c5264efe9fa4a62bb67c4e8, type: 3}
+  - name: S04_Plant04_L2_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 748845397501887129, guid: 8e72afc8e546841958aa0729d7cabec7, type: 3}
+  - name: S04_Reptile08_L1_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 2315662559237112794, guid: 7eeb48b90ee0f4b06b86574a7e3e80f4, type: 3}
+  - name: S04_Reptile08_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 1188951107123098201, guid: b51ab3ef4c88a43b8a60cfdc88214b66, type: 3}
+  - name: S05_Bird04_L1_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 6301725409033105003, guid: df2c5e270333e415aa5c788e2ac7390b, type: 3}
+  - name: S05_Bird04_L2_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 1994000151030414865, guid: 2999244c8e4f940ebaca209e2478279f, type: 3}
+  - name: S05_Plant10_L1_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 2764296191318811502, guid: 517762bee5a924b7d8ba298371218719, type: 3}
+    - type: 4
+      prefab: {fileID: 984263803291634944, guid: 1da9969ef44c6430c92422489fd5c88f, type: 3}
+  - name: S05_Plant10_L1_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 2226976466696707678, guid: c53bf34d8061642a5a66b74b4d4d37e4, type: 3}
+  - name: S05_Plant10_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 7827981433368907767, guid: f3d2860af0a6a45cf8f6f9501f83c4ef, type: 3}
+    - type: 4
+      prefab: {fileID: 7012166093155707008, guid: 8ba90525e22614abf8c10fded2e02d51, type: 3}
+  - name: S05_Plant10_L2_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 2719412827825140685, guid: 4a5843cab33384d39932507955c000ed, type: 3}
+  - name: S05_Reptile06_L1_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 1803337166144819863, guid: 42cf812faa6844aa99bbf2391736b1b8, type: 3}
+  - name: S05_Reptile06_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 2394258123474470, guid: 92b887c2d57e14fdabebe4f7a8422271, type: 3}
+  - name: S05_Reptile08_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 3493447823604350343, guid: a3cbffb2d27a7457bb167f435f0c41e9, type: 3}
+  - name: S05_Reptile08_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 2853491130035179160, guid: 98a16d006423e4d2a891e3e1a582e7a1, type: 3}
+  - name: S05_Reptile10_L1_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 8269027564862954951, guid: 7b778f5a0e85f41198322018f0f5540d, type: 3}
+  - name: S05_Reptile10_L2_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 5947393773124642077, guid: 5b13f7c0d89004bd29609c746d1c8530, type: 3}
+  - name: S06_Aquatic08_L1_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 4432091269759532452, guid: 63951513fd4fe4e5e948a6bcdc83275e, type: 3}
+  - name: S06_Aquatic08_L2_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 7039435736724939378, guid: e3aba1e9ddc394426962187606f389f8, type: 3}
+  - name: S06_Beast02_L1_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 1775166808814044714, guid: 22654054d1db448b9bf6a1c2f9f49d7b, type: 3}
+    - type: 4
+      prefab: {fileID: 7155460005501405271, guid: 517971bd21c77437aa6f1ffff478ddeb, type: 3}
+  - name: S06_Beast02_L1_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 4074496950473316829, guid: 3000101789c154f42b360c2b5bb42467, type: 3}
+  - name: S06_Beast02_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 8453717980064744838, guid: dc254e221911343be89447ed67a503ca, type: 3}
+    - type: 4
+      prefab: {fileID: 7456450676868014799, guid: 343eb308dc4604cf5aac4ae8b8616ab0, type: 3}
+  - name: S06_Beast02_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 4594868267439422560, guid: 44a8ed95d2ca14186be2e6236da7b0ab, type: 3}
+  - name: S06_Beast12_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 5103303484021301485, guid: d1affc2ddb2154b6c8a13931c942a767, type: 3}
+  - name: S06_Beast12_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 4422270312389078079, guid: 7ae22573ae67a4cb6b2c6862ba73ea36, type: 3}
+  - name: S06_Bug04_L1_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 3705550521594036821, guid: 4b362a938b749479e96aedf80485ef92, type: 3}
+  - name: S06_Bug04_L2_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 1538890804371714861, guid: 69f4abd2e934a4c0aaf68fab64e10329, type: 3}
+  - name: S06_Reptile02_L1_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 7580680812736037843, guid: 6441a6a0a05d649f583cabc04c476205, type: 3}
+  - name: S06_Reptile02_L2_Horn
+    rigs:
+    - type: 10
+      prefab: {fileID: 775710423067338129, guid: 4fe793ee5769447c6bd290dd3a828423, type: 3}
+    - type: 12
+      prefab: {fileID: 305786736081926128, guid: f740c6112faf8480680aaffdcc37d5d8, type: 3}
+  - name: S06_Reptile10_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 2812779646739263802, guid: 07266a1afff7d4cb586da7c002fbec48, type: 3}
+  - name: S06_Reptile10_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 988965805772148612, guid: eb1465f14a6b94f789e27ed9ff8275d5, type: 3}
+  - name: S07_Reptile02_L1_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 310197174357646528, guid: 4ae802177a93e4020be8727bffdc2af3, type: 3}
+  - name: S07_Reptile02_L2_Horn
+    rigs:
+    - type: 10
+      prefab: {fileID: 4747070908124006276, guid: 85729d767ac4644a8a78acaca56a2ced, type: 3}
+    - type: 12
+      prefab: {fileID: 4346244467960486032, guid: d807ca69e333b461ba3da4d9e19b5e63, type: 3}
+  - name: S08_Reptile02_L1_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 5788504452051088777, guid: 0a445c30f0efb45b9b7ab714c4e31353, type: 3}
+  - name: S08_Reptile02_L2_Horn
+    rigs:
+    - type: 10
+      prefab: {fileID: 3585421504120193399, guid: 9fd15b052e3e74f5e95962bc29699902, type: 3}
+    - type: 12
+      prefab: {fileID: 6100313738840472540, guid: 902dc38edbf73425d9ea7c300ddc37bd, type: 3}
+  - name: S09_Aquatic08_L1_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 8271386561410493657, guid: 9ec46320d8923426cbc0df005027e2a4, type: 3}
+  - name: S09_Aquatic08_L2_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 1608440590150832090, guid: 7531d89fc807b40fd990df54601441f2, type: 3}
+  - name: S09_Beast02_L1_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 1204065680708453725, guid: 315d7a4885df948b99e7d6cec256f8c4, type: 3}
+    - type: 4
+      prefab: {fileID: 4739251128753243472, guid: 24b1f92948fc644dfa69ee61c606bb87, type: 3}
+  - name: S09_Beast02_L1_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 4339534194927650723, guid: 2a63f2f9ca5d0470e978abef308d6acc, type: 3}
+  - name: S09_Beast02_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 2667101534928646640, guid: 5a27343beb07d48478177dbc9f569831, type: 3}
+    - type: 4
+      prefab: {fileID: 1875367058057485904, guid: b5995c87ba58742699c344775b6a500b, type: 3}
+  - name: S09_Beast02_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 1806986120415046809, guid: fe29cdfa51ed24745820706a67d15ae8, type: 3}
+  - name: S09_Beast12_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 9081736018127916737, guid: d071c678b624b43cba148d1a2dd97774, type: 3}
+  - name: S09_Beast12_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 4422270312389078079, guid: 6c53a7ba18e444f6bab17df9f15f70fc, type: 3}
+  - name: S09_Bug04_L1_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 37110332134190814, guid: 961f7331bb7b047b5812579332a67ee8, type: 3}
+  - name: S09_Bug04_L2_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 2844593906555587737, guid: 490647020d6a046738923b984c7dcbb6, type: 3}
+  - name: S09_Reptile02_L1_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 3914133813539548140, guid: bc5ee665b44b1409f98306c5fedddc55, type: 3}
+  - name: S09_Reptile02_L2_Horn
+    rigs:
+    - type: 10
+      prefab: {fileID: 8497735429480218684, guid: 9aaa0b45a8fd8455bbef854215a3394c, type: 3}
+    - type: 12
+      prefab: {fileID: 922690662414696536, guid: 75735a0e184df4628b318e8ce58dc2f6, type: 3}
+  - name: S09_Reptile10_L1_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 5785053967599823222, guid: 46ae346015d434116af920508534a03c, type: 3}
+  - name: S09_Reptile10_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 5089558202905698150, guid: c5d7eb84f01734d318b8cd4c1a874c21, type: 3}
+  - name: S10_Reptile02_L1_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 4945431989017250869, guid: 8e4f0bcf293434b119f184ba5c2b086e, type: 3}
+  - name: S10_Reptile02_L2_Horn
+    rigs:
+    - type: 10
+      prefab: {fileID: 5996696571362556088, guid: 3f5ade2e0afcc434db9211ed735525a5, type: 3}
+    - type: 12
+      prefab: {fileID: 7850598843645988382, guid: 58591237304b74cf189687a90583bd2e, type: 3}
+  - name: S11_Reptile02_L1_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 6402854568192062881, guid: 26ff692135cc547429ea0a5a2c0b0724, type: 3}
+  - name: S11_Reptile02_L2_Horn
+    rigs:
+    - type: 10
+      prefab: {fileID: 5868163871780245047, guid: 7d756dc160a314afeb9d1d7219986e82, type: 3}
+    - type: 12
+      prefab: {fileID: 2969498679085940391, guid: b2edd7af0c3c646d4a1229966ddb6be2, type: 3}
+  - name: S12_Aquatic04_L2_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 127449979874045127, guid: 4fac902f5b02945bf839397f66862e13, type: 3}
+  - name: S12_Aquatic04_L2_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 7211233166971738381, guid: c0ced66135f4b4a30b773dce3344903a, type: 3}
+  - name: S12_Aquatic04_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 3664025610431492701, guid: e001aa02164074f68b76b5dea6cb0178, type: 3}
+  - name: S12_Aquatic06_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 4245252873514606552, guid: ed78e0952521140229915a548fdbfbf7, type: 3}
+  - name: S12_Beast04_L2_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 5637965147901953205, guid: 77a6dd91bfcf94f409f9f1e414d8c66b, type: 3}
+  - name: S12_Beast04_L2_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 2537575619666919394, guid: 651f5c5ceb3d64321baa49e47ee79b89, type: 3}
+  - name: S12_Beast04_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 1868432826774222037, guid: f9608200ab61c474db069212621a94c3, type: 3}
+  - name: S12_Beast06_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 487215166047881340, guid: dfdcd0e68cc8e497494f20925f3e6e0a, type: 3}
+  - name: S12_Bird04_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 6049665610119635745, guid: e89a29dd4d8ee4ad5ac9df404285ebfe, type: 3}
+    - type: 4
+      prefab: {fileID: 3994323381504761278, guid: a9fb4f487144749bbb00a8d9cc51c390, type: 3}
+  - name: S12_Bird04_L2_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 546137038397906078, guid: dfb1d871bf9b345049dcd5b18fbe974b, type: 3}
+  - name: S12_Bird06_L2_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 6125208608654756949, guid: a5e2eaf929c3a4665aee68db75d93438, type: 3}
+  - name: S12_Bird06_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 9078935322034272649, guid: a3728da3bf3624b18b95aceac3424eef, type: 3}
+  - name: S12_Bug02_L2_Mouth
+    rigs:
+    - type: 14
+      prefab: {fileID: 1724585991773191996, guid: 57a3b38c9971c4d74aa0d49b12feaff0, type: 3}
+  - name: S12_Bug04_L2_Horn
+    rigs:
+    - type: 10
+      prefab: {fileID: 895165282608763098, guid: 74cd646b852e141e99bdf828d1c552aa, type: 3}
+    - type: 12
+      prefab: {fileID: 6066603441008025348, guid: ef268836cd4d14fb3b0d4b94d12d92ed, type: 3}
+  - name: S12_Bug04_L2_Tail
+    rigs:
+    - type: 18
+      prefab: {fileID: 5422946333826812457, guid: bb75292888c604553bde4ecf8376bcc3, type: 3}
+  - name: S12_Bug06_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 8740839980279930220, guid: 656892d153e0842a1b1eb63e05358837, type: 3}
+    - type: 4
+      prefab: {fileID: 5768895921864496259, guid: 564aedd38d8ca4cb09a6033729cf3d6f, type: 3}
+  - name: S12_Plant04_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 3882091796698263785, guid: e6b5ad5b30ef84b82be5495e12c0291f, type: 3}
+    - type: 4
+      prefab: {fileID: 3937628007410764623, guid: 0fd7f565f84764cf08027885b67e4450, type: 3}
+  - name: S12_Plant04_L2_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 4810998277593578666, guid: 7731f59ae23f7423993249ed6758f7d9, type: 3}
+  - name: S12_Plant06_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 3074062131979960043, guid: 7701ef0c9d08d4b108f14d0796421748, type: 3}
+  - name: S12_Plant06_L2_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 9093606449720832522, guid: e4481b1efdec84e538a505e95af49b2f, type: 3}
+  - name: S12_Reptile04_L2_Ear
+    rigs:
+    - type: 3
+      prefab: {fileID: 3037365143468797775, guid: e121a01b49360456891ddd1ed0b1515f, type: 3}
+    - type: 4
+      prefab: {fileID: 4388896976979937458, guid: b1983fad4ef694cc184146c371e18252, type: 3}
+  - name: S12_Reptile04_L2_Eye
+    rigs:
+    - type: 6
+      prefab: {fileID: 8871582445999096614, guid: 30a54f8f67e7b4235a68e7e5a00105bd, type: 3}
+  - name: S12_Reptile06_L2_Back
+    rigs:
+    - type: 1
+      prefab: {fileID: 1912613904057708024, guid: cdc99a23392584b6a9c5f1982470b9f8, type: 3}
+  - name: S12_Reptile06_L2_Horn
+    rigs:
+    - type: 13
+      prefab: {fileID: 8090555434065117486, guid: 60c6ea97f729b4ccdaf0045f0e3e221b, type: 3}
+  _addons:
+  - name: Aquatic-Back-02-S01-LV1/Back_M
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: 09ed6d044575940f1859213f7c0f926a, type: 2}
+    prefabs:
+    - {fileID: 3457452605558709632, guid: aed624e15e879442cba45a63713dfc7c, type: 3}
+  - name: Aquatic-Back-02-S01-LV2/Back_M
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: b00211bee6aae474d9b414cdb5d11ad7, type: 2}
+    prefabs:
+    - {fileID: 4936473046891592481, guid: 1cc75626d4afa4f9486562bde21bffa9, type: 3}
+  - name: Aquatic-Ear-02-S01-LV1/Ear_L
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: 21ec654a2608740fba7b22c592b4ff17, type: 2}
+    prefabs:
+    - {fileID: 4122174687843666270, guid: ce472b2a361664a828afd691cacd146a, type: 3}
+  - name: Aquatic-Ear-02-S01-LV1/Ear_R
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: 753ddf31616714ef5962b880d5f31fd3, type: 2}
+    prefabs:
+    - {fileID: 6916901476758199073, guid: f2319df2e1baa4ad88c792213f15ea93, type: 3}
+  - name: Aquatic-Ear-02-S01-LV2/Ear_L
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: ef14bdb02dd094d5ba02e178fb7aa333, type: 2}
+    prefabs: []
+  - name: Aquatic-Ear-02-S01-LV2/Ear_R
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: f5db70dcbc4e34c5fa5972f1dea7c605, type: 2}
+    prefabs: []
+  - name: Aquatic-Eye-02-S01-LV1/Eye_M
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: f07b3ec5d0c5c44199fd7e3790a3c8d0, type: 2}
+    prefabs:
+    - {fileID: 6350285141071229650, guid: 7936b7fe0690f4251a55e223f544934c, type: 3}
+  - name: Aquatic-Eye-02-S01-LV2/Eye_M
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: 07ad19d5c01db4ead83973b6d70b5031, type: 2}
+    prefabs: []
+  - name: Aquatic-Horn-02-S01-LV1/Horn_L
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: b72a01aebbb0a4944a71fa7b07eaca4e, type: 2}
+    prefabs:
+    - {fileID: 1920538128351008288, guid: d9504430465a442a3ab08fc0817442fd, type: 3}
+  - name: Aquatic-Horn-02-S01-LV1/Horn_R
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: a78374165068147eeb00b6f70a19eba3, type: 2}
+    prefabs:
+    - {fileID: 1270232945471840214, guid: 64768b4d1d0534779ae9ae85f5620d60, type: 3}
+  - name: Aquatic-Horn-02-S01-LV2/Horn_L
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: ab965247bd4414e038ed7ffa075d8ded, type: 2}
+    prefabs:
+    - {fileID: 6127582575975142635, guid: cd601bfc404594448b69a177e697b31e, type: 3}
+  - name: Aquatic-Horn-02-S01-LV2/Horn_R
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: 9d54b1c06b1b4efa94505d9d69cdc645, type: 2}
+    prefabs:
+    - {fileID: 2409098438741655910, guid: 314e4e434f20c4340b4397f9727bfe33, type: 3}
+  - name: Aquatic-Mouth-02-S01-LV1/Mouth_M
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: e281b77307a83448eb784d7c2bffbecb, type: 2}
+    prefabs: []
+  - name: Aquatic-Mouth-02-S01-LV2/Mouth_M
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: d97f6ee76172849689b095d8339cd831, type: 2}
+    prefabs: []
+  - name: Aquatic-Tail-02-S01-LV1/Tail_M
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: defb265c3665c451cac57bb9b1b9cb6f, type: 2}
+    prefabs:
+    - {fileID: 6594907123819451703, guid: 2554a061c02234edc849a603085727b0, type: 3}
+  - name: Aquatic-Tail-02-S01-LV2/Tail_M
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: 5e27061bfeeac4f55b7fd5ee5d669e64, type: 2}
+    prefabs:
+    - {fileID: 3523699205857022580, guid: 65f4153cbd4aa4d2597756a778d857f8, type: 3}
+  - name: Beast-Back-02-S01-LV1/Back_M
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: f8fd0e1d198424ccdb4b4732bc441159, type: 2}
+    prefabs:
+    - {fileID: 5027555475770893551, guid: eb492e1af1df449538976b579accf737, type: 3}
+  - name: Beast-Back-02-S01-LV2/Back_M
+    materials:
+    - name: S1_Beast_02_lv2_Back
+      material: {fileID: 2100000, guid: c9d4e803bfbb66947987e6a30dd7997f, type: 2}
+    prefabs:
+    - {fileID: 3405446414241754624, guid: 21a453bc9c55345acadfc56e51dca61b, type: 3}
+  - name: Beast-Ear-02-S01-LV1/Ear_L
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: 4fad14bceb63840afa5235b262f96440, type: 2}
+    prefabs:
+    - {fileID: 1934114696418244515, guid: e93ceebec0adb44b4a61f6147c0accb8, type: 3}
+  - name: Beast-Ear-02-S01-LV1/Ear_R
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: 8affa997198b94bc29473e2be070ca71, type: 2}
+    prefabs:
+    - {fileID: 4637501706318329187, guid: d9681ef9071164796a1897f99ca1a910, type: 3}
+  - name: Beast-Ear-02-S01-LV2/Ear_L
+    materials:
+    - name: S1_Beast_02_lv2_Ear
+      material: {fileID: 2100000, guid: db761fe570e609a46b0ff65b21fc16ed, type: 2}
+    prefabs: []
+  - name: Beast-Ear-02-S01-LV2/Ear_R
+    materials:
+    - name: S1_Beast_02_lv2_Ear
+      material: {fileID: 2100000, guid: 88903aa45f0b4e2b925216c1d14a04ac, type: 2}
+    prefabs: []
+  - name: Beast-Eye-02-S01-LV1/Eye_M
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: 41fccdf89fc3b4e94a7f5bf58754356e, type: 2}
+    prefabs:
+    - {fileID: 2027095992077573342, guid: 24ee6227ba6da402eaad7f1bb2c5c915, type: 3}
+  - name: Beast-Eye-02-S01-LV2/Eye_M
+    materials:
+    - name: S1_Beast_02_lv2_Eye
+      material: {fileID: 2100000, guid: 64d74391e68a2ef4dbc0621cdc239ed2, type: 2}
+    prefabs: []
+  - name: Beast-Horn-02-S01-LV1/Horn_L
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: c5878487829354b8ab3d7dbfba0605ba, type: 2}
+    prefabs:
+    - {fileID: 4166001634692585255, guid: 94f3982081171452f9ce01a4b240dfb8, type: 3}
+  - name: Beast-Horn-02-S01-LV1/Horn_R
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: 66c5a5ab2ef3845a183f7493d4a7fbcc, type: 2}
+    prefabs:
+    - {fileID: 7599691594312360365, guid: 01b7294293a6a419d8d502af9b62c01e, type: 3}
+  - name: Beast-Horn-02-S01-LV2/Horn_L
+    materials:
+    - name: S1_Beast_02_lv2_Horn
+      material: {fileID: 2100000, guid: 0be21309e1d09994b9df3f3e0d32f899, type: 2}
+    prefabs:
+    - {fileID: 4823543738698741675, guid: ab56a111157714a01beff793beeb46c8, type: 3}
+  - name: Beast-Horn-02-S01-LV2/Horn_R
+    materials:
+    - name: S1_Beast_02_lv2_Horn
+      material: {fileID: 2100000, guid: 2a14df47de3a4003a69da39291a35b66, type: 2}
+    prefabs:
+    - {fileID: 3300427767839300420, guid: 01b5b87fd4a5047c295889ed87851f56, type: 3}
+  - name: Beast-Mouth-02-S01-LV1/Mouth_M
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: 6dfbc3d2ecab94e9daa9043371c88cc8, type: 2}
+    prefabs:
+    - {fileID: 842315566713370988, guid: b1687d77761114892a8b7e716b802d32, type: 3}
+  - name: Beast-Mouth-02-S01-LV2/Mouth_M
+    materials:
+    - name: S1_Beast_02_lv2_Mouth
+      material: {fileID: 2100000, guid: 2225fe473d0dc7048af3e8383c643df1, type: 2}
+    prefabs: []
+  - name: Beast-Tail-02-S01-LV1/Tail_M
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: cd658896f6cc74031bb467faf734371b, type: 2}
+    prefabs:
+    - {fileID: 4831070736419328933, guid: 50e0b5a9483e24ae0b0298b8cc91f201, type: 3}
+  - name: Beast-Tail-02-S01-LV2/Tail_M
+    materials:
+    - name: S1_Beast_02_lv2_Tail
+      material: {fileID: 2100000, guid: 9a42d49cd8500254da176783f6b11379, type: 2}
+    prefabs:
+    - {fileID: 8296136783459655911, guid: e2663df1382ff4be2b640a0bb3003e5a, type: 3}
+  - name: Bird-Back-02-S01-LV1/Back_M
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: 931610c0a64114d64950fb6c5d1510fc, type: 2}
+    prefabs:
+    - {fileID: 7578773725133109248, guid: 3f7d8dd7bfba34b3b9116396dd4b0d6d, type: 3}
+  - name: Bird-Back-02-S01-LV2/Back_M
+    materials:
+    - name: S1_Bird_02_lv2_Back
+      material: {fileID: 2100000, guid: dbd8259c119a5614d8b378e7686bc6cd, type: 2}
+    prefabs:
+    - {fileID: 6728065340011590306, guid: b0aabca44e2e74ce596aefdd2fb0c366, type: 3}
+  - name: Bird-Ear-02-S01-LV1/Ear_L
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: 194ac5519b3494dc4b4fdd30bc2c7471, type: 2}
+    prefabs:
+    - {fileID: 7397140898510646024, guid: ba5325bf7989647129ee3480faf23fa7, type: 3}
+  - name: Bird-Ear-02-S01-LV1/Ear_R
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: 39d16f5ce72de44bb9fd2d7a68dffbfd, type: 2}
+    prefabs:
+    - {fileID: 3690749297616627340, guid: 94b333f2be8c04b1ab4961a8dd373c6e, type: 3}
+  - name: Bird-Ear-02-S01-LV2/Ear_L
+    materials:
+    - name: S1_Bird_02_lv2_Ear
+      material: {fileID: 2100000, guid: f1e68c78c13491b4ba1c8dde6cb8909c, type: 2}
+    prefabs:
+    - {fileID: 9048392498061529509, guid: 06c128541c8f24d71a9c50f328926adf, type: 3}
+  - name: Bird-Ear-02-S01-LV2/Ear_R
+    materials:
+    - name: S1_Bird_02_lv2_Ear
+      material: {fileID: 2100000, guid: cabf544101b44d68a9c90623258fcc06, type: 2}
+    prefabs:
+    - {fileID: 414621520156799397, guid: 5f3761fa5e665489f933d9b98958f25c, type: 3}
+  - name: Bird-Eye-02-S01-LV1/Eye_M
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: 4f0762bc6b55c4fc69ce10a14df6a5ee, type: 2}
+    prefabs:
+    - {fileID: 7297690988936389316, guid: d046f549c63c54accbc6aa0428cffdf0, type: 3}
+  - name: Bird-Eye-02-S01-LV2/Eye_M
+    materials:
+    - name: S1_Bird_02_lv2_Eye
+      material: {fileID: 2100000, guid: fe2541b2c6bb44f47b0a270b4845b400, type: 2}
+    prefabs: []
+  - name: Bird-Horn-02-S01-LV1/Horn_T
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: b6e37f6d92e54479f8c32d35188c087a, type: 2}
+    - name: Model_2
+      material: {fileID: 2100000, guid: 887798c0d5324472bbd81c9bf20e1f6a, type: 2}
+    prefabs:
+    - {fileID: 613341109222392395, guid: 696f8a702209644078b72591df155a94, type: 3}
+  - name: Bird-Horn-02-S01-LV2/Horn_T
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: 573705a3d9376bf43bb18a19ed5697b0, type: 2}
+    - name: Model_2
+      material: {fileID: 2100000, guid: 1d93602b11a8da94abfcc3b74084ce25, type: 2}
+    prefabs:
+    - {fileID: 126085925138705844, guid: 98c38f77340cc4cb0b91102d0f828c2e, type: 3}
+  - name: Bird-Mouth-02-S01-LV1/Mouth_M
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: 28e73be4089eb436ca79086305f9e643, type: 2}
+    prefabs:
+    - {fileID: 1212901803412699719, guid: 457f96cfa6c7f4748aae4f3ad69832af, type: 3}
+  - name: Bird-Mouth-02-S01-LV2/Mouth_M
+    materials:
+    - name: S1_Bird_02_lv2_Mouth
+      material: {fileID: 2100000, guid: 3ed5fee4da0f83a498dddb4d52fd60fd, type: 2}
+    prefabs: []
+  - name: Bird-Tail-02-S01-LV1/Tail_M
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: 190fda4f378e8451cb340720c58fa3e7, type: 2}
+    prefabs:
+    - {fileID: 4184865609090900849, guid: f8dbca824df3b4551a5b60fbabb985e8, type: 3}
+  - name: Bird-Tail-02-S01-LV2/Tail_M
+    materials:
+    - name: S1_Bird_02_lv2_tail
+      material: {fileID: 2100000, guid: 1dc6332898b6d404bb412a7652ab0ff8, type: 2}
+    prefabs:
+    - {fileID: 9127046239215575399, guid: 3fe943c152f684f258a0468960349a11, type: 3}
+  - name: Bug-Back-02-S01-LV1/Back_M
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: e200ee6eb25df467da763618459d5d9a, type: 2}
+    prefabs:
+    - {fileID: 2479968100140806492, guid: 470807ece8d18420da6fbb12f12dcf2d, type: 3}
+  - name: Bug-Back-02-S01-LV2/Back_M
+    materials:
+    - name: S1_Bug_02_lv2_Back
+      material: {fileID: 2100000, guid: a6114003870735348a9388361fc20f59, type: 2}
+    prefabs:
+    - {fileID: 3409912201582969403, guid: 3faa496f9c7c44b62ab2587c6cc200a6, type: 3}
+  - name: Bug-Ear-02-S01-LV1/Ear_L
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: f28f0fdf7505b42a99dcd1a78059e53f, type: 2}
+    prefabs:
+    - {fileID: 2349984004923958327, guid: d9650de7d33b74121a2b914c2455c6ae, type: 3}
+  - name: Bug-Ear-02-S01-LV1/Ear_R
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: 8a83232bb44a742e5ac07a0f5c0e8abe, type: 2}
+    prefabs:
+    - {fileID: 307811993275847831, guid: f92b735df809646acb8557730103c6d6, type: 3}
+  - name: Bug-Ear-02-S01-LV2/Ear_L
+    materials:
+    - name: S1_Bug_02_lv2_Ear
+      material: {fileID: 2100000, guid: 4fb52cd2ca061a74c8a5cb207b0025a4, type: 2}
+    prefabs:
+    - {fileID: 1946289374032257680, guid: 05453d442ff2f4cc080cb51991dbdd88, type: 3}
+  - name: Bug-Ear-02-S01-LV2/Ear_R
+    materials:
+    - name: S1_Bug_02_lv2_Ear
+      material: {fileID: 2100000, guid: fa9277f98cc94ea788afc077d07d0a97, type: 2}
+    prefabs:
+    - {fileID: 1530146698630568509, guid: 8fd855b5362bb412d9acc001e48a4384, type: 3}
+  - name: Bug-Eye-02-S01-LV1/Eye_M
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: d6ddbc445bebe4f1eb595175445186e4, type: 2}
+    prefabs:
+    - {fileID: 8608082923296010706, guid: f64fce6888849483fac685d59ae7f18a, type: 3}
+  - name: Bug-Eye-02-S01-LV2/Eye_M
+    materials:
+    - name: S1_Bug_02_lv2_Eye
+      material: {fileID: 2100000, guid: 999a893d0e377a144ba65c58636dbffe, type: 2}
+    prefabs: []
+  - name: Bug-Horn-02-S01-LV1/Horn_L
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: 6dd003af5216847c3850821ba314f778, type: 2}
+    prefabs:
+    - {fileID: 111099254368907994, guid: 78becddc0cc3a4893b20cc8a8b40bb03, type: 3}
+  - name: Bug-Horn-02-S01-LV1/Horn_R
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: 1f29e6747eef3435e9b3b9bf06d13b64, type: 2}
+    prefabs:
+    - {fileID: 3378798919488505529, guid: 6f51d4af80e4c4f3da5102dcfa08c428, type: 3}
+  - name: Bug-Horn-02-S01-LV2/Horn_T
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: a14de0fa0a9d498469ee2e20dfc3c3cc, type: 2}
+    prefabs:
+    - {fileID: 1404619118435750009, guid: f66111ba3f791403ea0cac3e7eb57727, type: 3}
+  - name: Bug-Mouth-02-S01-LV1/Mouth_M
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: b452e6607264448f49006de7bc99c5b6, type: 2}
+    prefabs:
+    - {fileID: 3289712569631852137, guid: 9354637609d914f9f923fdf791f0a973, type: 3}
+  - name: Bug-Mouth-02-S01-LV2/Mouth_M
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: 99a30961dc1296048bf884072eb6b484, type: 2}
+    prefabs:
+    - {fileID: 2204154298958057101, guid: c23d6ff2243184761b365f28bc6109e8, type: 3}
+  - name: Bug-Tail-02-S01-LV1/Tail_M
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: dd0a93f53110646e0913dbe18b7fd849, type: 2}
+    prefabs:
+    - {fileID: 1745831643925915741, guid: 110a279a6e50343e29c26b30c685b44a, type: 3}
+  - name: Bug-Tail-02-S01-LV2/Tail_M
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: 43d67efe741ff044caadbdf482a86ed5, type: 2}
+    prefabs:
+    - {fileID: 955763040959991501, guid: 0b7446eb907c648c692b1a4ca26ebd2d, type: 3}
+  - name: Plant-Back-02-S01-LV1/Back_M
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: df5bb9a3f2e164dec9bfbf750c994f7a, type: 2}
+    prefabs:
+    - {fileID: 3562604919071709522, guid: 56aa879b384a04b77ac3d186ac52ea16, type: 3}
+  - name: Plant-Back-02-S01-LV2/Back_M
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: 06fae5b08cb43204084a45e78c6e2d24, type: 2}
+    prefabs:
+    - {fileID: 4222895460658565108, guid: a5db273991a7142c094e7a2e121c0a5e, type: 3}
+  - name: Plant-Ear-02-S01-LV1/Ear_L
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: 57b768004b5f041fca96dfcc2746ffe0, type: 2}
+    prefabs:
+    - {fileID: 5607196234742402636, guid: afbfd1501c2854902b752cebb6a5799f, type: 3}
+  - name: Plant-Ear-02-S01-LV1/Ear_R
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: 43ed4ee1391a041289aaab4eb3ff9f96, type: 2}
+    prefabs:
+    - {fileID: 6370598294550998787, guid: bc33fdcde3caf4df197c8d4173a5d571, type: 3}
+  - name: Plant-Ear-02-S01-LV2/Ear_L
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: 56df8d8167cef9140bdd566fa3da6ba5, type: 2}
+    prefabs:
+    - {fileID: 6228932860239845996, guid: f4c9a77fbba1244889ac678ca2e5c520, type: 3}
+  - name: Plant-Ear-02-S01-LV2/Ear_R
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: c920d94f37f6493498653718caab228b, type: 2}
+    prefabs:
+    - {fileID: 4165276364511967028, guid: e918f16d037b742a486ed35f1ebb722d, type: 3}
+  - name: Plant-Eye-02-S01-LV1/Eye_M
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: 2c179ec2f5fda4cf895f15991f16ebbb, type: 2}
+    prefabs:
+    - {fileID: 7537420791571512975, guid: 74e64f9ae4a724ad4afd79596f4de162, type: 3}
+  - name: Plant-Eye-02-S01-LV1/Eye_R
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: 94c2b34b735a54e289fed12a602b635d, type: 2}
+    prefabs: []
+  - name: Plant-Eye-02-S01-LV2/Eye_M
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: 6647974b316247249bd0f8ee488f1e1f, type: 2}
+    prefabs: []
+  - name: Plant-Horn-02-S01-LV1/Horn_T
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: 881cf11cbea3943728310d958114e067, type: 2}
+    prefabs:
+    - {fileID: 4699150199613161474, guid: 07b53d8571f0344dca659b1e653fa1f2, type: 3}
+  - name: Plant-Horn-02-S01-LV2/Horn_T
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: e680d78fc76e673479bf1b16f1f889c4, type: 2}
+    prefabs:
+    - {fileID: 5616846187963513140, guid: 845a3cc1a080d4de780d7d3e297b20e7, type: 3}
+  - name: Plant-Mouth-02-S01-LV1/Mouth_M
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: cd6eb9a14452f45879c10d26cd6cfa29, type: 2}
+    prefabs:
+    - {fileID: 6511202618417463760, guid: a6bcc24ba443e4c5cb5c8f112bd51cfa, type: 3}
+  - name: Plant-Mouth-02-S01-LV2/Mouth_M
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: ff8441f225f67a34d8326922fe19f39a, type: 2}
+    prefabs: []
+  - name: Plant-Tail-02-S01-LV1/Tail_M
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: 2486b78c03f2246fc8721d678d057f1d, type: 2}
+    prefabs:
+    - {fileID: 6135237287105917215, guid: d62198646d5fb483db25950e0363fa5f, type: 3}
+  - name: Plant-Tail-02-S01-LV2/Tail_M
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: 5761a5eca5024124b98f47f3a36b32a5, type: 2}
+    prefabs:
+    - {fileID: 5670495214278605799, guid: 40f94d3eb812a4fa08e338f789cd888d, type: 3}
+  - name: Reptile-Back-02-S01-LV1/Back_M
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: 99812b3bd80c84938bf0c9303abb7cc0, type: 2}
+    prefabs:
+    - {fileID: 1397941842779115469, guid: 6e87d7a96d57740369071a658611af18, type: 3}
+    - {fileID: 1397941842779115469, guid: 6c889bcbfeb2148c2ab84e304d198fd0, type: 3}
+    - {fileID: 1397941842779115469, guid: 456b6cfbf72714dd7bf3d036b8ba8a8b, type: 3}
+    - {fileID: 1397941842779115469, guid: d030f11b5325a4ded99aebab4ccbc7d4, type: 3}
+  - name: Reptile-Back-02-S01-LV2/Back_M
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: 1d68b5d592ebbfd45a0a23a2c4c16cb7, type: 2}
+    prefabs: []
+  - name: Reptile-Ear-02-S01-LV1/Ear_L
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: 713f21240b1114e56ae669767a8eb4f9, type: 2}
+    prefabs:
+    - {fileID: 5073734000241183330, guid: babdcb27accad4dcf89cb8c2830761f0, type: 3}
+  - name: Reptile-Ear-02-S01-LV1/Ear_R
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: 8649c63babb044f1688192f95a76aad0, type: 2}
+    prefabs:
+    - {fileID: 1850314253357003152, guid: a041eb7c17e9e4c86896b4e11937e7c7, type: 3}
+  - name: Reptile-Ear-02-S01-LV2/Ear_L
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: 6dbf8a3edd0939f44b30db837d205209, type: 2}
+    prefabs: []
+  - name: Reptile-Ear-02-S01-LV2/Ear_R
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: d2d36f46b8b542c3abe63b87a3552182, type: 2}
+    prefabs: []
+  - name: Reptile-Eye-02-S01-LV1/Eye_M
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: a0f1abb3dbf8b4f93b074efcc1ccf14b, type: 2}
+    prefabs:
+    - {fileID: 5490206323506197496, guid: b25a7bf46ad7745b6b3bb81d683cc4d5, type: 3}
+  - name: Reptile-Eye-02-S01-LV2/Eye_M
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: d795213e8ef16964c916b2dbbb3c0fcf, type: 2}
+    prefabs: []
+  - name: Reptile-Horn-02-S01-LV1/Horn_T
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: a1939c0c2f11f46f08d0af92c762e11b, type: 2}
+    prefabs:
+    - {fileID: 1429399004721128374, guid: 01113972e96a84d0dae54e9d2241d035, type: 3}
+  - name: Reptile-Horn-02-S01-LV2/Horn_L
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: e5f929c4a4511554b89d5b642f3cdfb2, type: 2}
+    prefabs:
+    - {fileID: 3216873410755966350, guid: 60aa0a24429e4440f874b1b2e44f1b93, type: 3}
+  - name: Reptile-Horn-02-S01-LV2/Horn_R
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: 6b24a631348d9421a899340aaee743ad, type: 2}
+    prefabs:
+    - {fileID: 5367014415467828109, guid: c457554da2bee4008ab9a5dbad1a4e99, type: 3}
+  - name: Reptile-Mouth-02-S01-LV1/Mouth_M
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: 940d5f7338d064fc68ac26691dde0a7f, type: 2}
+    prefabs:
+    - {fileID: 3245960215013459451, guid: 81c578d774cba4232a1b1ef07097908f, type: 3}
+  - name: Reptile-Mouth-02-S01-LV2/Mouth_M
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: b4a3fb98a0c4339478dcca66616072fb, type: 2}
+    prefabs: []
+  - name: Reptile-Tail-02-S01-LV1/Tail_M
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: ff0eb4921a8ae4718b84a69b67a15a05, type: 2}
+    prefabs:
+    - {fileID: 4323917604117691841, guid: 8529e90200e764dc3a39d7da82d81c22, type: 3}
+  - name: Reptile-Tail-02-S01-LV2/Tail_M
+    materials:
+    - name: Model
+      material: {fileID: 2100000, guid: 553f77457b1961c408dd34879184813e, type: 2}
+    prefabs:
+    - {fileID: 4982442009900335188, guid: e016519cd8f584cacaa61e0630c782ac, type: 3}
+  _forceIncludedMaterials:
+  - {fileID: 2100000, guid: efe6682c1700476e9c83d75f369bc1fa, type: 2}
