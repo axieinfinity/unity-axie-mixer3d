@@ -111,10 +111,10 @@ namespace SkyMavis.AxieMixer3D
 
             // Track which optional vertex channels at least one source actually carries. A channel that
             // NO source has must be left OFF the combined mesh rather than fabricated as zero-fill: the
-            // mystic (Mystic_Final) shader samples uv1 to gate its gold matcap, and reads a *missing*
-            // uv1 attribute differently from a present-but-zero one. Fabricating a zero uv1 (which none
-            // of the mystic part meshes have) flips that gate and drops the gold on ears/eyes. So we
-            // pad per-source for alignment while merging, but only publish channels that genuinely exist.
+            // mystic (Mystic_Final) shader samples uv1 to gate its gold matcap, and Unity reads a
+            // *missing* uv1 as uv0 — a zero uv1 instead drops the gold or floods the whole part. So we
+            // pad per-source for alignment while merging, but only publish channels that genuinely
+            // exist; and where uv1 does exist, a source without it is padded with its own uv0.
             bool anyNormals = false, anyTangents = false, anyColors = false, anyUv0 = false, anyUv1 = false;
 
             // Sub-mesh (triangle) buckets, one per unique material, in first-seen order.
@@ -179,7 +179,12 @@ namespace SkyMavis.AxieMixer3D
                 }
                 anyColors |= AppendOrPad(colors, srcMesh.colors, count, Color.white);
                 anyUv0 |= AppendOrPad(uv0, srcMesh.uv, count, Vector2.zero);
-                anyUv1 |= AppendOrPad(uv1, srcMesh.uv2, count, Vector2.zero);
+                // A source without uv1 gets its own uv0 there, which is what Unity reads for it
+                // un-combined, so its gold keeps following its mask in a group where another has uv1.
+                var srcUv1 = srcMesh.uv2;
+                var hasUv1 = srcUv1 != null && srcUv1.Length == count;
+                AppendOrPad(uv1, hasUv1 ? srcUv1 : srcMesh.uv, count, Vector2.zero);
+                anyUv1 |= hasUv1;
 
                 // --- bone weights, remapped to unified indices ---
                 var srcWeights = srcMesh.boneWeights;
